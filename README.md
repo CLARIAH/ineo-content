@@ -1,5 +1,7 @@
 # Ineo Rich User Content
 
+**At this stage this repository is just a proposal!**
+
 ## Introduction
 
 This repository stores the rich user content for the Ineo Resource finder. We
@@ -43,6 +45,6 @@ ingested into Ineo.
 
 The markdown files can be enriched with YAML headers to convey some extra information for Ineo.
 
-* *TODO: describe YAML headers 
+* *TODO: describe YAML headers, trying to get hold of some specification of Ineo's yaml format.
 
 
