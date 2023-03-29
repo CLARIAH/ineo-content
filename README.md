@@ -1,6 +1,6 @@
 # Ineo Rich User Content
 
-**At this stage this repository is just a proposal!**
+**At this stage this repository is a proposal!**
 
 ## Introduction
 
@@ -11,7 +11,7 @@ content'.
 This content can be contrasted to the automatically harvested metadata that
 results from the [CLARIAH Tool
 Discovery](https://github.com/CLARIAH/tool-discovery) track or the FAIR
-Datasets track and is not supposed to overlap. For automatically harvested
+Datasets track and is **not** supposed to overlap. For automatically harvested
 metadata, the primary authorship lies with the tool/data producer. For rich
 user content, it lies with the people of CLARIAH communication (WP1).
 
@@ -20,31 +20,77 @@ format](https://www.markdownguide.org/basic-syntax), a simple plain text format
 for text markup. We follow a specific structure to the data can be easily
 ingested into Ineo, as well as by potential other systems.
 
+We provide a very simple headless CMS to facilitate working with the Markdown
+files in the git repository, without requiring real technical knowledge of either.
+
 ## File Structure
 
-* ``tools/`` - Contains content for tools. 
-    * Content for each tool is stored in its own subdirectory, the name of which must correspond with how the tool is called (the identifier), on <https://tools.clariah.nl>
-    * The level of granularity offered on <https://tools.clariah.nl> may be too fine-grained compared to what is desirable for Ineo. Instead of creating a subdirectory that corresponds with a single tool, you may also create a subdirectory that corresponds to a tool group/suite. These too are defined on <https://tools.clariah.nl>. They carry only a label, name your subdirectory according to this the label, but use only lowercase letters and replacing spaces and other special symbols with an underscore (squash any consecutive underscores that arise into a single one).
-* ``data/`` -  Contains data
-    * *TODO:* what identifiers do we use for subdirectories that can be tied to output from the data harvesting pipeline?
-* ``workflows/`` -  Contains Rich Data concerning tools
-* ``standards/`` -  Contains Rich Data concerning tools
-* Within each resource subdirectory there are a number of files in markdown format, named as follows:
-    * ``index.md`` - This contains the tool's name and a small description. For tools this is only needed when it concerns a tool suite, as this information can typically be extracted automatically from the metadata. Just leave it out for those tools.
-    * ``overview.md`` - This contains the text (including heading) for the overview tab.
-    * ``learn.md`` - This contains the text (including heading) for the learn tab.
-    * ``mentions.md`` - This contains the text (including heading) for the mentions tab.
-    * If any other tabs are added to the system, they should follow a similar scheme. Please update this README to document them.
+
+Directories:
+
+* ``tools/`` - Contains content describing tools. 
+* ``data/`` -  Contains content describing data
+* ``workflows/`` -  Contains content describing workflows
+* ``standards/`` -  Contains content describing standards
+* ``media/`` - Stores mainly images or other associated files ,
     * You can reference images from the markdown files.
     * Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.
     * Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.
 
-**Note:** All filenames are case-sensitive and preferably kept to lowercase for consistency.
+Within these directories, each resource is described by a single Markdown file,
+with optional [YAML frontmatter](#yaml-frontmatter).
+
+The title of the markdown file (a level-one heading, e.g. `#`) corresponds with
+the title of the resource as shown in the frontend. The extension is always `.md`.
+
+The markdown file contains sections marked with level two headings (`##`), each should correspond to agreed-upon tabs shown in the Ineo frontend, we currently distinguish the following:
+
+* Overview
+* Learn
+* Mentions
+
+The content editors and frontend developers can introduce new ones when needed.
+
+Any subsections (level-three headings and beyond) can be used freely.
     
-## YAML headers
+## YAML frontmatter
 
-The markdown files can be enriched with YAML headers to convey some extra
-information for Ineo, if necessary. It is preferred to use this as sparingly as
-possible so the content can be used more generically rather than only by Ineo.
+The markdown files can be enriched with YAML frontmatter to convey some extra
+information. This is *NOT* intended for various metadata, as those come
+directly from different data provisioning pipelines. The only metadata we
+always duplicate is the title of the resource, which typically also determines
+the filename (in a 'slug' form in lowercase only and with spaces replaced by
+hyphens).
 
-* *TODO:* describe YAML headers, trying to get hold of some specification of Ineo's yaml format.
+```markdown
+---
+title: The title of the resource
+---
+```
+
+For tools, we use either the `identifier` or `group` field to link to
+<https://tools.clariah.nl>. The former links to an exact rresource, the latter
+to a group or tool suite because the level of granularity offered on
+<https://tools.clariah.nl> may be too fine-grained compared to what is
+desirable for Ineo or other portals. 
+
+```markdown
+---
+identifier: tool
+title: Tool
+---
+```
+
+The following Ineo-specific metadata can be added:
+
+* (TODO: add specification of part of Ineo's YAML syntax that are reusable)
+
+## Content Management System (CMS)
+
+A headless CMS ([DecapCMS](https://decapcms.org/) previously known as
+NetlifyCMS) is available to make it easier for content editors to do their
+editing. Within the CMS, both the Markdown content and the YAML frontmatter can
+be edited in a WYSIWYG fashion without knowledge of either Markdown or YAML.
+
+A GitHub account is required to edit. The CMS can be accessed here (TODO: add
+link).
