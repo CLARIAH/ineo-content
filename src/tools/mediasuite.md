@@ -1,11 +1,12 @@
 ---
-title: MediaSuite
-carousel: 
-    - /media/mediasuite-cover1.png
-    - https://vimeo.com/503507411?embedded=true&source=vimeo_logo&owner=115309374
-    - /media/mediasuite-cover2.png
-    - /media/mediasuite-cover3.png
-    - /media/mediasuite-cover4.png
+title: Media Suite
+carousel:
+  - /media/mediasuite-cover1.png
+  - https://vimeo.com/503507411?embedded=true&source=vimeo_logo&owner=115309374
+  - /media/mediasuite-cover2.png
+  - /media/mediasuite-cover3.png
+  - /media/mediasuite-cover4.png
+identifier: mediasuite
 ---
 
 # Media Suite
