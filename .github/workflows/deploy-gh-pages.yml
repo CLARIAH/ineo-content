@@ -18,9 +18,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup pages
-        uses: actions/configure-pages@v3
-
       - name: Build
         run: make
 
