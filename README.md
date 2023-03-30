@@ -25,14 +25,14 @@ files in the git repository, without requiring real technical knowledge of eithe
 
 ## File Structure
 
-
 Directories:
 
-* ``tools/`` - Contains content describing tools. 
-* ``data/`` -  Contains content describing data
-* ``workflows/`` -  Contains content describing workflows
-* ``standards/`` -  Contains content describing standards
-* ``media/`` - Stores mainly images or other associated files ,
+* ``src/`` - Contains Markdown texts
+    * ``tools/`` - Contains Markdown texts describing tools. 
+    * ``data/`` -  Contains Markdown texts describing data
+    * ``workflows/`` -  Contains Markdown texts describing workflows
+    * ``standards/`` -  Contains Markdown texts describing standards
+* ``media/`` - Stores images or other associated media files,
     * You can reference images from the markdown files.
     * Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.
     * Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.

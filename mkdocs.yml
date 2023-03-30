@@ -1,0 +1,31 @@
+site_name: Ineo Content
+
+repo_url: https://github.com/CLARIAH/ineo-content
+repo_name: CLARIAH/ineo-content
+edit_uri: /-/ide/project/CLARIAH/ineo-content/edit/master/-/docs/
+
+docs_dir: "src"
+site_dir: build
+site_url: https://clariah.github.io/ineo-content/
+
+theme:
+  name: mkdocs
+  logo: media/ineo.svg
+  features:
+    - content.action.edit
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: deep blue
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep blue
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
