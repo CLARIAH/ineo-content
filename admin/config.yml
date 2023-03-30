@@ -2,8 +2,7 @@ backend:
   name: github
   repo: CLARIAH/ineo-content
   branch: master # Branch to update (optional; defaults to master)
-  base_url: https://clariah.github.io/ineo-content
-  #site_domain: sparkling-kitsune-122e3b.netlify.com #this was a bit of a process to setup via netlify.com: https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html
+  site_domain: sparkling-kitsune-122e3b.netlify.com #this was a bit of a process to setup via netlify.com: https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html
 
 
 media_folder: "media" #images and other (small!) downloadable resources, no videos
