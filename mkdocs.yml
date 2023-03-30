@@ -2,7 +2,7 @@ site_name: Ineo Content
 
 repo_url: https://github.com/CLARIAH/ineo-content
 repo_name: CLARIAH/ineo-content
-edit_uri: /-/ide/project/CLARIAH/ineo-content/edit/master/-/docs/
+edit_uri: https://github.dev/CLARIAH/ineo-content/blob/master/src/
 
 docs_dir: "src"
 site_dir: build
