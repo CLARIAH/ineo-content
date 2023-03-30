@@ -13,8 +13,8 @@ collections:
     folder: "src/tools"
     create: true
     fields:
-      - {label: "Identifier", name: "identifier", hint: "The identifier of the tool exactly as it is known by CLARIAH Tool Discovery, set either this or group name. For internal use.", widget: "string"}
-      - {label: "Group", name: "group", hint: "The group or suite name exactly as known by CLARIAH Tool Discovery, set either this or identiftier. For internal use.", widget: "string"}
+      - {label: "Identifier", name: "identifier", hint: "The identifier of the tool exactly as it is known by CLARIAH Tool Discovery, set either this or group name. For internal use.", widget: "string", required: false}
+      - {label: "Group", name: "group", hint: "The group or suite name exactly as known by CLARIAH Tool Discovery, set either this or identiftier. For internal use.", widget: "string", required: false }
       - {label: "Title", name: "title", widget: "string"} #filename will derive from this (slugified)
       - {label: "Body", name: "body", widget: "markdown"} #actual markdown context after the front matter
   - name: "data"
@@ -22,14 +22,14 @@ collections:
     folder: "src/data"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string" } #filename will derive from this (slugified)
+      - {label: "Title", name: "title", widget: "string", required: false  } #filename will derive from this (slugified)
       - {label: "Body", name: "body", widget: "markdown"} #actual markdown context after the front matter
   - name: "standards"
     label: "Standards"
     folder: "src/standards"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string" } #filename will derive from this (slugified)
+      - {label: "Title", name: "title", widget: "string", required: false } #filename will derive from this (slugified)
       - {label: "Body", name: "body", widget: "markdown"} #actual markdown context after the front matter
 
 
