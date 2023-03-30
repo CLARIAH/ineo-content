@@ -1,4 +1,4 @@
-# Ineo Content
+# Introduction 
 
 This website shows curated texts on tools, data and standards of the CLARIAH project.
 
