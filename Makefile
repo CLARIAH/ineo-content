@@ -7,5 +7,5 @@ env:
 	. env/bin/activate; pip install mkdocs
 
 build: env
-	. env/bin/activate; mkdocs build; mkdir -p build/admin; cp -rf admin/* build/
+	. env/bin/activate; mkdocs build && mkdir -p build/admin && cp -rfv admin/* build/admin/
 	
