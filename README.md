@@ -32,7 +32,7 @@ On the preview site we also provide access to a simple headless CMS to
 facilitate working with the Markdown files in the git repository, without
 requiring real technical knowledge of either.
 
-## File Structure
+## Directory Structure
 
 Directories:
 
