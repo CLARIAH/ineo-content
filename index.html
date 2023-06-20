@@ -151,8 +151,9 @@ requiring real technical knowledge of either.</p>
 </li>
 <li><code>media/</code> - Stores images or other associated media files,<ul>
 <li>Right now all media files are in this single folder, without subfolders, this limitation is only due to the admin CMS.</li>
+<li>Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory as well.</li>
 <li>You can reference images from the markdown files, just use <code>/media/</code> as URL prefix when doing so.</li>
-<li>Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.</li>
+<li>You can also reference media elsewhere on the web, always sure to use <code>https://</code> in that case. This should probably be kept to a minimum as there is no guarantee such media will persist in that location over time.</li>
 <li>Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.</li>
 <li>Ensure the media files you upload here are suitable for use on the web, pay attention to file-size, format and resolution.</li>
 </ul>
@@ -165,7 +166,8 @@ the title of the resource as shown in the frontend. The extension is always
 <code>.md</code>. The paragraph(s) immediately succeeding the level-one heading are taken
 to be the description, for tools (unless it concerns a tool suite), this
 generally be omitted as the description should be automatically drawn from the
-metadata.</p>
+metadata. It is recommended to keep filename to a simple subset of lowercase
+ASCII characters, without spaces or any punctuation aside from dashes.</p>
 <p>The markdown file contains sections marked with level two headings (<code>##</code>), each should correspond to agreed-upon tabs shown in the Ineo frontend, we currently distinguish the following:</p>
 <ul>
 <li>Overview</li>
@@ -201,7 +203,7 @@ to still describe a whole tool suite in Ineo, but picks one of the tools in the 
 <li>(TODO: add specification of part of Ineo's YAML syntax that are reusable. This is something for the Ineo developers to specify.)</li>
 <li>Ineo currently allows for a carousel widget showing several images in sequence (see for example <a href="https://www.ineo.tools/resources/media-suite">https://www.ineo.tools/resources/media-suite</a>). The data definition for such a widget would go in the YAML frontmatter, I would propose something like:</li>
 </ul>
-<pre><code>---
+<pre><code class="language-markdown">---
 carousel:
   - /media/mediasuite-cover1.png
   - https://vimeo.com/503507411?embedded=true&amp;source=vimeo_logo&amp;owner=115309374
@@ -210,8 +212,35 @@ carousel:
   - /media/mediasuite-cover4.png
 ---
 </code></pre>
-<p>Note these are specifically for Ineo and won't be previewed in the editor.</p>
-<p>For data and standards, no way of linking to underlying registries via identifiers has been defined yet. (take this up with Menzo)</p>
+<p>Note these are specifically for Ineo and won't be previewed in the editor. Whether you images interspersed in the flowing text (easier) or the carousel is up to the maintainer team to decide.</p>
+<p>Note that for data, no way of linking to underlying data registry
+via identifiers has been defined yet (take this up with Menzo).</p>
+<h3 id="template">Template</h3>
+<p>The following template serves as an example for tools:</p>
+<pre><code class="language-markdown">---
+identifier: tool-identifier-from-tools-clariah-nl
+title: Name of the Tool
+carousel:
+  - /media/tool-screenshot.png
+---
+
+# Name of the Tool
+
+(a short description can go here)
+
+## Overview
+
+(all text you want on the overview tab goes here)
+
+## Learn
+
+(all text you want on the learn tab goes here)
+
+## Mentions
+
+(all text you want on the mentions tab goes here)
+
+</code></pre>
 <h2 id="editing">Editing</h2>
 <h3 id="content-management-system-cms">Content Management System (CMS)</h3>
 <p>A headless CMS (<a href="https://decapcms.org/">DecapCMS</a> previously known as
@@ -330,5 +359,5 @@ tool and data developers.</p>
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-06-20 13:46:00.662330+00:00
+Build Date UTC : 2023-06-20 13:56:15.714937+00:00
 -->
