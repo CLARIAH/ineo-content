@@ -42,9 +42,11 @@ Directories:
     * ``workflows/`` -  Contains Markdown texts describing workflows
     * ``standards/`` -  Contains Markdown texts describing standards
 * ``media/`` - Stores images or other associated media files,
+    * Right now all media files are in this single folder, without subfolders, this limitation is only due to the admin CMS.
     * You can reference images from the markdown files, just use `/media/` as URL prefix when doing so.
     * Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.
     * Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.
+    * Ensure the media files you upload here are suitable for use on the web, pay attention to file-size, format and resolution.
 
 Within these directories, each resource is described by a single Markdown file,
 with optional [YAML frontmatter](#yaml-frontmatter).
@@ -114,7 +116,7 @@ carousel:
 
 Note these are specifically for Ineo and won't be previewed in the editor.
 
-For data and standards, no way of linking to underlying registries via identifiers has been defined yet.
+For data and standards, no way of linking to underlying registries via identifiers has been defined yet. (take this up with Menzo)
 
 ## Editing
 
@@ -126,6 +128,10 @@ editing. Within the CMS, both the Markdown content and the YAML frontmatter can
 be edited in a WYSIWYG fashion without knowledge of either Markdown or YAML.
 
 A GitHub account is required to edit. The CMS can be accessed [here](https://clariah.github.io/ineo-content/admin)
+
+The CMS is a nice convenience but it also enforced some limitations, it has put the following constraints on this specification:
+
+* All media files are stored in a single directory `/media/` and does not allow further divisions in subdirectories.
 
 ### Online IDE
 
