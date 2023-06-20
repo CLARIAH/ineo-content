@@ -42,7 +42,7 @@ Directories:
     * ``workflows/`` -  Contains Markdown texts describing workflows
     * ``standards/`` -  Contains Markdown texts describing standards
 * ``media/`` - Stores images or other associated media files,
-    * You can reference images from the markdown files.
+    * You can reference images from the markdown files, just use `/media/` as URL prefix when doing so.
     * Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.
     * Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.
 
@@ -69,7 +69,7 @@ Any subsections (level-three headings and beyond) can be used freely.
 ## YAML frontmatter
 
 The markdown files can be enriched with YAML frontmatter to convey some extra
-information. This is *NOT* intended for extensive tool/data metadata, as those
+information. This is **NOT** intended for extensive tool/data metadata, as those
 come directly from different data provisioning pipelines and are not kept in
 this repository. The only metadata we always duplicate is the title of the
 resource, which typically also determines the filename (in a 'slug' form in
@@ -81,11 +81,9 @@ title: The title of the resource
 ---
 ```
 
-For tools, we use either the `identifier` or `group` field to link to
-<https://tools.clariah.nl>. The former links to an exact resource, the latter
-to a group or tool suite because the level of granularity offered on
-<https://tools.clariah.nl> may be too fine-grained compared to what is
-desirable for Ineo or other portals. 
+For *tools*, we use either the `identifier` or `group` field to link to
+<https://tools.clariah.nl>. The `identifier` links to an exact resource, such as `frog` for <https://tools.clariah.nl/frog>, i.e. it is identical to what appears in the URL. The other one, `group`, links to a group or tool suite because the level of granularity offered on <https://tools.clariah.nl> may be too fine-grained compared to what is
+desirable for Ineo or other portals. It should be exact name of the group as it appears on the tool discovery overview. The name s of the groups an be easily spotted by looking at the table of contents there; the groups are the ones with sub-items.
 
 ```markdown
 ---
@@ -94,14 +92,29 @@ title: Tool
 ---
 ```
 
-If both `identifier` and `group` are set, the identifier is used to associate
-metadata of one specific tool in the group/suite with the group as a whole,
-otherwise there would be no metadata at all for the group.
-
+If *both* `identifier` and `group` are set, the identifier is used to associate
+metadata of one specific tool in the group/suite with the group as a whole. This allows you
+to still describe a whole tool suite in Ineo, but picks one of the tools in the suite as being its representative and have its metadata prominently features.
 
 The following Ineo-specific metadata can be added:
 
-* (TODO: add specification of part of Ineo's YAML syntax that are reusable)
+* (TODO: add specification of part of Ineo's YAML syntax that are reusable. This is something for the Ineo developers to specify.)
+* Ineo currently allows for a carousel widget showing several images in sequence (see for example <https://www.ineo.tools/resources/media-suite>). The data definition for such a widget would go in the YAML frontmatter, I would propose something like:
+
+```
+---
+carousel:
+  - /media/mediasuite-cover1.png
+  - https://vimeo.com/503507411?embedded=true&source=vimeo_logo&owner=115309374
+  - /media/mediasuite-cover2.png
+  - /media/mediasuite-cover3.png
+  - /media/mediasuite-cover4.png
+---
+```
+
+Note these are specifically for Ineo and won't be previewed in the editor.
+
+For data and standards, no way of linking to underlying registries via identifiers has been defined yet.
 
 ## Editing
 
@@ -117,8 +130,8 @@ A GitHub account is required to edit. The CMS can be accessed [here](https://cla
 ### Online IDE
 
 An alternative to using the CMS is to use GitHub's online Visual Studio Code
-IDE. Each page on <https://clariah.github.io/ineo-content> has a an *edit this
-page* link that automatically takes you to the IDE. This offers a bit more
+IDE. Each page on <https://clariah.github.io/ineo-content> has an *edit this
+page* link that automatically takes you to the web-based IDE. This offers a bit more
 freedom than the CMS.
 
 ### Local editing
@@ -131,7 +144,7 @@ something specifically geared for comfortable Markdown editing such as
 
 ### Version Control
 
-Being a version control system, git will ensure all versions of the content are
+As a version control system, git will ensure all versions of the content are
 tracked throughout their history. You can use git tools to revert to previous
 versions if needed. It also offers an exact provenance trail of who edited what
 and when, offering maximum transparency.
@@ -148,7 +161,6 @@ The maintainers, from CLARIAH's communication department, are:
 * Sebastiaan Fluitsma
 * Emma Verbree
 * Liselore Tissen
-
 
 
 
