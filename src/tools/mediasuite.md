@@ -8,10 +8,9 @@ carousel:
   - /media/mediasuite-cover4.png
 identifier: mediasuite
 ---
-
 # Media Suite
 
-The CLARIAH Media Suite is a research environment of the Dutch infrastructure for digital humanities and social science. It facilitates scholarly research with large Dutch media collections by providing advanced search and analysis tools. 
+The CLARIAH Media Suite is a research environment of the Dutch infrastructure for digital humanities and social science. It facilitates scholarly research with large Dutch media collections by providing advanced search and analysis tools.
 
 ## Overview
 
@@ -36,7 +35,7 @@ More about our data:
 As a research environment, the CLARIAH Media Suite aims to support scholars in all the steps of their research process. At a general level, it provides tools for exploring the data and collections, creating personal selections (or corpora), adding annotations (such as tags, comments, links, and other metadata), and the possibility to export them. The Media Suite also facilitates working with data directly by using its APIs in combination with Jupyter Notebooks.
 Workspace
 
-### Workspace 
+### Workspace
 
 The CLARIAH Media Suite offers a “virtual work space” to its users. It allows researchers to store bookmarks, annotations, saved queries, personal collections, or automatic enrichments. The workspace thus provides researchers with novel ways for making transparent and managing their research process.
 
@@ -57,7 +56,7 @@ The Media Suite Learn pages offer a wide set instruction and support material:
 
 ### Advice and user support
 
-* Media Suite Learn team aims to support a wide array of approaches and areas of teaching and research, and are happy to offer advice on how to use the Media Suite productively in your own project. You can contact the team via <mediastudies@clariah.nl>.
+* Media Suite Learn team aims to support a wide array of approaches and areas of teaching and research, and are happy to offer advice on how to use the Media Suite productively in your own project. You can contact the team via [mediastudies@clariah.nl](mailto:mediastudies@clariah.nl).
 * The team regularly contributes to organising research events that introduce the Media Suite to new users, and that reflect on digital methods and videographic approaches more broadly. Events include online webinars and public research seminars focussing on state-of-the-art digital scholarship, with contributions from scholars from the Netherlands and abroad.
 
 ### Public forum
@@ -80,7 +79,6 @@ The Media Suite Public Forum uses [Gitter](https://en.wikipedia.org/wiki/Gitter)
 
 [See all publications](https://www.zotero.org/groups/2288915/clariah_media_suite_research_and_dissemination_outputs/collections/U89WPV84)
 
-
 ### Presentations
 
 * Erp, M. van. A philosophy of change, Institute for Social Work, Utrecht, 12 december 2018
@@ -96,4 +94,3 @@ The Media Suite Public Forum uses [Gitter](https://en.wikipedia.org/wiki/Gitter)
 ### Video’s
 
 * Talkshow Mediasuite // Data Stories, Dutch Media Week
-
