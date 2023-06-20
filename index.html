@@ -150,7 +150,7 @@ requiring real technical knowledge of either.</p>
 </ul>
 </li>
 <li><code>media/</code> - Stores images or other associated media files,<ul>
-<li>You can reference images from the markdown files.</li>
+<li>You can reference images from the markdown files, just use <code>/media/</code> as URL prefix when doing so.</li>
 <li>Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.</li>
 <li>Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.</li>
 </ul>
@@ -174,7 +174,7 @@ metadata.</p>
 <p>Any subsections (level-three headings and beyond) can be used freely.</p>
 <h2 id="yaml-frontmatter">YAML frontmatter</h2>
 <p>The markdown files can be enriched with YAML frontmatter to convey some extra
-information. This is <em>NOT</em> intended for extensive tool/data metadata, as those
+information. This is <strong>NOT</strong> intended for extensive tool/data metadata, as those
 come directly from different data provisioning pipelines and are not kept in
 this repository. The only metadata we always duplicate is the title of the
 resource, which typically also determines the filename (in a 'slug' form in
@@ -183,23 +183,33 @@ lowercase only and with spaces replaced by hyphens).</p>
 title: The title of the resource
 ---
 </code></pre>
-<p>For tools, we use either the <code>identifier</code> or <code>group</code> field to link to
-<a href="https://tools.clariah.nl">https://tools.clariah.nl</a>. The former links to an exact resource, the latter
-to a group or tool suite because the level of granularity offered on
-<a href="https://tools.clariah.nl">https://tools.clariah.nl</a> may be too fine-grained compared to what is
-desirable for Ineo or other portals. </p>
+<p>For <em>tools</em>, we use either the <code>identifier</code> or <code>group</code> field to link to
+<a href="https://tools.clariah.nl">https://tools.clariah.nl</a>. The <code>identifier</code> links to an exact resource, such as <code>frog</code> for <a href="https://tools.clariah.nl/frog">https://tools.clariah.nl/frog</a>, i.e. it is identical to what appears in the URL. The other one, <code>group</code>, links to a group or tool suite because the level of granularity offered on <a href="https://tools.clariah.nl">https://tools.clariah.nl</a> may be too fine-grained compared to what is
+desirable for Ineo or other portals. It should be exact name of the group as it appears on the tool discovery overview. The name s of the groups an be easily spotted by looking at the table of contents there; the groups are the ones with sub-items.</p>
 <pre><code class="language-markdown">---
 identifier: tool
 title: Tool
 ---
 </code></pre>
-<p>If both <code>identifier</code> and <code>group</code> are set, the identifier is used to associate
-metadata of one specific tool in the group/suite with the group as a whole,
-otherwise there would be no metadata at all for the group.</p>
+<p>If <em>both</em> <code>identifier</code> and <code>group</code> are set, the identifier is used to associate
+metadata of one specific tool in the group/suite with the group as a whole. This allows you
+to still describe a whole tool suite in Ineo, but picks one of the tools in the suite as being its representative and have its metadata prominently features.</p>
 <p>The following Ineo-specific metadata can be added:</p>
 <ul>
-<li>(TODO: add specification of part of Ineo's YAML syntax that are reusable)</li>
+<li>(TODO: add specification of part of Ineo's YAML syntax that are reusable. This is something for the Ineo developers to specify.)</li>
+<li>Ineo currently allows for a carousel widget showing several images in sequence (see for example <a href="https://www.ineo.tools/resources/media-suite">https://www.ineo.tools/resources/media-suite</a>). The data definition for such a widget would go in the YAML frontmatter, I would propose something like:</li>
 </ul>
+<pre><code>---
+carousel:
+  - /media/mediasuite-cover1.png
+  - https://vimeo.com/503507411?embedded=true&amp;source=vimeo_logo&amp;owner=115309374
+  - /media/mediasuite-cover2.png
+  - /media/mediasuite-cover3.png
+  - /media/mediasuite-cover4.png
+---
+</code></pre>
+<p>Note these are specifically for Ineo and won't be previewed in the editor.</p>
+<p>For data and standards, no way of linking to underlying registries via identifiers has been defined yet.</p>
 <h2 id="editing">Editing</h2>
 <h3 id="content-management-system-cms">Content Management System (CMS)</h3>
 <p>A headless CMS (<a href="https://decapcms.org/">DecapCMS</a> previously known as
@@ -209,8 +219,8 @@ be edited in a WYSIWYG fashion without knowledge of either Markdown or YAML.</p>
 <p>A GitHub account is required to edit. The CMS can be accessed <a href="https://clariah.github.io/ineo-content/admin">here</a></p>
 <h3 id="online-ide">Online IDE</h3>
 <p>An alternative to using the CMS is to use GitHub's online Visual Studio Code
-IDE. Each page on <a href="https://clariah.github.io/ineo-content">https://clariah.github.io/ineo-content</a> has a an <em>edit this
-page</em> link that automatically takes you to the IDE. This offers a bit more
+IDE. Each page on <a href="https://clariah.github.io/ineo-content">https://clariah.github.io/ineo-content</a> has an <em>edit this
+page</em> link that automatically takes you to the web-based IDE. This offers a bit more
 freedom than the CMS.</p>
 <h3 id="local-editing">Local editing</h3>
 <p>Being a simple git repository with MarkDown files, you are not constrained to
@@ -219,7 +229,7 @@ and work with your text editor of choice, such as vim, emacs, VSCode, Sublime, o
 something specifically geared for comfortable Markdown editing such as
 <a href="https://www.zettlr.com/">Zettlr</a>.</p>
 <h3 id="version-control">Version Control</h3>
-<p>Being a version control system, git will ensure all versions of the content are
+<p>As a version control system, git will ensure all versions of the content are
 tracked throughout their history. You can use git tools to revert to previous
 versions if needed. It also offers an exact provenance trail of who edited what
 and when, offering maximum transparency.</p>
@@ -313,6 +323,6 @@ tool and data developers.</p>
 </html>
 
 <!--
-MkDocs version : 1.4.2
-Build Date UTC : 2023-03-31 10:25:49.741797+00:00
+MkDocs version : 1.4.3
+Build Date UTC : 2023-06-20 11:51:03.552153+00:00
 -->
