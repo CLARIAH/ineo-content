@@ -43,8 +43,9 @@ Directories:
     * ``standards/`` -  Contains Markdown texts describing standards
 * ``media/`` - Stores images or other associated media files,
     * Right now all media files are in this single folder, without subfolders, this limitation is only due to the admin CMS.
+    * Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory as well.
     * You can reference images from the markdown files, just use `/media/` as URL prefix when doing so.
-    * Images or downloadable documents/spreadsheets/presentations that are referenced from one of the markdown files may be included in this subdirectory.
+    * You can also reference media elsewhere on the web, always sure to use `https://` in that case. This should probably be kept to a minimum as there is no guarantee such media will persist in that location over time.
     * Videos are not suitable for direct inclusion in the git repository as they are too big, they need to be hosted elsewhere.
     * Ensure the media files you upload here are suitable for use on the web, pay attention to file-size, format and resolution.
 
@@ -56,7 +57,8 @@ the title of the resource as shown in the frontend. The extension is always
 `.md`. The paragraph(s) immediately succeeding the level-one heading are taken
 to be the description, for tools (unless it concerns a tool suite), this
 generally be omitted as the description should be automatically drawn from the
-metadata.
+metadata. It is recommended to keep filename to a simple subset of lowercase
+ASCII characters, without spaces or any punctuation aside from dashes.
 
 The markdown file contains sections marked with level two headings (`##`), each should correspond to agreed-upon tabs shown in the Ineo frontend, we currently distinguish the following:
 
@@ -103,7 +105,7 @@ The following Ineo-specific metadata can be added:
 * (TODO: add specification of part of Ineo's YAML syntax that are reusable. This is something for the Ineo developers to specify.)
 * Ineo currently allows for a carousel widget showing several images in sequence (see for example <https://www.ineo.tools/resources/media-suite>). The data definition for such a widget would go in the YAML frontmatter, I would propose something like:
 
-```
+```markdown
 ---
 carousel:
   - /media/mediasuite-cover1.png
@@ -114,9 +116,44 @@ carousel:
 ---
 ```
 
-Note these are specifically for Ineo and won't be previewed in the editor.
+Note these are specifically for Ineo and won't be previewed in the editor. Whether you images interspersed in the flowing text (easier) or the carousel is up to the maintainer team to decide.
 
-For data and standards, no way of linking to underlying registries via identifiers has been defined yet. (take this up with Menzo)
+Note that for data, no way of linking to underlying data registry
+via identifiers has been defined yet (take this up with Menzo).
+
+### Template
+
+The following template serves as an example for tools:
+
+```markdown
+---
+identifier: tool-identifier-from-tools-clariah-nl
+title: Name of the Tool
+carousel:
+  - /media/tool-screenshot.png
+---
+
+# Name of the Tool
+
+(a short description can go here)
+
+## Overview
+
+(all text you want on the overview tab goes here)
+
+## Learn
+
+(all text you want on the learn tab goes here)
+
+## Mentions
+
+(all text you want on the mentions tab goes here)
+
+```
+
+
+
+
 
 ## Editing
 
@@ -167,6 +204,5 @@ The maintainers, from CLARIAH's communication department, are:
 * Sebastiaan Fluitsma
 * Emma Verbree
 * Liselore Tissen
-
 
 
