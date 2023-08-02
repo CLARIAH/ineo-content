@@ -1,5 +1,9 @@
 ---
 identifier: Frog
+carousel:
+  - /media/frog-logo.svg
+  - /media/frog-output.png
+  - /media/frog.gif
 group: Frog
 title: Frog
 ---
