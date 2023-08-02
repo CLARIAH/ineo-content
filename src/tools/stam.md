@@ -30,10 +30,6 @@ Simplicity - the data model must be easy to understand for a user/developer to u
 
 The name STAM, an acronym for "*Stand-off Text Annotation Mode*l", is Dutch, Swedish, Afrikaans and Frisian for "*trunk*" (as in the trunk of a tree), the name itself depicts a solid foundation upon which more elaborate solutions can be built.
 
-Large parts of this specification are normative:
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).
-
 If you want to learn more, please have a look at [the project's github](https://github.com/annotation/stam-python/blob/master/README.md).
 
 ## Learn
