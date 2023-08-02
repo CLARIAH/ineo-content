@@ -31,7 +31,7 @@ There are two ways to install the software:
 * You can download Frog, manually compile and install it from source. However, due to the many dependencies and required technical expertise this is not an easy endeavor.
 * The recommendation methods is using LaMachine. Frog is part of theLaMachine software distribution and includes all necessary dependencies. It runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under other operating systems, including Windows. LaMachine makes the installation of Frog straightforward; detailed instructions for the installation of LaMachine can be found here: <http://proycon.github.io/LaMachine/>.
 
-## Using Frog from Python
+#### Using Frog from Python
 It is also possible to call Frog directly from Python using the python-frog software library. Contrary to the Frog client for Python discussed in Section [servermode], this library is a direct binding with code from Frog and does not use a client/server model. It therefore offers the tightest form of integration, and highest performance, possible.
 
 
