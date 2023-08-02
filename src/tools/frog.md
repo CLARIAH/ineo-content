@@ -32,15 +32,16 @@ There are two ways to install the software:
 * The recommendation methods is using LaMachine. Frog is part of theLaMachine software distribution and includes all necessary dependencies. It runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under other operating systems, including Windows. LaMachine makes the installation of Frog straightforward; detailed instructions for the installation of LaMachine can be found here: <http://proycon.github.io/LaMachine/>.
 
 #### Using Frog from Python
-It is also possible to call Frog directly from Python using the python-frog software library. Contrary to the Frog client for Python discussed in Section [servermode], this library is a direct binding with code from Frog and does not use a client/server model. It therefore offers the tightest form of integration, and highest performance, possible.
 
-
+It is also possible to call Frog directly from Python using the python-frog software library. Contrary to the Frog client for Python discussed in Section \[servermode], this library is a direct binding with code from Frog and does not use a client/server model. It therefore offers the tightest form of integration, and highest performance, possible.
 
 * The Python-Frog library is not included with Frog itself, but is shipped separately from https://github.com/proycon/python-frog.
-
 * Users who installed Frog using LaMachine, however, will already find that this software has been installed.
+* Other users will need to compile and install it from source. First ensure Frog itself is installed, then install the dependency cython \[14]. Installation of Python-Frog is then done by running: $ python setup.py install from its directory.
 
-* Other users will need to compile and install it from source. First ensure Frog itself is installed, then install the dependency cython [14]. Installation of Python-Frog is then done by running: $ python setup.py install from its directory.
+F﻿or more information, have a look at [the website](https://frognlp.readthedocs.io/en/latest/).
+
+
 
 ## Mentions
 
