@@ -104,6 +104,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#using-frog-from-python" class="nav-link">Using Frog from Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
@@ -135,6 +139,19 @@
 <ul>
 <li>You can download Frog, manually compile and install it from source. However, due to the many dependencies and required technical expertise this is not an easy endeavor.</li>
 <li>The recommendation methods is using LaMachine. Frog is part of theLaMachine software distribution and includes all necessary dependencies. It runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under other operating systems, including Windows. LaMachine makes the installation of Frog straightforward; detailed instructions for the installation of LaMachine can be found here: <a href="http://proycon.github.io/LaMachine/">http://proycon.github.io/LaMachine/</a>.</li>
+</ul>
+<h2 id="using-frog-from-python">Using Frog from Python</h2>
+<p>It is also possible to call Frog directly from Python using the python-frog software library. Contrary to the Frog client for Python discussed in Section [servermode], this library is a direct binding with code from Frog and does not use a client/server model. It therefore offers the tightest form of integration, and highest performance, possible.</p>
+<ul>
+<li>
+<p>The Python-Frog library is not included with Frog itself, but is shipped separately from https://github.com/proycon/python-frog.</p>
+</li>
+<li>
+<p>Users who installed Frog using LaMachine, however, will already find that this software has been installed.</p>
+</li>
+<li>
+<p>Other users will need to compile and install it from source. First ensure Frog itself is installed, then install the dependency cython [14]. Installation of Python-Frog is then done by running: $ python setup.py install from its directory.</p>
+</li>
 </ul>
 <h2 id="mentions">Mentions</h2>
 <h3 id="articles-incl-conference-papers-presentations-and-demos">Articles (incl. conference papers, presentations and demo’s)</h3>
