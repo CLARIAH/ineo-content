@@ -16,7 +16,15 @@ Frog is an integration of memory-based natural language processing (NLP) modules
 
 ## Learn
 
-### Instruction webpages
+* All NLP modules are based on Timbl, the Tilburg memory-based learning software package. Most modules were created in the 1990s at the ILK Research Group (Tilburg University, the Netherlands) and the CLiPS Research Centre (University of Antwerp, Belgium).
+* Over the years they have been integrated into a single text processing tool, which is currently maintained and developed by the Language Machines Research Group and the Centre for Language and Speech Technology at Radboud University (Nijmegen, the Netherlands).
+* Frog produces FoLiA XML, or tab-delimited column-formatted output. To learn more about what the output contains, have look at [the website](https://languagemachines.github.io/frog/#:~:text=the%20CLARIAH%20programme.-,What%20does%20it%20do%3F,-Frog%27s%20current).
+
+### Installation
+
+There are two ways to install the software:
+﻿* You can download Frog, manually compile and install it from source. However, due to the many dependencies and required technical expertise this is not an easy endeavor.*
+﻿ The recommendation methods is using LaMachine. Frog is part of theLaMachine software distribution and includes all necessary dependencies. It runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under other operating systems, including Windows. LaMachine makes the installation of Frog straightforward; detailed instructions for the installation of LaMachine can be found here: <http://proycon.github.io/LaMachine/>.
 
 ## Mentions
 
