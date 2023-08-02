@@ -28,14 +28,15 @@ Simplicity - the data model must be easy to understand for a user/developer to u
 
 * *Import & Export* - Reads/writes a simple JSON format. But also designed with export to more complex formats in mind (such as W3C Web Annotations / RDF) and imports from common formats such as CONLL. Note that although STAM puts no constraints on annotation paradigms and vocabularies, higher data models may.
 
-The name STAM, an acronym for "*Stand-off Text Annotation Mode*l", is Dutch, Swedish, Afrikaans and Frisian for "*trunk*" (as in the trunk of a tree), the name itself depicts a solid foundation upon which more elaborate solutions can be built.
+The name STAM, an acronym for "*Stand-off Text Annotation Model*", is Dutch, Swedish, Afrikaans and Frisian for "*trunk*" (as in the trunk of a tree), the name itself depicts a solid foundation upon which more elaborate solutions can be built.
 
-If you want to learn more, please have a look at [the project's github](https://github.com/annotation/stam-python/blob/master/README.md).
+If you want to learn more, please have a look at [the project's github page](https://github.com/annotation/stam-python/blob/master/README.md).
 
 ## Learn
 
 ### Extensions
-STAM Iis kept simple and only the bare minimum is defined. Other functionality is included in extensions. Extensions do one or more of the following: they extend the data model, specify new serialisations, specify mappings/crosswalks to other paradigms/formats, specify additional functionality.
+
+STAM is kept simple and only the bare minimum is defined. Other functionality is included in extensions. Extensions do one or more of the following: they extend the data model, specify new serialisations, specify mappings/crosswalks to other paradigms/formats, specify additional functionality.
 
 The following are currently defined:
 
