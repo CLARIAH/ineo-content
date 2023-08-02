@@ -100,6 +100,8 @@ If *both* `identifier` and `group` are set, the identifier is used to associate
 metadata of one specific tool in the group/suite with the group as a whole. This allows you
 to still describe a whole tool suite in Ineo, but picks one of the tools in the suite as being its representative and have its metadata prominently features.
 
+Note that neither `identifier` nor `group` uniquely identify a markdown file, they may be reused from multiple files and are merely intended to link to <https://tools.clariah.nl>.
+
 The following Ineo-specific metadata can be added:
 
 * (TODO: add specification of part of Ineo's YAML syntax that are reusable. This is something for the Ineo developers to specify.)
