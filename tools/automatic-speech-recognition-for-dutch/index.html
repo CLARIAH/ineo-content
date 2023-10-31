@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/alud/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/automatic-speech-recognition-for-dutch/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>alud - Ineo Content</title>
+        <title>Automatic Speech Recognition for Dutch - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -38,11 +38,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">alud</a>
+    <a href="../alud/" class="dropdown-item">alud</a>
 </li>
                                     
 <li>
-    <a href="../automatic-speech-recognition-for-dutch/" class="dropdown-item">Automatic Speech Recognition for Dutch</a>
+    <a href="./" class="dropdown-item active">Automatic Speech Recognition for Dutch</a>
 </li>
                                     
 <li>
@@ -71,17 +71,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../.." class="nav-link">
+                                <a rel="prev" href="../alud/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../automatic-speech-recognition-for-dutch/" class="nav-link">
+                                <a rel="next" href="../frog/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/alud.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/automatic-speech-recognition-for-dutch.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -102,7 +102,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#alud" class="nav-link">alud</a>
+            <li class="nav-item" data-level="1"><a href="#automatic-speech-recognition-for-dutch" class="nav-link">Automatic Speech Recognition for Dutch</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
@@ -123,17 +123,28 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="alud">alud</h1>
-<p>alud is a <a href="https://go.dev/">Go</a> package for deriving <a href="https://universaldependencies.org/">Universal Dependencies</a> from Dutch sentences parsed with Alpino.</p>
+<h1 id="automatic-speech-recognition-for-dutch">Automatic Speech Recognition for Dutch</h1>
+<p>CLARIAH offers a <a href="https://webservices.cls.ru.nl/asr_nl">webservice</a> for automatic speech recognition to provide the transcriptions of recordings spoken in Dutch.</p>
 <h2 id="overview">Overview</h2>
-<p>*</p>
+<ul>
+<li>The <a href="https://webservices.cls.ru.nl/asr_nl">webservice</a> is hosted by the Radboud University and requires an institute login to be used.</li>
+<li>The user can upload one file per project. Bulk processing is possible after contacting the developers.</li>
+<li>The webservice offers multiple ASR models to choose from, including one for daily conversations, oral history interviews, parliamentary discussions and Belgian Dutch.</li>
+<li>The code of the webservice is shared on <a href="https://github.com/opensource-spraakherkenning-nl/asr_nl">GitHub</a>.</li>
+</ul>
+<h3 id="privacy-notice">Privacy notice</h3>
+<p>All data you upload to the service and data obtained using the service will remain yours and is accessible only by you and our technical staff. Your data will not be shared with third parties and not be used for any purpose other than the service's operation. You can remove your projects at any time and are encouraged to do so, which will remove your data from our servers permanently. We can not guarantee any long-term storage of your data so you are recommended to download the results and store it yourself immediately; projects on the server will be automatically deleted after 30 days. Despite our security precautions, we do discourage use of this service for highly confidential material as there is no encryption on the storage. Last, we also collect some statistics on the frequency of use of the service, when shared this will always be anonymised.</p>
 <h2 id="learn">Learn</h2>
-<p>*</p>
-<h3 id="installation">Installation</h3>
+<h3 id="how-to-use">How to use</h3>
+<p>In order to use the ASR webservice, the user needs an institute login. Having logged in, the user can create a project. Old projects are listed on the same page.</p>
+<p>Once the user has created a project, they can upload a file from their disk. Before doing so, they need to specify the file type (e.g. .wav or .mp3). The user is then prompted to choose the ASR model they want to use. A simple click on the Start button will start the processing of the file. The user may safely close their browser or shut down their computer during this process, the system will keep running on the server and is available when they return another time.</p>
+<p>The output consists of a textual transcription, including timestamps and speaker diarisation, in plain text as well as XML, and a logging file. </p>
+<h3 id="user-support">User support</h3>
+<p>The current version of the ASR webservice is hosted and maintained by the Centre for Language and Speech Technology of the Radboud University. If you have any suggestions, questions, or general feedback you can contact <a href="https://www.ru.nl/personen/heuvel-h-van-den">Henk van den Heuvel</a>.</p>
 <h2 id="mentions">Mentions</h2>
-<h3 id="articles-incl-conference-papers-presentations-and-demos">Articles (incl. conference papers, presentations and demo’s)</h3>
-<h3 id="projects">Projects</h3>
-<h3 id="teaching-and-instruction">Teaching and Instruction</h3></div>
+<h3 id="webpages">Webpages</h3>
+<p>Webservice: https://webservices.cls.ru.nl/asr_nl/</p>
+<p>Source code: https://github.com/opensource-spraakherkenning-nl/asr_nl</p></div>
             </div>
         </div>
 

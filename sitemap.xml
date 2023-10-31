@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://clariah.github.io/ineo-content/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://clariah.github.io/ineo-content/tools/alud/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://clariah.github.io/ineo-content/tools/automatic-speech-recognition-for-dutch/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://clariah.github.io/ineo-content/tools/frog/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://clariah.github.io/ineo-content/tools/grlc/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://clariah.github.io/ineo-content/tools/mediasuite/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://clariah.github.io/ineo-content/tools/stam/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
