@@ -1,6 +1,6 @@
 ---
 identifier: asr_nl
-title: asr_nl.md
+title: asr_nl
 ---
 # Automatic Speech Recognition for Dutch
 
