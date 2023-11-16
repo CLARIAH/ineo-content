@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/hypodisc/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/paqu/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>HypoDisc - Ineo Content</title>
+        <title>PaQu - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">HypoDisc</a>
+    <a href="../hypodisc/" class="dropdown-item">HypoDisc</a>
 </li>
                                     
 <li>
@@ -70,7 +70,7 @@
 </li>
                                     
 <li>
-    <a href="../paqu/" class="dropdown-item">PaQu</a>
+    <a href="./" class="dropdown-item active">PaQu</a>
 </li>
                                     
 <li>
@@ -87,17 +87,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../grlc/" class="nav-link">
+                                <a rel="prev" href="../mediasuite/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../mediasuite/" class="nav-link">
+                                <a rel="next" href="../stam/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/hypodisc.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/paqu.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -118,13 +118,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#hypodisc" class="nav-link">H﻿ypoDisc</a>
+            <li class="nav-item" data-level="1"><a href="#paqu-parse-and-query" class="nav-link">PaQu- Parse and Query</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">O﻿verview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">L﻿earn</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -135,18 +131,14 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="hypodisc">H﻿ypoDisc</h1>
-<p>This tool aims to discover hypotheses in RDF knowledge graphs by: 1) Training a multi-hop link prediction model on a graph subset, encouraging the clustering of similar context entities. 2) Using cluster centroids as representatives, ranking paths within clusters: top-k paths become the hypotheses.</p>
+<h1 id="paqu-parse-and-query">PaQu- Parse and Query</h1>
+<p>The PaQu web service makes it possible to search in syntactically annotated corpora in Dutch. You can parse your own Dutch text corpus or use one of two corpora provided by the developers.</p>
 <h2 id="overview">O﻿verview</h2>
-<p>The goal of discovering hypotheses is redefined as a multi-hop link prediction and embedding clustering problem. First, a multi-hop link prediction model is trained on a subset of the graph, while simultaneously encouraging the embeddings of entities whose context is similar to cluster together in the embedding space. The second step takes the centroids of the clusters, and uses them as representatives of these clusters with which to rank the set of paths that exist in the cluster, thereby swapping the original embedding by the new representative. The top-k paths form the hypotheses for that cluster.</p>
-<h2 id="learn">L﻿earn</h2>
-<h3 id="multimodal-learning">Multimodal learning</h3>
-<p>This pipeline includes experimental support for multimodal features, stored as literal nodes. These are disabled by default, but can be enabled by specifying one or more of the following modalities: numerical, temporal, textual, spatial, and visual. These modalities map to their corresponding XSD datatypes, or b64Image for images encoded as string literals. Note that, for literals to be considered a member of a modality they should correctly be annotated with a datatype or language tag.</p>
-<p>Find out more about how to create and run a HDF5 file (which in includes text and images) on the <a href="https://github.com/wxwilcke/hypodisc#getting-started">github</a>.</p>
-<h3 id="generating-clusters">Generating Clusters</h3>
-<p><a href="https://lvdmaaten.github.io/tsne/">t-SNE</a> can be used to visualize the clusters in the entity embedding space. You can enable this feature, by installing t-SNE as a submodule of this repository.</p>
-<p>Detailed information on how to use the tool can be found on the <a href="https://github.com/wxwilcke/hypodisc#generating-clusters">github</a>.</p>
-<p>The <a href="https://github.com/wxwilcke/hypodisc#readme">README.md</a> on the tool's <a href="https://github.com/wxwilcke/hypodisc#multimodal-learning">github</a> contains more information.</p></div>
+<ul>
+<li>PaQu uses the Alpino parser to make treebanks of your own text corpus, and to search in these treebanks using an interface based on the LASSY Word Relations Search interface (<a href="http://dev.clarin.nl/node/1966">http://dev.clarin.nl/node/1966</a>). Two treebanks are already available in the application: Lassy Klein (1M words, manually checked syntactic analysis) and Lassy Groot (700M words, syntactic analysis automatically assigned by Alpino).</li>
+<li>PaQu offers two ways to search through the syntactically annotated texts. The first option is to use the search bar to look for word pairs, optionally complemented by their syntactic relationship. The second search option is to use the query language XPath.</li>
+</ul>
+<!--EndFragment--></div>
             </div>
         </div>
 
