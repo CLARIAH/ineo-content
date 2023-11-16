@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://clariah.github.io/ineo-content/tools/gretel/</loc>
+         <lastmod>2023-11-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://clariah.github.io/ineo-content/tools/grlc/</loc>
          <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
