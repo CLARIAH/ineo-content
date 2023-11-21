@@ -8,11 +8,11 @@ alud is a [Go](https://go.dev/) package for deriving [Universal Dependencies](ht
 
 ## Overview
 
-*Universal Dependencies (UD) is a framework for consistent annotation of grammar (parts of speech, morphological features, and syntactic dependencies) across different human languages.
-*alud is a package for deriving Universal Dependencies parsed with Alpino, a collection of tools and programs for parsing Dutch sentences into dependency structures.
-*Usually, the input is XML in the alpino_ds format.
-*The output is in the CoNLL-U format, or the Universal Dependencies can be embedded into the alpino_ds format (version 1.10), making them available for XPath queries.
-*It is also possible to embed a user provided file in the CoNLL-U format, and embed this into the alpino_ds format.
+* Universal Dependencies (UD) is a framework for consistent annotation of grammar (parts of speech, morphological features, and syntactic dependencies) across different human languages.
+* alud is a package for deriving Universal Dependencies parsed with Alpino, a collection of tools and programs for parsing Dutch sentences into dependency structures.
+* Usually, the input is XML in the alpino_ds format.
+* The output is in the CoNLL-U format, or the Universal Dependencies can be embedded into the alpino_ds format (version 1.10), making them available for XPath queries.
+* It is also possible to embed a user provided file in the CoNLL-U format, and embed this into the alpino_ds format.
 
 ## Learn
 

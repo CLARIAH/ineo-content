@@ -1,0 +1,30 @@
+---
+identifier: auchann
+title: auchann
+---
+
+# AuChAnn
+
+AuChAnn is a python package that provides Automatic CHAT Annotation.
+
+## Overview
+
+* AuChAnn is a python package that provides Automatic CHAT Annotation based on a transcript string and an interpretation (or 'corrected') string. For example, when given: Transcript: 'Ik wilt nu eh na huis' Correction: 'Ik wil nu naar huis'
+
+* AuChAnn produces: CHAT-Annotation: 'ik wilt [: wil] nu &-eh na(ar) [* s:r:prep] huis'
+
+* CHAT is an annotation convention that was developed for the CHILDES corpus (MacWinney, 2000) and is used by many linguists to annotate speech. For more information on CHAT, you can read their manual: https://talkbank.org/manuals/CHAT.html.
+
+* AuChAnn was specifically developed to enhance linguistic data in the form of a transcript and interpretation by a linguist for use with SASTA (https://github.com/UUDigitalHumanitieslab/sasta)
+
+## Learn
+
+### Instruction webpages
+
+## Mentions
+
+### Articles (incl. conference papers, presentations and demo’s)
+
+### Projects
+
+### Teaching and Instruction
