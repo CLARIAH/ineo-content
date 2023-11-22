@@ -1,7 +1,5 @@
 # Ineo Content
 
-**At this stage this repository is a proposal!**
-
 ## Introduction
 
 This repository stores the *rich content* for the Ineo Resource finder. We
