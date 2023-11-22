@@ -87,7 +87,7 @@ title: The title of the resource
 
 For *tools*, we use either the `identifier` or `group` field to link to
 <https://tools.clariah.nl>. The `identifier` links to an exact resource, such as `frog` for <https://tools.clariah.nl/frog>, i.e. it is identical to what appears in the URL. The other one, `group`, links to a group or tool suite because the level of granularity offered on <https://tools.clariah.nl> may be too fine-grained compared to what is
-desirable for Ineo or other portals. It should be exact name of the group as it appears on the tool discovery overview. The name s of the groups an be easily spotted by looking at the table of contents there; the groups are the ones with sub-items.
+desirable for Ineo or other portals. It should be exact name of the group as it appears on the tool discovery overview. The name s of the group can be easily spotted by looking at the table of contents there; the groups are the ones with sub-items.
 
 ```markdown
 ---
@@ -204,7 +204,7 @@ tool and data developers.
 The maintainers, from CLARIAH's communication department, are:
 
 * Sebastiaan Fluitsma
-* Emma Verbree
+* Janessa Vleghert
 * Liselore Tissen
 
 
