@@ -2,15 +2,15 @@
 identifier: hypodisc
 title: HypoDisc
 ---
-# H﻿ypoDisc
+# HypoDisc
 
 This tool aims to discover hypotheses in RDF knowledge graphs by: 1) Training a multi-hop link prediction model on a graph subset, encouraging the clustering of similar context entities. 2) Using cluster centroids as representatives, ranking paths within clusters: top-k paths become the hypotheses.
 
-## O﻿verview
+## Overview
 
 The goal of discovering hypotheses is redefined as a multi-hop link prediction and embedding clustering problem. First, a multi-hop link prediction model is trained on a subset of the graph, while simultaneously encouraging the embeddings of entities whose context is similar to cluster together in the embedding space. The second step takes the centroids of the clusters, and uses them as representatives of these clusters with which to rank the set of paths that exist in the cluster, thereby swapping the original embedding by the new representative. The top-k paths form the hypotheses for that cluster.
 
-## L﻿earn
+## Learn
 
 ### Multimodal learning
 
