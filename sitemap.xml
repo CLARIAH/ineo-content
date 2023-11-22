@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://clariah.github.io/ineo-content/tools/corpus-frontend/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://clariah.github.io/ineo-content/tools/cow/</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
