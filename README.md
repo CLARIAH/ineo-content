@@ -89,7 +89,7 @@ desirable for Ineo or other portals. It should be exact name of the group as it 
 
 ```markdown
 ---
-identifier: tool
+identifier: tool-identifier-from-tools-clariah-nl
 title: Tool
 ---
 ```
@@ -99,6 +99,18 @@ metadata of one specific tool in the group/suite with the group as a whole. This
 to still describe a whole tool suite in Ineo, but picks one of the tools in the suite as being its representative and have its metadata prominently features.
 
 Note that neither `identifier` nor `group` uniquely identify a markdown file, they may be reused from multiple files and are merely intended to link to <https://tools.clariah.nl>.
+
+It is possible that a Rich Content description is focussed on certain Software-as-a-Service whereas the codemeta is more focussed on the underlying software. In such cases it can happen that the codemeta representation lists multiple services/deployments of that software (expressed via the `targetProduct` property in the codemeta JSON-LD), whereas in the Rich User Content you may want to only cover a particular one. An example of this is <https://tools.clariah.nl/#corpus-frontend> . To constrain a rich user content page to a single service, add the following to the YAML frontmatter:
+
+```markdown
+---
+identifier: tool-identifier-from-tools-clariah-nl
+title: Service name
+service: https://some.domain/service
+---
+```
+
+The URL to the service must exactly match the `url` property of the `targetProduct` in the metadata. This `service` option should be interpreted as a signal to the consolidation pipeline merging rich content and metadata that only this single service should be expressed (and none of the others, if any). Moreover, it indicates that expressing metadata of the service (the matching object under `targetProduct`) has precedence over expressing metadata of the source code, in situations where there might otherwise be a tie.
 
 The following Ineo-specific metadata can be added:
 
