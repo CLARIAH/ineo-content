@@ -25,7 +25,7 @@ CoW (CSV on the Web) is a conversion tool that transposes tabular datasets in CS
   to cattle, conversion could take longer and cattle is no longer being
   maintained will eventually be taken offline.
 
-## L﻿earn
+## Learn
 
 ### Instruction webpages
 
