@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/paqu/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>PaQu - Ineo Content</title>
+        <title>Gecco - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -58,7 +58,7 @@
 </li>
                                     
 <li>
-    <a href="../gecco/" class="dropdown-item">Gecco</a>
+    <a href="./" class="dropdown-item active">Gecco</a>
 </li>
                                     
 <li>
@@ -78,7 +78,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">PaQu</a>
+    <a href="../paqu/" class="dropdown-item">PaQu</a>
 </li>
                                     
 <li>
@@ -99,17 +99,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../mediasuite/" class="nav-link">
+                                <a rel="prev" href="../frog/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../stam/" class="nav-link">
+                                <a rel="next" href="../gretel/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/paqu.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -130,9 +130,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#paqu-parse-and-query" class="nav-link">PaQu- Parse and Query</a>
+            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">O﻿verview</a>
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -143,14 +147,37 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="paqu-parse-and-query">PaQu- Parse and Query</h1>
-<p>The PaQu web service makes it possible to search in syntactically annotated corpora in Dutch. You can parse your own Dutch text corpus or use one of two corpora provided by the developers.</p>
-<h2 id="overview">O﻿verview</h2>
+<h1 id="gecco">Gecco</h1>
+<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h2 id="overview">Overview</h2>
 <ul>
-<li>PaQu uses the Alpino parser to make treebanks of your own text corpus, and to search in these treebanks using an interface based on the LASSY Word Relations Search interface (<a href="http://dev.clarin.nl/node/1966">http://dev.clarin.nl/node/1966</a>). Two treebanks are already available in the application: Lassy Klein (1M words, manually checked syntactic analysis) and Lassy Groot (700M words, syntactic analysis automatically assigned by Alpino).</li>
-<li>PaQu offers two ways to search through the syntactically annotated texts. The first option is to use the search bar to look for word pairs, optionally complemented by their syntactic relationship. The second search option is to use the query language XPath.</li>
+<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
+<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
+<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
+<li>Training is explicitly included in the framework.</li>
+<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
+<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
+<li>Given an input text, Gecco will add various suggestions for correction.</li>
 </ul>
-<!--EndFragment--></div>
+<h2 id="learn">Learn</h2>
+<ul>
+<li>
+<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
+</li>
+<li>
+<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
+</li>
+<li>
+<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
+</li>
+<li>
+<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
+</li>
+<li>
+<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
+</li>
+</ul>
+<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
             </div>
         </div>
 
