@@ -19,12 +19,24 @@ AuChAnn is a python package that provides Automatic CHAT Annotation.
 
 ## Learn
 
-### Instruction webpages
+### Instructions
+You can [install AuChAnn using pip](https://github.com/UUDigitalHumanitieslab/auchann#getting-started) or [use AuChAnn in your own python applications](https://github.com/UUDigitalHumanitieslab/auchann#import-as-library).
+
+* The align_words function scans the transcript and correction and determines for each token whether a correction token is copied exactly from the transcript, replaces a token from the transcript, is inserted, or whether a transcript token has been omitted. Based on which of these operations has occurred, the function adds the appropriate CHAT annotation to the output string.
+
+* The algorithm uses edit distance to establish which words are replacements of each other, i.e. it links a transcript token to a correction token. Words with the lowest available edit distance are matched together, and based on this match the operations COPY and REPLACE are determined. If two candidates have the same edit distance to a token, word position is used to determine the match. The operations REMOVE and INSERT are established if no suitable match can be found for a transcript and correction token respectively.
+
+* In addition to establishing these four operations, the function detects several other properties of the transcript and correction which can be expressed in CHAT. For example, it determines whether a word is a filler or fragment, whether a conjugation error has occurred, or if a pronoun, preposition, or article has been used incorrectly.
+
+* The [AuChAnn GitHUb](https://github.com/UUDigitalHumanitieslab/auchann) offers more information.
 
 ## Mentions
 
-### Articles (incl. conference papers, presentations and demo’s)
+## Presentations
+Van Dijk, J. (2023) Intergrating AuChAnn into SASTA [Conference presentation], CLIN33, University of Antwerp, Antwerp, Belgium.https://clin33.uantwerpen.be/abstract/integrating-auchann-into-sasta/.
 
-### Projects
+Wijnen, F. & Van Stiphout, M.  (2023) Automatic CHAT Annotation: A Feasibility Study [lunch lecture], online, https://www.clariah.nl/nl/evenementen/lunchlezing-auchann.
 
-### Teaching and Instruction
+### Webpages
+
+[Digital Humanities Lab launches AuChAnn](https://cdh.uu.nl/2022/08/digital-humanities-lab-launches-auchann/)
