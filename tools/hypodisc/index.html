@@ -118,13 +118,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#hypodisc" class="nav-link">H﻿ypoDisc</a>
+            <li class="nav-item" data-level="1"><a href="#hypodisc" class="nav-link">HypoDisc</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">O﻿verview</a>
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">L﻿earn</a>
+            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -135,11 +135,11 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="hypodisc">H﻿ypoDisc</h1>
+<h1 id="hypodisc">HypoDisc</h1>
 <p>This tool aims to discover hypotheses in RDF knowledge graphs by: 1) Training a multi-hop link prediction model on a graph subset, encouraging the clustering of similar context entities. 2) Using cluster centroids as representatives, ranking paths within clusters: top-k paths become the hypotheses.</p>
-<h2 id="overview">O﻿verview</h2>
+<h2 id="overview">Overview</h2>
 <p>The goal of discovering hypotheses is redefined as a multi-hop link prediction and embedding clustering problem. First, a multi-hop link prediction model is trained on a subset of the graph, while simultaneously encouraging the embeddings of entities whose context is similar to cluster together in the embedding space. The second step takes the centroids of the clusters, and uses them as representatives of these clusters with which to rank the set of paths that exist in the cluster, thereby swapping the original embedding by the new representative. The top-k paths form the hypotheses for that cluster.</p>
-<h2 id="learn">L﻿earn</h2>
+<h2 id="learn">Learn</h2>
 <h3 id="multimodal-learning">Multimodal learning</h3>
 <p>This pipeline includes experimental support for multimodal features, stored as literal nodes. These are disabled by default, but can be enabled by specifying one or more of the following modalities: numerical, temporal, textual, spatial, and visual. These modalities map to their corresponding XSD datatypes, or b64Image for images encoded as string literals. Note that, for literals to be considered a member of a modality they should correctly be annotated with a datatype or language tag.</p>
 <p>Find out more about how to create and run a HDF5 file (which in includes text and images) on the <a href="https://github.com/wxwilcke/hypodisc#getting-started">github</a>.</p>
