@@ -1,6 +1,6 @@
 ---
 identifier: auchann
-title: auchann
+title: AuChAnn
 ---
 
 # AuChAnn
