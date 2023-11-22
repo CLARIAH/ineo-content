@@ -8,7 +8,9 @@ This tool aims to discover hypotheses in RDF knowledge graphs by: 1) Training a 
 
 ## Overview
 
-The goal of discovering hypotheses is redefined as a multi-hop link prediction and embedding clustering problem. First, a multi-hop link prediction model is trained on a subset of the graph, while simultaneously encouraging the embeddings of entities whose context is similar to cluster together in the embedding space. The second step takes the centroids of the clusters, and uses them as representatives of these clusters with which to rank the set of paths that exist in the cluster, thereby swapping the original embedding by the new representative. The top-k paths form the hypotheses for that cluster.
+Hypodisc supports multimodal information of various types, which, in accordance to the RDF data model, are stored as string literals with an accompanying datatype or language tag. At present, Hypodisc understands numerical and temporal datatypes, as well as natural language and other strings. Literals with language tags are also treated as strings. To discover meaningful patterns in these data, a cluster-based approach is applied to all elements of the same datatype with a certain context.
+
+See the [documentation](https://wxwilcke.gitlab.io/hypodisc/) for more info.
 
 ## Learn
 
