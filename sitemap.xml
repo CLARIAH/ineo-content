@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://clariah.github.io/ineo-content/tools/CLAM/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://clariah.github.io/ineo-content/tools/alud/</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
