@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gretel/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/auchann/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>GrETEL - Ineo Content</title>
+        <title>AuChAnn - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -46,7 +46,7 @@
 </li>
                                     
 <li>
-    <a href="../auchann/" class="dropdown-item">AuChAnn</a>
+    <a href="./" class="dropdown-item active">AuChAnn</a>
 </li>
                                     
 <li>
@@ -58,7 +58,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">GrETEL</a>
+    <a href="../gretel/" class="dropdown-item">GrETEL</a>
 </li>
                                     
 <li>
@@ -95,17 +95,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../asr_nl/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../grlc/" class="nav-link">
+                                <a rel="next" href="../cow/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gretel.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/auchann.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -126,17 +126,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gretel" class="nav-link">GrETEL</a>
+            <li class="nav-item" data-level="1"><a href="#auchann" class="nav-link">AuChAnn</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">O﻿verview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">L﻿earn</a>
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">M﻿entions</a>
+            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#presentations" class="nav-link">Presentations</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -147,44 +151,46 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gretel">GrETEL</h1>
-<p>GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input.</p>
-<h2 id="overview">O﻿verview</h2>
+<h1 id="auchann">AuChAnn</h1>
+<p>AuChAnn is a python package that provides Automatic CHAT Annotation.</p>
+<h2 id="overview">Overview</h2>
 <ul>
-<li>GrETEL stands for Greedy Extraction of Trees for Empirical Linguistics.</li>
-<li>GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input. This provides a convenient way for novice and non-technical users to use treebanks with a limited knowledge of the underlying syntax and formal query languages.</li>
-<li>By allowing linguists to search for constructions similar to the example they provide, GrETEL aims to bridge the gap between descriptive-theoretical and computational linguistics.</li>
-<li>The example-based query procedure consists of multiple steps: 1) The user enters an example of the construction they are interested in. 2) The example is returned in the form of a matrix, in which the user specifies which aspects of this example are essential for the construction under investigation. This matrix is automatically converted in an XPath query, which can be manually edited or even written by the user. 3) The user chooses the corpus on which the query must be executed. 4) The query is executed on the selected corpus, and the matching constructions are presented to the user as a list of sentences, which can be downloaded. The user can also click on the sentences in order to visualize the results as syntax trees, in which the matching part of the tree is highlighted. 5) The results of the query can then be efficiently analysed through the use of a pivot table.</li>
-<li>GrETEL enables search in the LASSY-SMALL and the CGN (Spoken Dutch Corpus) Treebanks (1 million tokens each), among other corpora.</li>
-<li>GrETEL also allows users to upload their own corpus. The corpus is then automatically parsed with the Alpino parser, and can then be used for querying.</li>
+<li>
+<p>AuChAnn is a python package that provides Automatic CHAT Annotation based on a transcript string and an interpretation (or 'corrected') string. For example, when given: Transcript: 'Ik wilt nu eh na huis' Correction: 'Ik wil nu naar huis'</p>
+</li>
+<li>
+<p>AuChAnn produces: CHAT-Annotation: 'ik wilt [: wil] nu &amp;-eh na(ar) [* s:r:prep] huis'</p>
+</li>
+<li>
+<p>CHAT is an annotation convention that was developed for the CHILDES corpus (MacWinney, 2000) and is used by many linguists to annotate speech. For more information on CHAT, you can read their manual: https://talkbank.org/manuals/CHAT.html.</p>
+</li>
+<li>
+<p>AuChAnn was specifically developed to enhance linguistic data in the form of a transcript and interpretation by a linguist for use with SASTA (https://github.com/UUDigitalHumanitieslab/sasta)</p>
+</li>
 </ul>
-<h2 id="learn">L﻿earn</h2>
-<h3 id="instructions-and-support">Instructions and support</h3>
-<p><strong>Instructions</strong>\
-Most recently, a complete tutorial on GrETEL was given on Oct 7, 2022 by Jan Odijk (in Dutch). This tutorial was taped and included slides and exercises, which can be found <a href="https://surfdrive.surf.nl/files/index.php/s/xfjVB2AfwgOpmNM">here</a>.</p>
-<p><a href="https://gretel.hum.uu.nl/ng/documentation">The GrETEL webpage</a> offers a wide range of information, including tutorials, documentation and FAQ.</p>
+<h2 id="learn">Learn</h2>
+<h3 id="instructions">Instructions</h3>
+<p>You can <a href="https://github.com/UUDigitalHumanitieslab/auchann#getting-started">install AuChAnn using pip</a> or <a href="https://github.com/UUDigitalHumanitieslab/auchann#import-as-library">use AuChAnn in your own python applications</a>.</p>
 <ul>
-<li><a href="http://gretel.ccl.kuleuven.be/docs/GrETEL2-tutorial.pdf">Slides</a></li>
-<li><a href="http://gretel.ccl.kuleuven.be/docs/GrETEL2-tutorial-handson.pdf">Exercises</a></li>
-<li><a href="http://gretel.ccl.kuleuven.be/project/docs.php">Manuals and documentation</a></li>
-<li><a href="https://gretel.hum.uu.nl/ng/documentation">FAQ</a></li>
-<li><a href="https://gretel.hum.uu.nl/ng/documentation#contact">Contact the developers</a></li>
+<li>
+<p>The align_words function scans the transcript and correction and determines for each token whether a correction token is copied exactly from the transcript, replaces a token from the transcript, is inserted, or whether a transcript token has been omitted. Based on which of these operations has occurred, the function adds the appropriate CHAT annotation to the output string.</p>
+</li>
+<li>
+<p>The algorithm uses edit distance to establish which words are replacements of each other, i.e. it links a transcript token to a correction token. Words with the lowest available edit distance are matched together, and based on this match the operations COPY and REPLACE are determined. If two candidates have the same edit distance to a token, word position is used to determine the match. The operations REMOVE and INSERT are established if no suitable match can be found for a transcript and correction token respectively.</p>
+</li>
+<li>
+<p>In addition to establishing these four operations, the function detects several other properties of the transcript and correction which can be expressed in CHAT. For example, it determines whether a word is a filler or fragment, whether a conjugation error has occurred, or if a pronoun, preposition, or article has been used incorrectly.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/UUDigitalHumanitieslab/auchann">AuChAnn GitHUb</a> offers more information.</p>
+</li>
 </ul>
-<p><strong>Local installation</strong>\
-It is possible to install GrETEL locally. GrETEL’s <a href="https://github.com/UUDigitalHumanitieslab/gretel">GitHub repository</a> has detailed information on how to install GrETEL locally, as well as notes for users and developers.</p>
-<p><strong>Contact the developers</strong>\
-The current version of GrETEL is developed by the Digital Humanities Lab at Utrecht University. If you have any suggestions, questions, or general feedback you are welcome to give us a ring, or send us an email. You can find contact information on Digital Humanities Lab's website or in the footer of the <a href="https://gretel.hum.uu.nl/">GrETEL webpage</a>.</p>
-<h2 id="mentions">M﻿entions</h2>
-<h3 id="key-publications">Key publications:</h3>
-<ul>
-<li>Jan Odijk, Martijn van der Klis and Sheean Spoel (2018). “Extensions to the GrETEL treebank query application.” In: Proceedings of the 16th International Workshop on Treebanks and Linguistic Theories. Prague, Czech Republic. pp. 46-55.</li>
-<li>Liesbeth Augustinus, Vincent Vandeghinste and Frank Van Eynde (2012). “Example-based treebank querying.” In: Proceedings of the 8th Conference on Language Resources and Evaluation (LREC 2012). Istanbul, Turkey. pp. 3161-3167.</li>
-</ul>
-<p>Source code: <a href="https://github.com/UUDigitalHumanitieslab/gretel">https://github.com/UUDigitalHumanitieslab/gretel</a></p>
-<p>Previous versions:<a href="http://gretel.ccl.kuleuven.be/gretel3/">http://gretel.ccl.kuleuven.be/gretel3/</a> <a href="http://gretel.ccl.kuleuven.be/gretel-2.0/ebs/input.php">http://gretel.ccl.kuleuven.be/gretel-2.0/ebs/input.php</a></p>
-<p>More publications and talks: <a href="http://gretel.ccl.kuleuven.be/project/publications.php">http://gretel.ccl.kuleuven.be/project/publications.php</a></p>
-<p>Poly-GrETEL: An extension of GrETEL to be used in parallel corpora: <a href="http://gretel.ccl.kuleuven.be/poly-gretel/">http://gretel.ccl.kuleuven.be/poly-gretel/</a></p>
-<p>GrETEL for Afrikaans: <a href="http://gretel.ccl.kuleuven.be/afribooms/">http://gretel.ccl.kuleuven.be/afribooms/</a></p></div>
+<h2 id="mentions">Mentions</h2>
+<h2 id="presentations">Presentations</h2>
+<p>Van Dijk, J. (2023) Intergrating AuChAnn into SASTA [Conference presentation], CLIN33, University of Antwerp, Antwerp, Belgium.https://clin33.uantwerpen.be/abstract/integrating-auchann-into-sasta/.</p>
+<p>Wijnen, F. &amp; Van Stiphout, M.  (2023) Automatic CHAT Annotation: A Feasibility Study [lunch lecture], online, https://www.clariah.nl/nl/evenementen/lunchlezing-auchann.</p>
+<h3 id="webpages">Webpages</h3>
+<p><a href="https://cdh.uu.nl/2022/08/digital-humanities-lab-launches-auchann/">Digital Humanities Lab launches AuChAnn</a></p></div>
             </div>
         </div>
 

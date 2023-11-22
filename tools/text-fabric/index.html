@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gretel/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/text-fabric/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>GrETEL - Ineo Content</title>
+        <title>Text-Fabric - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -58,7 +58,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">GrETEL</a>
+    <a href="../gretel/" class="dropdown-item">GrETEL</a>
 </li>
                                     
 <li>
@@ -82,7 +82,7 @@
 </li>
                                     
 <li>
-    <a href="../text-fabric/" class="dropdown-item">Text-Fabric</a>
+    <a href="./" class="dropdown-item active">Text-Fabric</a>
 </li>
                                 </ul>
                             </li>
@@ -95,17 +95,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../stam/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../grlc/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gretel.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/text-fabric.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -126,17 +126,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gretel" class="nav-link">GrETEL</a>
+            <li class="nav-item" data-level="1"><a href="#text-fabric" class="nav-link">Text-Fabric</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">O﻿verview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">L﻿earn</a>
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">M﻿entions</a>
+            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -147,44 +147,69 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gretel">GrETEL</h1>
-<p>GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input.</p>
-<h2 id="overview">O﻿verview</h2>
+<h1 id="text-fabric">Text-Fabric</h1>
+<p>Text-Fabric processes corpora as annotated graphs, treating them as structured data without losing text richness like embedding. It works after markup removal, preserving complete logical structure.</p>
+<h2 id="overview">Overview</h2>
 <ul>
-<li>GrETEL stands for Greedy Extraction of Trees for Empirical Linguistics.</li>
-<li>GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input. This provides a convenient way for novice and non-technical users to use treebanks with a limited knowledge of the underlying syntax and formal query languages.</li>
-<li>By allowing linguists to search for constructions similar to the example they provide, GrETEL aims to bridge the gap between descriptive-theoretical and computational linguistics.</li>
-<li>The example-based query procedure consists of multiple steps: 1) The user enters an example of the construction they are interested in. 2) The example is returned in the form of a matrix, in which the user specifies which aspects of this example are essential for the construction under investigation. This matrix is automatically converted in an XPath query, which can be manually edited or even written by the user. 3) The user chooses the corpus on which the query must be executed. 4) The query is executed on the selected corpus, and the matching constructions are presented to the user as a list of sentences, which can be downloaded. The user can also click on the sentences in order to visualize the results as syntax trees, in which the matching part of the tree is highlighted. 5) The results of the query can then be efficiently analysed through the use of a pivot table.</li>
-<li>GrETEL enables search in the LASSY-SMALL and the CGN (Spoken Dutch Corpus) Treebanks (1 million tokens each), among other corpora.</li>
-<li>GrETEL also allows users to upload their own corpus. The corpus is then automatically parsed with the Alpino parser, and can then be used for querying.</li>
+<li>
+<p>A corpus of ancient texts and (linguistic) annotations represents a large body of knowledge. Text-Fabric (TF) makes that knowledge accessible to programmers and non-programmers.</p>
+</li>
+<li>
+<p>TF is machinery for processing such corpora as annotated graphs. It treats corpora and annotations as data, much like big tables, but without losing the rich structure of text, such as embedding and multiple representations. It deals with text in a state where all markup is gone, but where the complete logical structure still sits in the data.</p>
+</li>
+<li>
+<p>Whether a corpus comes from plain texts, OCR output, databases, XML, TEI: TF has support to convert it to single column files, where each file corresponds with a feature of the text.</p>
+</li>
+<li>
+<p>The Python library tf can be used to collect a bunch of features and display it as an annotated text. What ties the features together are natural numbers, that serve to anchor the elementary positions in the text as well as the relevant structures within the text.</p>
+</li>
+<li>
+<p>When TF loads a dataset of features, you can instruct it to get the features from anywhere. That means it supports workflows where annotations are produced by third parties and can be used against the original corpus, without additional work. It also facilitates mappings between ongoing versions of the corpus, so that annotations made on older versions can be ported to newer versions without redoing the annotation creation.</p>
+</li>
 </ul>
-<h2 id="learn">L﻿earn</h2>
-<h3 id="instructions-and-support">Instructions and support</h3>
-<p><strong>Instructions</strong>\
-Most recently, a complete tutorial on GrETEL was given on Oct 7, 2022 by Jan Odijk (in Dutch). This tutorial was taped and included slides and exercises, which can be found <a href="https://surfdrive.surf.nl/files/index.php/s/xfjVB2AfwgOpmNM">here</a>.</p>
-<p><a href="https://gretel.hum.uu.nl/ng/documentation">The GrETEL webpage</a> offers a wide range of information, including tutorials, documentation and FAQ.</p>
+<h2 id="learn">Learn</h2>
+<p>The <a href="https://annotation.github.io/text-fabric/tf/index.html">Text-Fabric webpages</a> offer a wide set instruction and support material, including:
+* <a href="https://annotation.github.io/text-fabric/tf/about/faq.html">Installation instructions</a>
+* <a href="https://annotation.github.io/text-fabric/tf/about/use.html">How to use it</a>
+* <a href="https://annotation.github.io/text-fabric/tf/about/faq.html">FAQ</a>
+* <a href="https://annotation.github.io/text-fabric/tf/about/fileformats.html">File formats</a>
+* <a href="https://annotation.github.io/text-fabric/tf/dataset/modify.html">Dataset manipulation</a>
+* <a href="https://annotation.github.io/text-fabric/tf/about/searchusage.html">Search usage</a></p>
 <ul>
-<li><a href="http://gretel.ccl.kuleuven.be/docs/GrETEL2-tutorial.pdf">Slides</a></li>
-<li><a href="http://gretel.ccl.kuleuven.be/docs/GrETEL2-tutorial-handson.pdf">Exercises</a></li>
-<li><a href="http://gretel.ccl.kuleuven.be/project/docs.php">Manuals and documentation</a></li>
-<li><a href="https://gretel.hum.uu.nl/ng/documentation">FAQ</a></li>
-<li><a href="https://gretel.hum.uu.nl/ng/documentation#contact">Contact the developers</a></li>
+<li><a href="https://nbviewer.org/github/annotation/banks/blob/master/tutorial/use.ipynb">A tutorial</a></li>
 </ul>
-<p><strong>Local installation</strong>\
-It is possible to install GrETEL locally. GrETEL’s <a href="https://github.com/UUDigitalHumanitieslab/gretel">GitHub repository</a> has detailed information on how to install GrETEL locally, as well as notes for users and developers.</p>
-<p><strong>Contact the developers</strong>\
-The current version of GrETEL is developed by the Digital Humanities Lab at Utrecht University. If you have any suggestions, questions, or general feedback you are welcome to give us a ring, or send us an email. You can find contact information on Digital Humanities Lab's website or in the footer of the <a href="https://gretel.hum.uu.nl/">GrETEL webpage</a>.</p>
-<h2 id="mentions">M﻿entions</h2>
-<h3 id="key-publications">Key publications:</h3>
+<p>Have a look on the <a href="https://annotation.github.io/text-fabric/tf/index.html">Text-Fabric webpages</a> for a complete overview.</p>
+<h3 id="instructions">Instructions</h3>
+<p><strong>Prerequisites</strong>: you need to have Python installed on your machine.Make sure you have at least Python 3.7.0.</p>
+<p><strong>If you do not have Python</strong>:
+* The fastest way to set up everything you need to use TF is by installing the JupyterLab Desktop application.</p>
 <ul>
-<li>Jan Odijk, Martijn van der Klis and Sheean Spoel (2018). “Extensions to the GrETEL treebank query application.” In: Proceedings of the 16th International Workshop on Treebanks and Linguistic Theories. Prague, Czech Republic. pp. 46-55.</li>
-<li>Liesbeth Augustinus, Vincent Vandeghinste and Frank Van Eynde (2012). “Example-based treebank querying.” In: Proceedings of the 8th Conference on Language Resources and Evaluation (LREC 2012). Istanbul, Turkey. pp. 3161-3167.</li>
+<li>
+<p>This installs both JupyterLab and Python in one go, as a desktop application running under MacOS, Linux or Windows.</p>
+</li>
+<li>
+<p>The Jupyter Desktop App can be downloaded from JupyterLab-desktop, choose the one that fits your system.</p>
+</li>
 </ul>
-<p>Source code: <a href="https://github.com/UUDigitalHumanitieslab/gretel">https://github.com/UUDigitalHumanitieslab/gretel</a></p>
-<p>Previous versions:<a href="http://gretel.ccl.kuleuven.be/gretel3/">http://gretel.ccl.kuleuven.be/gretel3/</a> <a href="http://gretel.ccl.kuleuven.be/gretel-2.0/ebs/input.php">http://gretel.ccl.kuleuven.be/gretel-2.0/ebs/input.php</a></p>
-<p>More publications and talks: <a href="http://gretel.ccl.kuleuven.be/project/publications.php">http://gretel.ccl.kuleuven.be/project/publications.php</a></p>
-<p>Poly-GrETEL: An extension of GrETEL to be used in parallel corpora: <a href="http://gretel.ccl.kuleuven.be/poly-gretel/">http://gretel.ccl.kuleuven.be/poly-gretel/</a></p>
-<p>GrETEL for Afrikaans: <a href="http://gretel.ccl.kuleuven.be/afribooms/">http://gretel.ccl.kuleuven.be/afribooms/</a></p></div>
+<p>You can access the tutorial on the <a href="https://annotation.github.io/text-fabric/tf/about/install.html#install">Text-Fabric website</a>, providing step-by-step guide for the installation process.</p>
+<p>There is also a <a href="https://nbviewer.org/github/annotation/banks/blob/master/tutorial/use.ipynb">tutorial</a> available.</p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="articles">Articles</h3>
+<ul>
+<li>Johnson, C., de Ridder, A., Kokken, M., &amp; Roorda, D. (2020-06-26). OldAssyrian. DOI: 10.5281/zenodo.3909515[https://doi.org/10.5281/zenodo.3909515].</li>
+<li>Johnson, C., de Ridder, A., Kokken, M., &amp; Roorda, D. (2020-06-26). OldBabylonian. DOI: (10.5281/zenodo.3909507)[https://doi.org/10.5281/zenodo.3909507].</li>
+<li>Johnson, C., &amp; Roorda, D. (2022-02-02). NinMed. DOI: (10.5281/zenodo.5984171)[https://doi.org/10.5281/zenodo.5984171].</li>
+<li>Johnson, C., &amp; Roorda, D. (2018-03-07). Uruk. DOI: (10.5281/zenodo.1482791.)[https://doi.org/10.5281/zenodo.1482791]
+*Kingham, c. &amp; Roorda, D. Northeastern Neo-Aramaic Text-Fabric Corpus. DOI: (10.5281/zenodo.3250720)[https://doi.org/10.5281/zenodo.3250720].</li>
+<li>Naaijer, M., &amp; Roorda, D. (2020-12-01). Dead Sea Scrolls. DOI: (10.5281/zenodo.3944788)[https://doi.org/10.5281/zenodo.3944788].</li>
+<li>Roorda, D. (2018). Coding the Hebrew Bible. In: Research Data Journal for the Humanities and Social Sciences, 27-41. DOI: (10.1163/24523666-01000011)[https://doi.org/10.1163/24523666-01000011]</li>
+<li>Roorda, D. (2019). Text-fabric: handling Biblical data with IKEA logistics. In: HIPHIL Novum, 126-135[https://www.hiphil.org/index.php/hiphil/article/view/50].</li>
+<li>Roorda, D., Kalkman, G., Naaijer, M., &amp; van Cranenburgh, A. (2014). LAF-Fabric: a data analysis tool for Linguistic Annotation Framework with an application to the Hebrew Bible. In: Computational Linguistics in the Netherlands Journal, 105-120[https://www.clinjournal.org/clinj/article/view/44].</li>
+<li>Roorda, D. (2015). The Hebrew Bible as Data: Laboratory – Sharing – Experiences. In: CLARIN in the Low Countries, 211-224[https://arxiv.org/abs/1501.01866].</li>
+<li>Scherer, B., Mataar, Y., van Peursen, W., &amp; Roorda, D. (2021-12-24). Dhammapada-Latine. DOI: (10.5281/zenodo.5803464)[https://doi.org/10.5281/zenodo.5803464].</li>
+<li>Sikkel, C., Roorda, D., &amp; van Peursen, W. (2019-01-31). BHSA. DOI: (10.5281/zenodo.1007624)[https://doi.org/10.5281/zenodo.1007624].</li>
+<li>van Lit, C., &amp; Roorda, D. (2019-01-15). Quran. DOI: (10.5281/zenodo.2532177)[https://doi.org/10.5281/zenodo.2532177].</li>
+</ul></div>
             </div>
         </div>
 
