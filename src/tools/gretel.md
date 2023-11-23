@@ -1,5 +1,11 @@
 ---
 identifier: gretel
+carousel:
+  - /media/gretel-logo.png
+  - /media/gretel-screenshot1.png
+  - /media/gretel-screenshot2.png
+  - /media/gretel-screenshot3.png
+  - /media/gretel-screenshot4.png
 title: GrETEL
 ---
 # GrETEL
