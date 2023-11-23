@@ -12,7 +12,7 @@ title: GrETEL
 
 GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input.
 
-## O﻿verview
+## Overview
 
 * GrETEL stands for Greedy Extraction of Trees for Empirical Linguistics.
 * GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input. This provides a convenient way for novice and non-technical users to use treebanks with a limited knowledge of the underlying syntax and formal query languages.
@@ -21,11 +21,11 @@ GrETEL is a user-friendly query engine in which linguists can use an utterance a
 * GrETEL enables search in the LASSY-SMALL and the CGN (Spoken Dutch Corpus) Treebanks (1 million tokens each), among other corpora.
 * GrETEL also allows users to upload their own corpus. The corpus is then automatically parsed with the Alpino parser, and can then be used for querying.
 
-## L﻿earn
+## Learn
 
 ### Instructions and support
 
-**Instructions**\
+**Instructions**
 Most recently, a complete tutorial on GrETEL was given on Oct 7, 2022 by Jan Odijk (in Dutch). This tutorial was taped and included slides and exercises, which can be found [here](https://surfdrive.surf.nl/files/index.php/s/xfjVB2AfwgOpmNM).
 
 [The GrETEL webpage](https://gretel.hum.uu.nl/ng/documentation) offers a wide range of information, including tutorials, documentation and FAQ.
@@ -36,13 +36,13 @@ Most recently, a complete tutorial on GrETEL was given on Oct 7, 2022 by Jan Odi
 * [FAQ](https://gretel.hum.uu.nl/ng/documentation)
 * [Contact the developers](https://gretel.hum.uu.nl/ng/documentation#contact)
 
-**Local installation**\
+**Local installation**
 It is possible to install GrETEL locally. GrETEL’s [GitHub repository](https://github.com/UUDigitalHumanitieslab/gretel) has detailed information on how to install GrETEL locally, as well as notes for users and developers.
 
-**Contact the developers**\
+**Contact the developers**
 The current version of GrETEL is developed by the Digital Humanities Lab at Utrecht University. If you have any suggestions, questions, or general feedback you are welcome to give us a ring, or send us an email. You can find contact information on Digital Humanities Lab's website or in the footer of the [GrETEL webpage](https://gretel.hum.uu.nl/).
 
-## M﻿entions
+## Mentions
 
 ### Key publications:
 
