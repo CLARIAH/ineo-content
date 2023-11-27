@@ -6,7 +6,7 @@ carousel:
   - /media/mediasuite-cover2.png
   - /media/mediasuite-cover3.png
   - /media/mediasuite-cover4.png
-identifier: mediasuite
+identifier: mediasuite-website
 ---
 # Media Suite
 
