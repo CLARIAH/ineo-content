@@ -1,5 +1,5 @@
 ---
-identifier: text-fabric
+identifier: textfabric
 title: Text-Fabric
 ---
 
