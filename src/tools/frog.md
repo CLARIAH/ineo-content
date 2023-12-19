@@ -49,8 +49,8 @@ Frog is free software; you can redistribute it and/or modify it under the terms 
 
 To download and install Frog:
 
-1. First check if there are up-to-date packages included in your distribution's package manager. There are packages for Debian, Ubuntu and Arch Linux.
-2. If not, we **strongly recommend** you use our [LaMachine](https://proycon.github.io/LaMachine/) software distribution, which includes Frog and all necessary dependencies, and runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under any host OS.
+1. First check if there are up-to-date packages included in your distribution's package manager. There are packages for Alpine Linux, Homebrew (macos), Debian, Ubuntu and Arch Linux.
+2. Use a docker container as instructed [here](https://github.com/LanguageMachines/frog/blob/master/README.md#container-usage).
 3. Alternatively, you can always download, compile and install Frog manually, as shown next.
 
 #### Manual installation
