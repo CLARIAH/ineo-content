@@ -1,6 +1,6 @@
 ---
 title: CLAM
-identifier: CLAM
+identifier: clam
 ---
 
 # Frog
@@ -95,7 +95,7 @@ CLAM support is funded by the NWO CLARIN-NL programme and its successor CLARIAH.
 * [CLAM documentation](https://clam.readthedocs.io/en/stable/)
 * [CLAM GitHub page](https://github.com/proycon/clam/)
 * [CLAM Python Package](https://pypi.org/project/CLAM/)
-* 
+
 ### Poster presentation
 
 Maarten van Gompel, Martin Reynaert & Antal van den Bosch (2011, February). [*CLAM: Computational Linguistics Application Mediator*.](https://proycon.github.io/clam/clam_poster.png) [Poster presentation]. CLIN 21, Tilburg.
