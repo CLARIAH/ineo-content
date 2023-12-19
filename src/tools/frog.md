@@ -54,6 +54,7 @@ To download and install Frog:
 3. Alternatively, you can always download, compile and install Frog manually, as shown next.
 
 #### Manual installation
+
 * [Source code](https://github.com/LanguageMachines/frog/)
 * [Stable releases](https://github.com/LanguageMachines/frog/releases)
 
@@ -81,32 +82,32 @@ As well as the following 3rd party dependencies:
 
 To let Frog leap, simply invoking frog without arguments will produce a list of available commandline options. Some main options are:
 
-* <tt>frog -t [file]</tt> will run all modules on the text in <tt>[file]</tt>.
-* <tt>frog --testdir=[dir]</tt> will let Frog process all files in the directory <tt>[dir]</tt>.
-* <tt>frog -S [port]</tt> starts up a Frog server listening on port number <tt>[port]</tt>.
-* With <tt>--skip=[mptnc]</tt> you can tell Frog to skip tokenization (<tt>t</tt>), base phrase chunking (<tt>c</tt>), named-entity recognition (<tt>n</tt>), multi-word unit chunking for the parser (<tt>m</tt>), or parsing (<tt>p</tt>).
+* ``frog -t [file]`` will run all modules on the text in ``[file]``
+* ``frog --testdir=[dir]`` will let Frog process all files in the directory ``[dir]``.
+* ``frog -S [port]`` starts up a Frog server listening on port number ``[port]``.
+* With ``--skip=[mptnc]`` you can tell Frog to skip tokenization (``t``), base phrase chunking (``c``), named-entity recognition (``n``), multi-word unit chunking for the parser (``m``), or parsing (``p``).
 
 Frog can be used from Python through the [python-frog](https://github.com/proycon/python-frog) binding, which has to be obtained separately unless you are using [LaMachine](https://proycon.github.io/LaMachine/). A python-frog example is shown below:
 
-> <tt>\
+```
 import frog
 frog = frog.Frog(frog.FrogOptions(parser=False))
 output = frog.process_raw("Dit is een test")
 print("RAW OUTPUT=",output)
 output = frog.process("Dit is nog een test.")
-print("PARSED OUTPUT=",output)\
-</tt>
+print("PARSED OUTPUT=",output)
+```
 
 If you want to connect to the Frog server using Python, then you can use the Frog client included in [PyNLPl](https://github.com/proycon/pynlpl) (also included as part of [LaMachine](https://proycon.github.io/LaMachine/)).
 
-> <tt>\
+```
 from pynlpl.clients.frogclient import FrogClient
 port = 8020
 frogclient = FrogClient('localhost',port)
 for data in frogclient.process("Een voorbeeldbericht om te froggen"):
-&emsp;&emsp;&emsp;&emsp;word, lemma, morph, pos = data[:4]
-&emsp;&emsp;&emsp;&emsp;#TODO: further processing
-</tt>
+    word, lemma, morph, pos = data[:4]
+    #TODO: further processing
+```
  
 Wouter van Atteveldt has developed a Frog client for R, [frogr](https://github.com/vanatteveldt/frogr/). This package contains functions for connecting to a Frog server from R and creating a document-term matrix from the resulting tokens. Since this yields a standard term-document matrix, it can be used with other R packages e.g. for [corpus analysis](https://github.com/kasperwelbers/corpus-tools/blob/master/howto/howto_compare_corpora.md) or text classification using [RTextTools](https://cran.r-project.org/web/packages/RTextTools/index.html).
 

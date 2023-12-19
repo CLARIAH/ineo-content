@@ -38,7 +38,9 @@ CLAM is maintained at the [Python Package Index](https://pypi.org/project/CLAM/)
 
 To automatically download and install CLAM from the Python Package Index, the convenient tool ``pip`` is available, it may be called ``pip3`` if you want to use Python 3 (recommended):
 
-> <tt> $ pip3 install clam </tt>
+```
+$ pip3 install clam
+```
 
 We recommend the use of a Python Virtual Environment
 
