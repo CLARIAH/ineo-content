@@ -1,52 +1,145 @@
 ---
-identifier: Frog
-carousel:
-  - /media/frog-logo.svg
-  - /media/frog-output.png
-  - /media/frog.gif
-group: Frog
 title: Frog
+identifier: frog
 ---
+
 # Frog
 
-Frog is an integration of memory-based natural language processing (NLP) modules developed for Dutch. It performs automatic linguistic enrichment such as part of speech tagging, lemmatisation, named entity recognition, shallow parsing, dependency parsing and morphological analysis.
+[Frog](https://languagemachines.github.io/frog/) is a suite containing a tokeniser, Part-of-Speech tagger, lemmatiser, morphological analyser, shallow parser, and dependency parser for Dutch.
 
 ## Overview
 
 * Frog is an integration of memory-based natural language processing (NLP) modules developed for Dutch. 
-* Frog performs tokenization, part-of-speech tagging, lemmatization and morphological segmentation of word tokens. At the sentence level Frog identifies non-embedded phrase chunks in the sentence, recognizes named entities and assigns a dependency parse graph.
-* Frog produces output in either FoLiA XML or a simple tab-delimited column format with one token per line.
-* Where possible, Frog makes use of multi-processor support to run subtasks in parallel. Frog offers a command-line interface (that can also run as a daemon) and a C++ library.
+* All NLP modules are based on [Timbl](http://languagemachines.github.io/timbl/), the Tilburg memory-based learning software package. Most modules were created in the 1990s at the ILK Research Group (Tilburg University, the Netherlands) and the CLiPS Research Centre (University of Antwerp, Belgium). Over the years they have been integrated into a single text processing tool, which is currently maintained and developed by the [Language Machines Research Group](https://github.com/LanguageMachines) and the [Centre for Language and Speech Technology at Radboud University Nijmegen](https://www.ru.nl/en/cls/clst). A dependency parser, a base phrase chunker, and a named-entity recognizer module were added more recently. 
+* Where possible, Frog makes use of multi-processor support to run subtasks in parallel.
+* Frog is also available as a webservice on (https://webservices.cls.ru.nl/frog).
+
+
+### What does it do?
+
+Frog's current version will tokenize, tag, lemmatize, and morphologically segment word tokens in Dutch text files, will assign a dependency graph to each sentence, will identify the base phrase chunks in the sentence, and will attempt to find and label all named entities.
+
+Frog produces [FoLiA XML](https://proycon.github.io/folia/), or tab-delimited column-formatted output, one line per token, that looks as follows:
+
+![Example of Frog output](./../media/frog/frog-output.png)
+
+The ten columns contain the following information:
+* Token number (resets every sentence)
+* Token
+* Lemma
+* Morphological segmentation
+* PoS tag ([CGN tagset](https://ivdnt.org/images/stories/producten/documentatie/cgn_website/doc_English/topics/project/pos_tagging/index.htm))
+* Confidence in the POS tag, a number between 0 and 1, representing the probability mass assigned to the best guess tag in the tag distribution
+* Named entity type, identifying person (PER), organization (ORG), location (LOC), product (PRO), event (EVE), and miscellaneous (MISC), using a BIO (or IOB2) encoding
+* Base (non-embedded) phrase chunk in BIO encoding
+* Token number of head word in dependency graph (according to CSI-DP)
+* Type of dependency relation with head word
+
+### Documentation
+
+The Frog manual is available [here](https://frognlp.readthedocs.io/en/latest/). It describes in detail how to install Frog, how to use it, as well as explains the underlying principles upon which Frog is built.
+
+The API reference is available from [here](https://languagemachines.github.io/frog/docs/api/html/).
 
 ## Learn
 
-* All NLP modules are based on Timbl, the Tilburg memory-based learning software package. Most modules were created in the 1990s at the ILK Research Group (Tilburg University, the Netherlands) and the CLiPS Research Centre (University of Antwerp, Belgium).
-* Over the years they have been integrated into a single text processing tool, which is currently maintained and developed by the Language Machines Research Group and the Centre for Language and Speech Technology at Radboud University (Nijmegen, the Netherlands).
-* Frog produces FoLiA XML, or tab-delimited column-formatted output. To learn more about what the output contains, have look at [the website](https://languagemachines.github.io/frog/#:~:text=the%20CLARIAH%20programme.-,What%20does%20it%20do%3F,-Frog%27s%20current).
+### Download and installation
 
-### Installation
+Frog is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) as published by the [Free Software Foundation](https://www.fsf.org/).
 
-There are two ways to install the software:
+To download and install Frog:
 
-* You can download Frog, manually compile and install it from source. However, due to the many dependencies and required technical expertise this is not an easy endeavor.
-* The recommendation methods is using LaMachine. Frog is part of theLaMachine software distribution and includes all necessary dependencies. It runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under other operating systems, including Windows. LaMachine makes the installation of Frog straightforward; detailed instructions for the installation of LaMachine can be found here: <http://proycon.github.io/LaMachine/>.
+1. First check if there are up-to-date packages included in your distribution's package manager. There are packages for Debian, Ubuntu and Arch Linux.
+2. If not, we **strongly recommend** you use our [LaMachine](https://proycon.github.io/LaMachine/) software distribution, which includes Frog and all necessary dependencies, and runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under any host OS.
+3. Alternatively, you can always download, compile and install Frog manually, as shown next.
 
-#### Using Frog from Python
+#### Manual installation
+* [Source code](https://github.com/LanguageMachines/frog/)
+* [Stable releases](https://github.com/LanguageMachines/frog/releases)
 
-It is also possible to call Frog directly from Python using the python-frog software library. Contrary to the Frog client for Python discussed in Section \[servermode], this library is a direct binding with code from Frog and does not use a client/server model. It therefore offers the tightest form of integration, and highest performance, possible.
+Because of file sizes and to cleanly separate code from data, the data and configuration files for the modules of Frog have been packaged separately:
 
-* The Python-Frog library is not included with Frog itself, but is shipped separately from https://github.com/proycon/python-frog.
-* Users who installed Frog using LaMachine, however, will already find that this software has been installed.
-* Other users will need to compile and install it from source. First ensure Frog itself is installed, then install the dependency cython \[14]. Installation of Python-Frog is then done by running: $ python setup.py install from its directory.
+* [Source repository](https://github.com/LanguageMachines/frogdata/)
+* [Stable releases](https://github.com/LanguageMachines/frogdata/releases)
 
-F﻿or more information, have a look at [the website](https://frognlp.readthedocs.io/en/latest/).
+To compile these manually consult the included INSTALL documents, you will need current versions of the following dependencies of our software:
 
+* [ticcutils](https://github.com/LanguageMachines/ticcutils/) - A shared utility library
+* [libfolia](https://github.com/LanguageMachines/libfolia/) - A library for the FoLiA format.
+* [ucto](https://github.com/LanguageMachines/ucto/) - A rule-based tokenizer
+* [timbl](https://github.com/LanguageMachines/timbl/) - The memory-based classifier engine
+* [timblserver](https://github.com/LanguageMachines/timbl/) - For server functionality around Timbl
+* [mbt](https://github.com/LanguageMachines/mbt/) - The memory-based tagger
+
+As well as the following 3rd party dependencies:
+
+* [icu](https://icu.unicode.org/) - A C++ library for Unicode and Globalization support. On Debian/Ubuntu systems, install the package libicu-dev.
+* [libxml2](https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home) - An XML library. On Debian/Ubuntu systems install the package libxml2-dev.
+* A sane build environment with a C++ compiler (e.g. gcc or clang), autotools, libtool, pkg-config.
+
+### Usage instructions: Making Frog leap
+
+To let Frog leap, simply invoking frog without arguments will produce a list of available commandline options. Some main options are:
+
+* <tt>frog -t [file]</tt> will run all modules on the text in <tt>[file]</tt>.
+* <tt>frog --testdir=[dir]</tt> will let Frog process all files in the directory <tt>[dir]</tt>.
+* <tt>frog -S [port]</tt> starts up a Frog server listening on port number <tt>[port]</tt>.
+* With <tt>--skip=[mptnc]</tt> you can tell Frog to skip tokenization (<tt>t</tt>), base phrase chunking (<tt>c</tt>), named-entity recognition (<tt>n</tt>), multi-word unit chunking for the parser (<tt>m</tt>), or parsing (<tt>p</tt>).
+
+Frog can be used from Python through the [python-frog](https://github.com/proycon/python-frog) binding, which has to be obtained separately unless you are using [LaMachine](https://proycon.github.io/LaMachine/). A python-frog example is shown below:
+
+> <tt>\
+import frog
+frog = frog.Frog(frog.FrogOptions(parser=False))
+output = frog.process_raw("Dit is een test")
+print("RAW OUTPUT=",output)
+output = frog.process("Dit is nog een test.")
+print("PARSED OUTPUT=",output)\
+</tt>
+
+If you want to connect to the Frog server using Python, then you can use the Frog client included in [PyNLPl](https://github.com/proycon/pynlpl) (also included as part of [LaMachine](https://proycon.github.io/LaMachine/)).
+
+> <tt>\
+from pynlpl.clients.frogclient import FrogClient
+port = 8020
+frogclient = FrogClient('localhost',port)
+for data in frogclient.process("Een voorbeeldbericht om te froggen"):
+&emsp;&emsp;&emsp;&emsp;word, lemma, morph, pos = data[:4]
+&emsp;&emsp;&emsp;&emsp;#TODO: further processing
+</tt>
+ 
+Wouter van Atteveldt has developed a Frog client for R, [frogr](https://github.com/vanatteveldt/frogr/). This package contains functions for connecting to a Frog server from R and creating a document-term matrix from the resulting tokens. Since this yields a standard term-document matrix, it can be used with other R packages e.g. for [corpus analysis](https://github.com/kasperwelbers/corpus-tools/blob/master/howto/howto_compare_corpora.md) or text classification using [RTextTools](https://cran.r-project.org/web/packages/RTextTools/index.html).
+
+Machiel Molenaar developed a Frog client for Go, aptly named [gorf](https://github.com/Machiel/gorf).
+
+**Notice**: we are in the process of writing a reference guide for Frog that explains all options in detail.
 
 
 ## Mentions
 
-### Articles (incl. conference papers, presentations and demo’s)
+### Publications
 
-### Projects
+If you use Frog for your own work, please cite the following paper:
+* Van den Bosch, A., Busser, G.J., Daelemans, W., and Canisius, S. (2007). An efficient memory-based morphosyntactic tagger and parser for Dutch, In F. van Eynde, P. Dirix, I. Schuurman, and V. Vandeghinste (Eds.), Selected Papers of the 17th Computational Linguistics in the Netherlands Meeting, Leuven, Belgium, pp. 99-114
 
-### Teaching and Instruction
+Frog uses the CGN part-of-speech tagset. Full documentation can be found as:
+* Van Eynde, F. (2004). Part of speech tagging en lemmatisering van het Corpus Gesproken Nederlands. KU Leuven.
+
+
+### Credits and Contact Information
+
+Frog, formerly known as Tadpole and before that as MB-TALPA, was coded by Bertjan Busser, Ko van der Sloot, Maarten van Gompel, and Peter Berck, subsuming code by Sander Canisius (constraint satisfaction inference-based dependency parser), Antal van den Bosch (MBMA, MBLEM, tagger-lemmatizer integration), Jakub Zavrel (MBT), and Maarten van Gompel (Ucto). In the context of the CLARIN-NL infrastructure project TTNWW, Frederik Vaassen (CLiPS, Antwerp) created the base phrase chunking module, and Bart Desmet (LT3, Ghent) provided the data for the named-entity module.
+
+Maarten van Gompel designed the FoLiA XML output format that Frog produces, and also wrote a Frog client in Python. Wouter van Atteveldt wrote a Frog client in R.
+
+The development of Frog relies on earlier work and ideas from Ko van der Sloot (lead programmer of MBT and TiMBL and the TiMBL API), Walter Daelemans, Jakub Zavrel, Peter Berck, Gert Durieux, and Ton Weijters.
+
+The development and improvement of Frog also relies on your bug reports, suggestions, and comments. Use the [github issue tracker](https://github.com/LanguageMachines/frog/issues) or mail lamasoftware (at) science.ru.nl.
+
+### Webpages
+
+* [Frog mainpage](https://languagemachines.github.io/frog/)
+* [Frog as a webservice](https://webservices.cls.ru.nl/frog)
+* [Frog documentation](https://frognlp.readthedocs.io/en/latest/)
+* [Frog GitHub page](https://github.com/LanguageMachines/frog)
+
