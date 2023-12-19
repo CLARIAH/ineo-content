@@ -1,7 +1,8 @@
 ---
-identifier: asr_nl
-title: asr_nl
+title: Automatic Speech Recognition for Dutch
+identifier: asr
 ---
+
 # Automatic Speech Recognition for Dutch
 
 CLARIAH offers a [webservice](https://webservices.cls.ru.nl/asr_nl) for automatic speech recognition to provide the transcriptions of recordings spoken in Dutch.
@@ -42,3 +43,5 @@ The current version of the ASR webservice is hosted and maintained by the Centre
 Webservice: https://webservices.cls.ru.nl/asr_nl/
 
 Source code: https://github.com/opensource-spraakherkenning-nl/asr_nl
+
+
