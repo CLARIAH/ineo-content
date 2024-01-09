@@ -243,7 +243,7 @@ title: The title of the resource
 <a href="https://tools.clariah.nl">https://tools.clariah.nl</a>. The <code>identifier</code> links to an exact resource, such as <code>frog</code> for <a href="https://tools.clariah.nl/frog">https://tools.clariah.nl/frog</a>, i.e. it is identical to what appears in the URL. The other one, <code>group</code>, links to a group or tool suite because the level of granularity offered on <a href="https://tools.clariah.nl">https://tools.clariah.nl</a> may be too fine-grained compared to what is
 desirable for Ineo or other portals. It should be exact name of the group as it appears on the tool discovery overview. The name s of the group can be easily spotted by looking at the table of contents there; the groups are the ones with sub-items.</p>
 <pre><code class="language-markdown">---
-identifier: tool
+identifier: tool-identifier-from-tools-clariah-nl
 title: Tool
 ---
 </code></pre>
@@ -251,6 +251,14 @@ title: Tool
 metadata of one specific tool in the group/suite with the group as a whole. This allows you
 to still describe a whole tool suite in Ineo, but picks one of the tools in the suite as being its representative and have its metadata prominently features.</p>
 <p>Note that neither <code>identifier</code> nor <code>group</code> uniquely identify a markdown file, they may be reused from multiple files and are merely intended to link to <a href="https://tools.clariah.nl">https://tools.clariah.nl</a>.</p>
+<p>It is possible that a Rich Content description is focussed on certain Software-as-a-Service whereas the codemeta is more focussed on the underlying software. In such cases it can happen that the codemeta representation lists multiple services/deployments of that software (expressed via the <code>targetProduct</code> property in the codemeta JSON-LD), whereas in the Rich User Content you may want to only cover a particular one. An example of this is <a href="https://tools.clariah.nl/#corpus-frontend">https://tools.clariah.nl/#corpus-frontend</a> . To constrain a rich user content page to a single service, add the following to the YAML frontmatter:</p>
+<pre><code class="language-markdown">---
+identifier: tool-identifier-from-tools-clariah-nl
+title: Service name
+service: https://some.domain/service
+---
+</code></pre>
+<p>The URL to the service must exactly match the <code>url</code> property of the <code>targetProduct</code> in the metadata. This <code>service</code> option should be interpreted as a signal to the consolidation pipeline merging rich content and metadata that only this single service should be expressed (and none of the others, if any). Moreover, it indicates that expressing metadata of the service (the matching object under <code>targetProduct</code>) has precedence over expressing metadata of the source code, in situations where there might otherwise be a tie.</p>
 <p>The following Ineo-specific metadata can be added:</p>
 <ul>
 <li>(TODO: add specification of part of Ineo's YAML syntax that are reusable. This is something for the Ineo developers to specify.)</li>
@@ -414,5 +422,5 @@ tool and data developers.</p>
 
 <!--
 MkDocs version : 1.5.3
-Build Date UTC : 2023-11-27 09:03:18.786537+00:00
+Build Date UTC : 2024-01-09 13:44:43.630051+00:00
 -->
