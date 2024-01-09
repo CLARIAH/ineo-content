@@ -38,7 +38,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../CLAM/" class="dropdown-item">CLAM</a>
+    <a href="../alpino/" class="dropdown-item">Alpino</a>
+</li>
+                                    
+<li>
+    <a href="../alpinograph/" class="dropdown-item">AlpinoGraph</a>
 </li>
                                     
 <li>
@@ -46,7 +50,7 @@
 </li>
                                     
 <li>
-    <a href="../asr_nl/" class="dropdown-item">asr_nl</a>
+    <a href="../asr_nl/" class="dropdown-item">Automatic Speech Recognition for Dutch</a>
 </li>
                                     
 <li>
@@ -54,7 +58,23 @@
 </li>
                                     
 <li>
+    <a href="../autosearch/" class="dropdown-item">AutoSearch</a>
+</li>
+                                    
+<li>
+    <a href="../blacklab/" class="dropdown-item">BlackLab</a>
+</li>
+                                    
+<li>
     <a href="../burgerLinker/" class="dropdown-item">BurgerLinker</a>
+</li>
+                                    
+<li>
+    <a href="../clam/" class="dropdown-item">CLAM</a>
+</li>
+                                    
+<li>
+    <a href="../colibricore/" class="dropdown-item">Colibri Core</a>
 </li>
                                     
 <li>
@@ -63,6 +83,22 @@
                                     
 <li>
     <a href="../cow/" class="dropdown-item">CoW</a>
+</li>
+                                    
+<li>
+    <a href="../ewald/" class="dropdown-item">Ewald</a>
+</li>
+                                    
+<li>
+    <a href="../ewbd/" class="dropdown-item">Ewbd</a>
+</li>
+                                    
+<li>
+    <a href="../ewgd/" class="dropdown-item">Ewgd</a>
+</li>
+                                    
+<li>
+    <a href="../ewld/" class="dropdown-item">Ewld</a>
 </li>
                                     
 <li>
@@ -90,7 +126,15 @@
 </li>
                                     
 <li>
-    <a href="../paqu/" class="dropdown-item">PaQu</a>
+    <a href="../opensonar/" class="dropdown-item">OpenSoNaR</a>
+</li>
+                                    
+<li>
+    <a href="../paqu/" class="dropdown-item">PaQu – Parse and Query</a>
+</li>
+                                    
+<li>
+    <a href="../sasta/" class="dropdown-item">SASTA</a>
 </li>
                                     
 <li>
@@ -99,6 +143,14 @@
                                     
 <li>
     <a href="../textfabric/" class="dropdown-item">Text-Fabric</a>
+</li>
+                                    
+<li>
+    <a href="../ucto/" class="dropdown-item">Ucto</a>
+</li>
+                                    
+<li>
+    <a href="../udpipe_frysk/" class="dropdown-item">UDPipe Frysk</a>
 </li>
                                 </ul>
                             </li>
@@ -116,7 +168,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../burgerLinker/" class="nav-link">
+                                <a rel="next" href="../autosearch/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -156,10 +208,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#presentations" class="nav-link">Presentations</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -168,45 +216,133 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="auchann">AuChAnn</h1>
-<p>AuChAnn is a python package that provides Automatic CHAT Annotation.</p>
+<p><a href="https://pypi.org/project/auchann/">AuChAnn</a> (Automatic CHAT Annotation) is a python package that provides CHAT annotations based on a transcript string and an interpretation (or 'corrected') string. For example, the following transcript and correction</p>
+<blockquote>
+<p>Transcript: 'ik wilt nu eh na huis'\
+Correction: 'Ik wil nu naar huis.'</p>
+</blockquote>
+<p>will yield</p>
+<blockquote>
+<p>CHAT-Annotation: 'ik wilt [: wil] nu &amp;-eh na(ar) [* s:r:prep] huis'</p>
+</blockquote>
+<p>CHAT is an annotation convention that was developed for the CHILDES corpus (MacWinney, 2000) and is used by many linguists to annotate speech. For more information on CHAT, you can read <a href="https://talkbank.org/manuals/CHAT.html">their manual</a>.</p>
+<p>AuChAnn was specifically developed to enhance linguistic data in the form of a transcript and interpretation by a linguist for use with <a href="https://www.ineo.tools/resources/sasta">SASTA</a>.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>
-<p>AuChAnn is a python package that provides Automatic CHAT Annotation based on a transcript string and an interpretation (or 'corrected') string. For example, when given: Transcript: 'Ik wilt nu eh na huis' Correction: 'Ik wil nu naar huis'</p>
-</li>
-<li>
-<p>AuChAnn produces: CHAT-Annotation: 'ik wilt [: wil] nu &amp;-eh na(ar) [* s:r:prep] huis'</p>
-</li>
-<li>
-<p>CHAT is an annotation convention that was developed for the CHILDES corpus (MacWinney, 2000) and is used by many linguists to annotate speech. For more information on CHAT, you can read their manual: https://talkbank.org/manuals/CHAT.html.</p>
-</li>
-<li>
-<p>AuChAnn was specifically developed to enhance linguistic data in the form of a transcript and interpretation by a linguist for use with SASTA (https://github.com/UUDigitalHumanitieslab/sasta)</p>
-</li>
+<li>AuChAnn – Automatic CHAT Annotation tool – is a python library that can read a Dutch transcript and interpretation pair and generate a fitting CHAT annotation.</li>
+<li>AuChAnn was specifically developed to enhance linguistic data in the form of a transcript and interpretation by a linguist for use with <a href="https://www.ineo.tools/resources/sasta">SASTA</a>.</li>
+<li>AuChAnn consistently outperforms human annotators, and provides annotations in a fraction of the time, making it a useful improvement for SASTA, but also for any other linguists that want to use information-rich CHAT annotations for their research.</li>
 </ul>
 <h2 id="learn">Learn</h2>
-<h3 id="instructions">Instructions</h3>
-<p>You can <a href="https://github.com/UUDigitalHumanitieslab/auchann#getting-started">install AuChAnn using pip</a> or <a href="https://github.com/UUDigitalHumanitieslab/auchann#import-as-library">use AuChAnn in your own python applications</a>.</p>
-<ul>
-<li>
-<p>The align_words function scans the transcript and correction and determines for each token whether a correction token is copied exactly from the transcript, replaces a token from the transcript, is inserted, or whether a transcript token has been omitted. Based on which of these operations has occurred, the function adds the appropriate CHAT annotation to the output string.</p>
-</li>
-<li>
+<p>Professor Frank Wijnen gave a lunch lecture on AuChAnn on 25 May 2023. During this lecture, Wijnen expanded on how complete and correct CHAT annotations can be generated on the basis of transcribed actual utterance-correct version pairs:</p>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/870688674?h=be1200bc9f" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
+<h3 id="getting-started-with-auchann">Getting Started with AuChAnn</h3>
+<p>You can install AuChAnn using pip:</p>
+<pre><code class="language-bash">pip install auchann
+</code></pre>
+<p>You can also optionally install <a href="https://github.com/UUDigitalHumanitieslab/sastadev"><code>sastadev</code></a>
+which is used for detecting inflection errors.</p>
+<pre><code class="language-bash">pip install auchann[NL]
+</code></pre>
+<p>When installed, the program can be run interactively from the console using the command <code>auchann</code>.</p>
+<h3 id="import-as-library">Import as Library</h3>
+<p>To use AuChAnn in your own Python applications, you can import the <code>align_words</code> function from <code>align_words</code>, see below. This is the main functionality of the package.</p>
+<pre><code class="language-python">from auchann.align_words import align_words
+
+transcript = input(&quot;Transcript: &quot;)
+correction = input(&quot;Correction: &quot;)
+alignment = align_words(transcript, correction)
+print(alignment)
+</code></pre>
+<h4 id="settings">Settings</h4>
+<p>Various settings can be adjusted. Default values are used for every unchanged property.</p>
+<pre><code class="language-python">from auchann.align_words import align_words, AlignmentSettings
+import editdistance
+
+settings = AlignmentSettings()
+
+# Return the edit distance between the original and correction
+settings.calc_distance = lambda original, correction: editdistance.distance(original, correction)
+
+# Return an override of the distance and the error type;
+# if error type is None the distance returned will be ignored
+# Default method detects inflection errors
+settings.detect_error = lambda original, correction: (1, &quot;m&quot;) if original == &quot;geloopt&quot; and correction == &quot;liep&quot; else (0, None)
+
+### Sastadev contains a helper function for Dutch which detects inflection errors
+from sastadev.deregularise import detect_error
+settings.detect_error = detect_error
+
+# How many words could be split from one?
+# e.g. das -&gt; da(t) (i)s requires a lookahead of 2
+# hoest -&gt; hoe (i)s (he)t requires a lookahead of 3
+settings.lookahead = 5
+
+# Allow detection of replacements within a group
+# e.g. swapping articles this will then be marked with
+# the specified key
+
+# EXAMPLE:
+# Transcript: de huis
+# Correction: het huis
+# de [: het] [* s:r:gc:art] huis
+settings.replacements = {
+    's:r:gc:art': ['de', 'het', 'een'],
+    's:r:gc:pro': ['dit', 'dat', 'deze'],
+    's:r:prep': ['aan', 'uit']
+}
+
+# Other lists to adjust
+settings.fillers = ['eh', 'hm', 'uh']
+settings.fragments = ['ba', 'to', 'mu']
+
+### Example usage
+transcript = input(&quot;Transcript: &quot;)
+correction = input(&quot;Correction: &quot;)
+alignment = align_words(transcript, correction, settings)
+print(alignment)
+</code></pre>
+<h3 id="how-it-works">How it Works</h3>
+<p>The <code>align_words</code> function scans the transcript and correction and determines for each token whether a correction token is copied exactly from the transcript, replaces a token from the transcript, is inserted, or whether a transcript token has been omitted. Based on which of these operations has occurred, the function adds the appropriate CHAT annotation to the output string.</p>
 <p>The algorithm uses edit distance to establish which words are replacements of each other, i.e. it links a transcript token to a correction token. Words with the lowest available edit distance are matched together, and based on this match the operations COPY and REPLACE are determined. If two candidates have the same edit distance to a token, word position is used to determine the match. The operations REMOVE and INSERT are established if no suitable match can be found for a transcript and correction token respectively.</p>
-</li>
-<li>
 <p>In addition to establishing these four operations, the function detects several other properties of the transcript and correction which can be expressed in CHAT. For example, it determines whether a word is a filler or fragment, whether a conjugation error has occurred, or if a pronoun, preposition, or article has been used incorrectly.</p>
-</li>
-<li>
-<p>The <a href="https://github.com/UUDigitalHumanitieslab/auchann">AuChAnn GitHUb</a> offers more information.</p>
-</li>
-</ul>
+<h3 id="development">Development</h3>
+<p>To install the requirements:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<p>To run the AuChAnn command-line function from the console:</p>
+<pre><code class="language-bash">python -m auchann
+</code></pre>
+<h4 id="run-tests">Run Tests</h4>
+<pre><code class="language-bash">pip install pytest
+pytest
+</code></pre>
+<h4 id="upload-to-pypi">Upload to PyPi</h4>
+<pre><code class="language-bash">pip install pip-tools twine
+python setup.py sdist
+twine upload dist/*.tar.gz
+</code></pre>
 <h2 id="mentions">Mentions</h2>
-<h2 id="presentations">Presentations</h2>
-<p>Van Dijk, J. (2023) Intergrating AuChAnn into SASTA [Conference presentation], CLIN33, University of Antwerp, Antwerp, Belgium.https://clin33.uantwerpen.be/abstract/integrating-auchann-into-sasta/.</p>
-<p>Wijnen, F. &amp; Van Stiphout, M.  (2023) Automatic CHAT Annotation: A Feasibility Study [lunch lecture], online, https://www.clariah.nl/nl/evenementen/lunchlezing-auchann.</p>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<p>AuChAnn was developed by the <a href="https://cdh.uu.nl/about/research-software-lab/">Centre for Digital Humanities – Research Software Lab</a> (Sheean Spoel and Mees van Stiphout), in collaboration with Frank Wijnen, Professor of psycholinguistics at the Department of Languages, Literature and Communication.</p>
+<p>The research for this software was made possible by the CLARIAH-PLUS project financed by NWO (Grant 184.034.023).</p>
+<h3 id="lunch-lecture">Lunch Lecture</h3>
+<p>Professor Frank Wijnen gave a lunch lecture on AuChAnn on 25 May 2023. During this lecture, Wijnen expanded on how complete and correct CHAT annotations can be generated on the basis of transcribed actual utterance-correct version pairs: https://www.clariah.nl/nl/evenementen/lunchlezing-auchann</p>
 <h3 id="webpages">Webpages</h3>
-<p><a href="https://cdh.uu.nl/2022/08/digital-humanities-lab-launches-auchann/">Digital Humanities Lab launches AuChAnn</a></p></div>
+<ul>
+<li><a href="https://pypi.org/project/auchann/">AuChAnn on pypi</a></li>
+<li><a href="https://github.com/UUDigitalHumanitieslab/auchann">AuChAnn GitHub page</a></li>
+<li><a href="https://cdh.uu.nl/portfolio/automatic-chat-annotation-tool-auchann/">AuChAnn in the RSL portfolio</a></li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li><a href="https://www.ineo.tools/resources/sasta">SASTA</a>: AuChAnn was specifically developed to enhance linguistic data in the form of a transcript and interpretation by a linguist for use with SASTA.</li>
+</ul>
+<h3 id="references">References</h3>
+<ul>
+<li>MacWhinney, B. (2000). <em>The CHILDES project: Tools for analyzing talk: Transcription format and programs</em> (3rd ed.). Lawrence Erlbaum Associates Publishers.</li>
+</ul></div>
             </div>
         </div>
 

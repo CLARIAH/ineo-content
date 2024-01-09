@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/alpino/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Gecco - Ineo Content</title>
+        <title>Alpino - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../alpino/" class="dropdown-item">Alpino</a>
+    <a href="./" class="dropdown-item active">Alpino</a>
 </li>
                                     
 <li>
@@ -106,7 +106,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Gecco</a>
+    <a href="../gecco/" class="dropdown-item">Gecco</a>
 </li>
                                     
 <li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gretel/" class="nav-link">
+                                <a rel="next" href="../alpinograph/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/alpino.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,13 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
+            <li class="nav-item" data-level="1"><a href="#alpino" class="nav-link">Alpino</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -211,37 +215,80 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gecco">Gecco</h1>
-<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h1 id="alpino">Alpino</h1>
+<p><a href="https://urd2.let.rug.nl/~vannoord/alp/Alpino/">Alpino</a> is a dependency <strong>parser for Dutch</strong> that also analyses sentences in terms of constituents. Apart from a purely syntactic analysis, Alpino also provides part-of-speech tagging, lemmatization and morphological tagging. The output is formatted in XML.</p>
+<p><img alt="Example of an Alpino parse" src="./../media/alpino/example_parse.png" /></p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
-<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
-<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
-<li>Training is explicitly included in the framework.</li>
-<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
-<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
-<li>Given an input text, Gecco will add various suggestions for correction.</li>
+<li>
+<p>Alpino parses, POS-tags, lemmatizes and analyses morphologically any Dutch sentence that it is given. Alpino reliably analyses an input sentence syntactically, yielding a fully annotated syntactic tree with both constituents as well as explicitly labelled syntactic relations.</p>
+</li>
+<li>
+<p>Alpino is a rule-based parser with a statistics-based disambiguation component.</p>
+</li>
+<li>
+<p>Alpino's grammar has been augmented to build structures based on the guidelines
+of <a href="https://www.ineo.tools/resources/corpus-gesproken-nederlands">CGN</a> (Corpus of Spoken Dutch) and <a href="https://www.let.rug.nl/~vannoord/DCOI/">D-COI</a>.</p>
+</li>
+<li>
+<p>Alpino's output is formatted in XML, allowing it to be queried by formal query languages such as XPath. Tools such as <a href="https://www.ineo.tools/resources/paqu">PaQu</a> and <a href="https://www.ineo.tools/resources/gretel">GrETEL</a> leverage this feature and use Alpino in the background for querying purposes.</p>
+</li>
+<li>
+<p>Developed by the University of Groningen, Alpino is available as a <a href="https://webservices.cls.ru.nl/alpino/">webservice</a> hosted by the Radboud University Nijmegen, but can also be installed <a href="https://github.com/rug-compling/alpino">locally</a>.</p>
+</li>
 </ul>
 <h2 id="learn">Learn</h2>
+<h3 id="quick-use">Quick Use</h3>
+<p>Using Alpino is easiest with the <a href="https://webservices.cls.ru.nl/alpino/">webservice</a>, but requires one the log in using an institutional account. Once logged in, the user can create a new project, upload a tokenized or un-tokenized file (or input the text directly as plain text), and have have Alpino parse all input sentences. The output consists of one <a href="https://www.ineo.tools/resources/folia">FoLIA</a> XML file for the entire input, as well as one file per input sentence in standard Alpino annotation.</p>
+<p>For quick single-sentence parses, one can use the <a href="https://urd2.let.rug.nl/~vannoord/bin/alpino">online demo</a> or <a href="https://www.ineo.tools/resources/gretel">GrETEL</a>. Neither options require a log-in, and both showcase the parse yielded as a tree for quick inspection.</p>
+<h3 id="local-installation">Local Installation</h3>
+<p>Alpino can also be installed locally. For this, we refer to the tool's general <a href="https://urd2.let.rug.nl/~vannoord/alp/Alpino/AlpinoUserGuide.html">User Guide</a> and <a href="https://github.com/rug-compling/alpino">GitHub page</a>.</p>
+<p>Some more comments on using Alpino on Windows are necessary, however. Please read <a href="https://danieldk.eu/running-the-alpino-parser-on-windows-10/">Daniël de Kok's blog post</a> on this, if one desires to use Alpino on Windows.</p>
+<h3 id="annotation-guidelines">Annotation Guidelines</h3>
+<p>In the end, the hardest part about using Alpino is understanding its annotations. For a detailed description of the syntactic annotations used by Alpino, one should check the document: <a href="https://www.let.rug.nl/vannoord/Lassy/sa-man_lassy.pdf">Lassy Syntactische Annotatie</a>. For the annotation of parts-of-speech and lemmas, one should check the document: <a href="https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf">Part of speech tagging en lemmatisering van het D-coi corpus</a>. <em>These documents are, however, only available in Dutch.</em></p>
+<p>The following document (in English) may also be useful: <a href="https://www.let.rug.nl/~vannoord/DCOI/AnnotationGuide.html">Manual for syntactic annotators</a>.</p>
+<h2 id="mentions">Mentions</h2>
 <ul>
+<li>The <a href="https://www.let.rug.nl/~vannoord/Lassy/">Lassy corpus</a> was parsed with Alpino. The Lassy Klein subcorpus was manually corrected.</li>
 <li>
-<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
+<p>Van Noord, Gertjan, Bouma, Gosse, Van Eynde, Frank, De Kok, Daniël, Van der Linde, Jelmer, Schuurman, Ineke, Tjong Kim Sang, Erik, &amp; Vandeghinste, Vincent (2013). Large scale syntactic annotation of written Dutch: Lassy. In Peter Spyns, &amp; Jan Odijk (Eds.), <em>Essential speech and language technology for Dutch: Results by the STEVIN programme</em> (pp. 147-164). Springer Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-30910-6</p>
 </li>
 <li>
-<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
-</li>
-<li>
-<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
-</li>
-<li>
-<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
-</li>
-<li>
-<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
+<p><a href="https://www.rug.nl/news/2011/01/alpino_011">Press release on Alpino (in Dutch)</a></p>
 </li>
 </ul>
-<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
+<h3 id="publications">Publications</h3>
+<ul>
+<li>Van Noord, Gertjan. (2006, april 10–13). At Last Parsing Is Now Operational. In <em>Actes de la 13ème conférence sur le Traitement Automatique des Langues Naturelles. Conférences invitées</em> (pp. 20–42). ATALA, Leuven. https://aclanthology.org/2006.jeptalnrecital-invite.2/</li>
+</ul>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li><a href="https://urd2.let.rug.nl/~vannoord/alp/Alpino/">Alpino home page</a></li>
+<li><a href="https://github.com/rug-compling/alpino">GitHub page</a></li>
+<li><a href="https://urd2.let.rug.nl/~vannoord/bin/alpino">Alpino web demo</a></li>
+<li><a href="https://urd2.let.rug.nl/~vannoord/alp/Alpino/AlpinoUserGuide.html">Alpino User Guide</a></li>
+<li>
+<p><a href="https://danieldk.eu/running-the-alpino-parser-on-windows-10/">Alpino on Windows</a></p>
+</li>
+<li>
+<p><a href="https://www.ineo.tools/resources/paqu">PaQu - Parse and Query</a> makes it possible to search in syntactically annotated corpora in Dutch. PaQu uses the Alpino parser to make treebanks of your own text corpus, and to search in these treebanks.</p>
+</li>
+<li>
+<p><a href="https://www.ineo.tools/resources/gretel">GrETEL</a> is a tool to query-by-example corpora and treebanks that were parsed by Alpino.</p>
+</li>
+<li>
+<p><a href="https://www.ineo.tools/resources/alpinograph">AlpinoGraph</a> is a tool query syntactically annotated corpora as graphs instead of treebanks, allowing for some other flexibilities.</p>
+</li>
+<li>
+<p><a href="https://www.ineo.tools/resources/sasta">SASTA</a>, a tool for the semi-automatic analysis of spontaneous-language fragments of children with an SLI, uses Alpino to analyse the utterances grammatically.</p>
+</li>
+<li>
+<p><a href="https://redekundig.nl/index.cgi?zin=Het+gaat+regenen+vandaag&amp;mode=redekundig">Redekundig.nl</a> is a tool for Dutch high-schoolers, that uses Alpino as backend to classify parts of speech and grammatical functions of phrases in sentences (so-called "taalkundig ontleden" and "redekundig ontleden").</p>
+</li>
+</ul>
+<h3 id="credits-and-contact-information">Credits and Contact Information</h3>
+<p>Alpino was developed in the context of the PIONIER Project <a href="http://www.let.rug.nl/~vannoord/alp/">Algorithms for Linguistic Processing</a>.</p>
+<p>Alpino was released under the <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html">Gnu Lesser General Public License</a>.</p></div>
             </div>
         </div>
 

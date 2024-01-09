@@ -8,7 +8,7 @@
         
         <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/paqu/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>PaQu - Ineo Content</title>
+        <title>PaQu – Parse and Query - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -38,7 +38,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../CLAM/" class="dropdown-item">CLAM</a>
+    <a href="../alpino/" class="dropdown-item">Alpino</a>
+</li>
+                                    
+<li>
+    <a href="../alpinograph/" class="dropdown-item">AlpinoGraph</a>
 </li>
                                     
 <li>
@@ -46,7 +50,7 @@
 </li>
                                     
 <li>
-    <a href="../asr_nl/" class="dropdown-item">asr_nl</a>
+    <a href="../asr_nl/" class="dropdown-item">Automatic Speech Recognition for Dutch</a>
 </li>
                                     
 <li>
@@ -54,7 +58,23 @@
 </li>
                                     
 <li>
+    <a href="../autosearch/" class="dropdown-item">AutoSearch</a>
+</li>
+                                    
+<li>
+    <a href="../blacklab/" class="dropdown-item">BlackLab</a>
+</li>
+                                    
+<li>
     <a href="../burgerLinker/" class="dropdown-item">BurgerLinker</a>
+</li>
+                                    
+<li>
+    <a href="../clam/" class="dropdown-item">CLAM</a>
+</li>
+                                    
+<li>
+    <a href="../colibricore/" class="dropdown-item">Colibri Core</a>
 </li>
                                     
 <li>
@@ -63,6 +83,22 @@
                                     
 <li>
     <a href="../cow/" class="dropdown-item">CoW</a>
+</li>
+                                    
+<li>
+    <a href="../ewald/" class="dropdown-item">Ewald</a>
+</li>
+                                    
+<li>
+    <a href="../ewbd/" class="dropdown-item">Ewbd</a>
+</li>
+                                    
+<li>
+    <a href="../ewgd/" class="dropdown-item">Ewgd</a>
+</li>
+                                    
+<li>
+    <a href="../ewld/" class="dropdown-item">Ewld</a>
 </li>
                                     
 <li>
@@ -90,7 +126,15 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">PaQu</a>
+    <a href="../opensonar/" class="dropdown-item">OpenSoNaR</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">PaQu – Parse and Query</a>
+</li>
+                                    
+<li>
+    <a href="../sasta/" class="dropdown-item">SASTA</a>
 </li>
                                     
 <li>
@@ -99,6 +143,14 @@
                                     
 <li>
     <a href="../textfabric/" class="dropdown-item">Text-Fabric</a>
+</li>
+                                    
+<li>
+    <a href="../ucto/" class="dropdown-item">Ucto</a>
+</li>
+                                    
+<li>
+    <a href="../udpipe_frysk/" class="dropdown-item">UDPipe Frysk</a>
 </li>
                                 </ul>
                             </li>
@@ -111,12 +163,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../mediasuite/" class="nav-link">
+                                <a rel="prev" href="../opensonar/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../stam/" class="nav-link">
+                                <a rel="next" href="../sasta/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -142,9 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#paqu-parse-and-query" class="nav-link">PaQu- Parse and Query</a>
+            <li class="nav-item" data-level="1"><a href="#paqu-parse-and-query" class="nav-link">PaQu – Parse and Query</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -155,12 +215,58 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="paqu-parse-and-query">PaQu- Parse and Query</h1>
-<p>The PaQu web service makes it possible to search in syntactically annotated corpora in Dutch. You can parse your own Dutch text corpus or use one of two corpora provided by the developers.</p>
+<h1 id="paqu-parse-and-query">PaQu – Parse and Query</h1>
+<p>The <a href="https://www.let.rug.nl/alfa/paqu/">PaQu web service</a> makes it possible to search in syntactically annotated corpora in Dutch. You can parse your own Dutch text corpus or use one of two corpora provided by the developers.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>PaQu uses the Alpino parser to make treebanks of your own text corpus, and to search in these treebanks using an interface based on the LASSY Word Relations Search interface (<a href="http://dev.clarin.nl/node/1966">http://dev.clarin.nl/node/1966</a>). Two treebanks are already available in the application: Lassy Klein (1M words, manually checked syntactic analysis) and Lassy Groot (700M words, syntactic analysis automatically assigned by Alpino).</li>
-<li>PaQu offers two ways to search through the syntactically annotated texts. The first option is to use the search bar to look for word pairs, optionally complemented by their syntactic relationship. The second search option is to use the query language XPath.</li>
+<li>
+<p>PaQu uses the <a href="https://www.ineo.tools/resources/alpino">Alpino parser</a> to make treebanks of your own text corpus, and to search in these treebanks using an interface based on the <a href="http://www.let.rug.nl/~alfa/lassy/bin/lassy-save">LASSY Word Relations Search interface</a>. Uploading one's own corpus requires a log-in.</p>
+</li>
+<li>
+<p>Two treebanks are already available in the application: <a href="https://www.let.rug.nl/~vannoord/Lassy/">Lassy Klein</a> (1M words, manually checked syntactic analysis) and <a href="https://www.let.rug.nl/~vannoord/Lassy/">Lassy Groot</a> (700M words, syntactic analysis automatically assigned by Alpino).</p>
+</li>
+<li>
+<p>PaQu offers two ways to search through the syntactically annotated texts. The first option is to use the search bar to look for word pairs, optionally complemented by their syntactic relationship. The second search option is to use the query language XPath.</p>
+</li>
+</ul>
+<h2 id="learn">Learn</h2>
+<h3 id="preliminaries-alpino-annotations">Preliminaries – Alpino annotations</h3>
+<p>Using PaQu requires one to be familiar with the <a href="https://www.ineo.tools/resources/alpino">Alpino</a> annotation guidelines. <a href="https://www.let.rug.nl/alfa/paqu/info.html#rel">PaQu's own information page</a> gives a good brief overview of all syntactic relations. For a detailed description of the syntactic annotations used by Alpino, one should check the document: <a href="https://www.let.rug.nl/vannoord/Lassy/sa-man_lassy.pdf">Lassy Syntactische Annotatie</a>. For the annotation of parts-of-speech and lemmas, one should check the document: <a href="https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf">Part of speech tagging en lemmatisering van het D-coi corpus</a>. <em>These documents are, however, only available in Dutch.</em></p>
+<p>The following document (in English) may also be useful: <a href="https://www.let.rug.nl/~vannoord/DCOI/AnnotationGuide.html">Manual for syntactic annotators</a>.</p>
+<h3 id="querying-with-paqu">Querying with PaQu</h3>
+<p>PaQu offers two ways to search through the syntactically annotated texts. </p>
+<p>The first option is to use the search bar to look for word pairs, optionally complemented by their syntactic relationship. For instance, in the image below, PaQu is told to look for the adjective (adj) <em>taalkundig</em> 'linguistic' that is a modifier (mod) to the noun (n) <em>onderzoek</em> 'research'. As said above, to use this effectively, the user must be familiar with the Alpino annotation guidelines, for which see the links provided under Preliminaries. Also check out <a href="https://www.let.rug.nl/alfa/paqu/info.html#zoeken">PaQu's own information page</a> for more tips and tricks on search for word pairs (in Dutch).</p>
+<p><img alt="PaQu is told to look for the adjective (adj) *taalkundig* 'linguistic' that is a modifier (mod) to the noun (n) *onderzoek* 'research'." src="./../media/paqu-cover1.png" /></p>
+<p>The second search option is to use the query language XPath. In the image below, the XPath query tells PaQu to look for any instance of the verb <em>zoeken</em> 'search' that takes a PP-complement headed by the preposition <em>in</em>. </p>
+<p><img alt="The XPath query tells PaQu to look for any instance of the verb *zoeken* 'search' that takes a PP-complement headed by the preposition *in*." src="./../media/paqu-cover3.png" /></p>
+<p>Using the more advanced XPath querying method allows the user to search for more complex structures, however requires them to be familiar with the Alpino annotations, as well as XPath. A 'cookbook' for writing XPath queries for Alpino-annotated treebanks can be found <a href="https://rug-compling.github.io/dact/cookbook/">here</a> (in English). Also check out <a href="https://www.let.rug.nl/alfa/paqu/info.html#xpath">PaQu's own information page</a> for more tips and tricks on using XPath in PaQu (in Dutch).</p>
+<h3 id="local-installation">Local Installation</h3>
+<p>PaQu can be installed locally. For this, we refer to the tool's <a href="https://github.com/rug-compling/paqu">GitHub page</a> (in Dutch).</p>
+<h3 id="contact">Contact</h3>
+<p>Project leader: <a href="https://www.rug.nl/staff/g.j.m.van.noord/">Gertjan van Noord</a>
+Developer: <a href="https://www.rug.nl/staff/p.c.j.kleiweg/">Peter Kleiweg</a></p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="publications">Publications</h3>
+<ul>
+<li>Odijk, Jan, van Noord, Gertjan, Kleiweg, Peter &amp; Tjong Kim Sang, Erik. (2017). The Parse and Query (PaQu) Application . In: Odijk, Jan &amp; van Hessen, Arjan (eds.) <em>CLARIN in the Low Countries</em> (pp. 281-297). Ubiquity Press, London. https://doi.org/10.5334/bbi.23</li>
+</ul>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li><a href="https://www.let.rug.nl/alfa/paqu/">PaQu webservice</a></li>
+<li><a href="https://github.com/rug-compling/paqu">GitHub page</a></li>
+</ul>
+<h3 id="related-tools-and-resources">Related tools and resources</h3>
+<ul>
+<li>
+<p><a href="https://www.ineo.tools/resources/alpino">Alpino</a> is a parser for Dutch, used by PaQu.</p>
+</li>
+<li>
+<p><a href="https://www.ineo.tools/resources/gretel">GrETEL</a> is a tool to query-by-example corpora and treebanks that were parsed by Alpino.</p>
+</li>
+<li>
+<p>The <a href="https://www.let.rug.nl/~vannoord/Lassy/">Lassy corpus</a> was parsed with Alpino. The Lassy Klein subcorpus was manually corrected.</p>
+</li>
+<li>Van Noord, Gertjan, Bouma, Gosse, Van Eynde, Frank, De Kok, Daniël, Van der Linde, Jelmer, Schuurman, Ineke, Tjong Kim Sang, Erik, &amp; Vandeghinste, Vincent (2013). Large scale syntactic annotation of written Dutch: Lassy. In Peter Spyns, &amp; Jan Odijk (Eds.), <em>Essential speech and language technology for Dutch: Results by the STEVIN programme</em> (pp. 147-164). Springer Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-30910-6</li>
 </ul></div>
             </div>
         </div>

@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/alpinograph/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Gecco - Ineo Content</title>
+        <title>AlpinoGraph - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -42,7 +42,7 @@
 </li>
                                     
 <li>
-    <a href="../alpinograph/" class="dropdown-item">AlpinoGraph</a>
+    <a href="./" class="dropdown-item active">AlpinoGraph</a>
 </li>
                                     
 <li>
@@ -106,7 +106,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Gecco</a>
+    <a href="../gecco/" class="dropdown-item">Gecco</a>
 </li>
                                     
 <li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../alpino/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gretel/" class="nav-link">
+                                <a rel="next" href="../alud/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/alpinograph.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,13 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
+            <li class="nav-item" data-level="1"><a href="#alpinograph" class="nav-link">AlpinoGraph</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -211,37 +215,45 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gecco">Gecco</h1>
-<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h1 id="alpinograph">AlpinoGraph</h1>
+<p><a href="https://urd2.let.rug.nl/~kleiweg/alpinograph/">AlpinoGraph</a> is a tool to query syntactically annotated corpora. The tool makes use of AgensGraph, which combines database technology (PostgreSQL) and Cypher, the standard query language for graphs. The queries that one can use in AlpinoGraph are thus a mix of SQL and Cypher. AlpinoGraph additionally provides some extra extensions, such as a simple system of macros, and a visualization of results.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
-<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
-<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
-<li>Training is explicitly included in the framework.</li>
-<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
-<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
-<li>Given an input text, Gecco will add various suggestions for correction.</li>
+<li>AlpinoGraph is a tool to query syntactically annotated corpora as graphs instead of trees. This allows for some extra flexibilities.</li>
+<li>The query language used by AlpinoGraph is a mix of SQL and Cypher.</li>
+<li>AlpinoGraph makes use of <a href="https://www.ineo.tools/resources/alpino">Alpino's annotations</a> and <a href="https://universaldependencies.org/">Universal Dependencies</a>.</li>
 </ul>
+<h3 id="data">Data</h3>
+<p>AlpinoGraph ships with (treebanks of) the <a href="http://www.let.rug.nl/~vannoord/Lassy/">LASSY-SMALL</a>, the <a href="http://hdl.handle.net/10032/tm-a2-k6">CGN (Corpus Gesproken Nederlands)</a> and the <a href="https://taalmaterialen.ivdnt.org/download/tstc-eindhoven-corpus/">Eindhoven corpus</a>, among others. See <a href="https://urd2.let.rug.nl/~kleiweg/alpinograph-docs/corpora/">this page</a> for a full list (in Dutch).</p>
 <h2 id="learn">Learn</h2>
+<h3 id="instruction">Instruction</h3>
+<p>The <a href="https://aclanthology.org/2020.tlt-1.13">key publication of AlpinoGraph</a> has a detailed documentation of AlpinoGraph's workings, and how queries are formulated. It is recommended to read this.</p>
+<p>Additionally, the <a href="https://urd2.let.rug.nl/~kleiweg/alpinograph/">AlpinoGraph page</a> has some useful examples and explanations that can be found in the menu in the top-left of the page. For a more extensive documentation of AlpinoGraph, users are invited to visit the <a href="https://urd2.let.rug.nl/~kleiweg/alpinograph-docs/">Help page of AlpinoGraph</a>. <em>These pages are, however, only available in Dutch.</em></p>
+<h3 id="alpino-annotations">Alpino Annotations</h3>
+<p>AlpinoGraph makes use of the annotations and tagging provided by <a href="https://www.ineo.tools/resources/alpino">Alpino</a>. For a detailed description of the syntactic annotations used by Alpino, one should check the document: <a href="https://www.let.rug.nl/vannoord/Lassy/sa-man_lassy.pdf">Lassy Syntactische Annotatie</a>. For the annotation of parts-of-speech and lemmas, one should check the document: <a href="https://www.let.rug.nl/vannoord/Lassy/POS_manual.pdf">Part of speech tagging en lemmatisering van het D-coi corpus</a>. <em>These documents are, however, only available in Dutch.</em></p>
+<p>The following document (in English) may also be useful: <a href="https://www.let.rug.nl/~vannoord/DCOI/AnnotationGuide.html">Manual for syntactic annotators</a>.</p>
+<h3 id="universal-dependencies">Universal Dependencies</h3>
+<p>AlpinoGraph also makes use of annotations and tagging following <a href="https://universaldependencies.org/">Universal Dependencies</a> (UD), a programme that aims at cross-linguistically consistent tagging and dependency parsing. UD is an open community effort with over 500 contributors producing over 200 treebanks in over 100 languages. If you’re new to UD, you should start by reading the first part of the <a href="https://universaldependencies.org/introduction.html">Short Introduction</a> and then browsing the <a href="https://universaldependencies.org/guidelines.html">annotation guidelines</a> on the UD website.</p>
+<h3 id="user-support">User support</h3>
+<p>AlpinoGraph was developed at the <a href="https://www.rug.nl/research/clcg/research/cl/">Center for Language and Cognition</a> of the University of Groningen by Peter Kleiweg. Any issues can be reported on <a href="https://github.com/rug-compling/alpinograph/issues">AlpinoGraph's GitHub</a>.</p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="key-publications">Key publications</h3>
 <ul>
-<li>
-<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
-</li>
-<li>
-<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
-</li>
-<li>
-<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
-</li>
-<li>
-<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
-</li>
-<li>
-<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
-</li>
+<li>Peter Kleiweg and Gertjan van Noord. 2020. <a href="https://aclanthology.org/2020.tlt-1.13">AlpinoGraph: A Graph-based Search Engine for Flexible and Efficient Treebank Search.</a> In <em>Proceedings of the 19th International Workshop on Treebanks and Linguistic Theories</em>, pages 151–161, Düsseldorf, Germany. Association for Computational Linguistics.</li>
 </ul>
-<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li><a href="https://urd2.let.rug.nl/~kleiweg/alpinograph/">Main page</a></li>
+<li><a href="https://urd2.let.rug.nl/~kleiweg/alpinograph-docs/">Online documentation</a> (in Dutch)</li>
+<li>
+<p><a href="https://github.com/rug-compling/alpinograph">Source code</a></p>
+</li>
+<li>
+<p><a href="https://www.ineo.tools/resources/alpino">Alpino</a></p>
+</li>
+<li><a href="https://universaldependencies.org/">Universal Dependencies</a></li>
+</ul>
+<p>TODO: alud</p></div>
             </div>
         </div>
 

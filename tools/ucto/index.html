@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/ucto/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Gecco - Ineo Content</title>
+        <title>Ucto - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -106,7 +106,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Gecco</a>
+    <a href="../gecco/" class="dropdown-item">Gecco</a>
 </li>
                                     
 <li>
@@ -146,7 +146,7 @@
 </li>
                                     
 <li>
-    <a href="../ucto/" class="dropdown-item">Ucto</a>
+    <a href="./" class="dropdown-item active">Ucto</a>
 </li>
                                     
 <li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../textfabric/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gretel/" class="nav-link">
+                                <a rel="next" href="../udpipe_frysk/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/ucto.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,13 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
+            <li class="nav-item" data-level="1"><a href="#ucto" class="nav-link">Ucto</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -211,37 +215,91 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gecco">Gecco</h1>
-<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h1 id="ucto">Ucto</h1>
+<p><a href="https://languagemachines.github.io/ucto/">Ucto</a> tokenizes text files: it separates words from punctuation, and splits sentences. It offers several other basic preprocessing steps such as changing case that you can all use to make your text suited for further processing such as indexing, part-of-speech tagging, or machine translation. Ucto comes with tokenisation rules for several languages and can be easily extended to suit other languages. It has been incorporated for tokenizing Dutch text in Frog, our Dutch morpho-syntactic processor.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
-<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
-<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
-<li>Training is explicitly included in the framework.</li>
-<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
-<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
-<li>Given an input text, Gecco will add various suggestions for correction.</li>
+<li>
+<p>Comes with tokenization rules for English, Dutch, French, Italian, and Swedish; easily extendible to other languages.</p>
+</li>
+<li>
+<p>Recognizes dates, times, units, currencies, abbreviations.</p>
+</li>
+<li>
+<p>Recognizes paired quote spans, sentences, and paragraphs.</p>
+</li>
+<li>
+<p>Produces UTF8 encoding and NFC output normalization, optionally accepts other encodings as input.</p>
+</li>
+<li>
+<p>Optional conversion to all lowercase or uppercase.</p>
+</li>
+<li>
+<p>Supports <a href="https://www.ineo.tools/resources/folia">FoLiA XML</a>.</p>
+</li>
+<li>
+<p>Ucto is also available as a <a href="https://webservices.cls.ru.nl/ucto">webservice</a>.</p>
+</li>
 </ul>
 <h2 id="learn">Learn</h2>
+<p><img alt="Ucto in action." src="./../media/ucto.gif" /></p>
+<h3 id="webservice">Webservice</h3>
+<p>Ucto is available as a <a href="https://webservices.cls.ru.nl/ucto">webservice</a>.</p>
+<h3 id="download-installation">Download &amp; Installation</h3>
+<p>Ucto is free software; you can redistribute it and/or modify it under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License</a> as published by the <a href="https://www.fsf.org/">Free Software Foundation</a>.</p>
+<p>To download and install Ucto:</p>
+<ol>
+<li>First check if there are up-to-date packages included in your distribution's package manager. There are packages for Arch Linux, Debian, FreeBSD and Ubuntu.</li>
+<li>If not, it is strongly recommended to use the <a href="https://proycon.github.io/LaMachine/">LaMachine</a> software distribution, which includes Ucto and all necessary dependencies, and runs on Linux, BSD and Mac OS X. It can also run as a virtual machine under any host OS.</li>
+<li>Alternatively, you can always download, compile and install Ucto manually, as described below.</li>
+</ol>
+<h4 id="manual-installation">Manual installation</h4>
 <ul>
-<li>
-<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
-</li>
-<li>
-<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
-</li>
-<li>
-<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
-</li>
-<li>
-<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
-</li>
-<li>
-<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
-</li>
+<li><a href="https://github.com/LanguageMachines/ucto/">Source code</a></li>
+<li><a href="https://github.com/LanguageMachines/ucto/releases">Stable releases</a></li>
 </ul>
-<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
+<p>To compile these manually consult the included INSTALL documents, you will need current versions of the following dependencies of our software:</p>
+<ul>
+<li><a href="https://github.com/LanguageMachines/ticcutils/">ticcutils</a> - A shared utility library;</li>
+<li><a href="https://github.com/LanguageMachines/libfolia/">libfolia</a> - A library for the <a href="https://www.ineo.tools/resources/folia">FoLiA</a> format.</li>
+</ul>
+<p>As well as the following 3rd party dependencies:</p>
+<ul>
+<li><a href="https://icu.unicode.org/">icu</a> - A C++ library for Unicode and Globalization support. On Debian/Ubuntu systems, install the package <code>libicu-dev</code>.</li>
+<li><a href="http://xmlsoft.org/">libxml2</a> - An XML library. On Debian/Ubuntu systems install the package <code>libxml2-dev</code>.
+A sane build environment with a C++ compiler (e.g. gcc or clang), autotools, libtool, pkg-config.</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<p>The Ucto documentation can be found <a href="https://ucto.readthedocs.io/en/latest/">here</a>.</p>
+<h3 id="python-binding">Python binding</h3>
+<p>Ucto can be used from Python through the <a href="https://github.com/proycon/python-ucto">python-ucto</a> binding, which has to be obtained separately unless you are using <a href="https://proycon.github.io/LaMachine/">LaMachine</a>.</p>
+<h3 id="support">Support</h3>
+<p>The development and improvement of Ucto also relies on your bug reports, suggestions, and comments. Use the <a href="https://github.com/LanguageMachines/ucto/issues">github issue tracker</a> or mail lamasoftware (at) science.ru.nl.</p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="publications">Publications</h3>
+<ul>
+<li>Van Gompel, M., van der Sloot, K., &amp; van den Bosch, A. (2012). <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=8eba02b37357288b9f9beac57d65a4cb26542419">Ucto: Unicode Tokeniser</a>. <em>Version 0.5, 3</em>, 12-05.</li>
+</ul>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li><a href="https://languagemachines.github.io/ucto/">Ucto home page</a></li>
+<li>
+<p><a href="https://webservices.cls.ru.nl/ucto">Ucto as a webservice</a></p>
+</li>
+<li>
+<p>Ucto is included in <a href="https://proycon.github.io/LaMachine/">LaMachine</a>, a unified software distribution for Natural Language Processing, also including (among others):</p>
+</li>
+<li><a href="https://www.ineo.tools/resources/alpino">Alpino</a></li>
+<li><a href="https://www.ineo.tools/resources/frog">Frog</a></li>
+<li><a href="https://www.ineo.tools/resources/folia">FoLiA</a></li>
+<li><a href="https://www.ineo.tools/resources/colibricore">Colibri Core</a></li>
+<li><a href="https://www.ineo.tools/resources/clam">CLAM</a></li>
+<li><a href="https://www.ineo.tools/resources/flat">FLAT</a></li>
+</ul>
+<h3 id="credits-contact-information-and-license">Credits, Contact Information and License</h3>
+<p>Ucto was written by Maarten van Gompel and Ko van der Sloot (<a href="https://www.ru.nl/clst">Radboud University</a>). Work on Ucto was funded by NWO, the Netherlands Organisation for Scientific Research, under the Implicit Linguistics project and the <a href="https://www.clarin.nl/">CLARIN-NL</a> program.</p>
+<p>The development and improvement of Ucto also relies on your bug reports, suggestions, and comments. Use the <a href="https://github.com/LanguageMachines/ucto/issues">github issue tracker</a> or mail lamasoftware (at) science.ru.nl.</p>
+<p>Ucto is free software; you can redistribute it and/or modify it under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License</a> as published by the <a href="https://www.fsf.org/">Free Software Foundation</a>.</p></div>
             </div>
         </div>
 

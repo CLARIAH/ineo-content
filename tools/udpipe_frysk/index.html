@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/udpipe_frysk/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Gecco - Ineo Content</title>
+        <title>UDPipe Frysk - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -106,7 +106,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Gecco</a>
+    <a href="../gecco/" class="dropdown-item">Gecco</a>
 </li>
                                     
 <li>
@@ -150,7 +150,7 @@
 </li>
                                     
 <li>
-    <a href="../udpipe_frysk/" class="dropdown-item">UDPipe Frysk</a>
+    <a href="./" class="dropdown-item active">UDPipe Frysk</a>
 </li>
                                 </ul>
                             </li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../ucto/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gretel/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/udpipe_frysk.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,13 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
+            <li class="nav-item" data-level="1"><a href="#udpipe-frysk" class="nav-link">UDPipe Frysk</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -211,37 +215,83 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gecco">Gecco</h1>
-<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h1 id="udpipe-frysk">UDPipe Frysk</h1>
+<p><a href="https://fryske-akademy.nl/fa-apps/ud-pipe/#run">UDPipe Frysk</a> is a webservice for lemmatizing, part-of-speech tagging and dependency parsing of (West) Frisian texts using <a href="https://dx.doi.org/10.18653/v1/K17-3009">UDPipe</a> (Straka and Straková, 2017). The tool allows for multiple ways of processing a text (the web service facilitates texts, files and web addresses).
+UDPipe parses texts following the <a href="https://universaldependencies.org/">Universal Dependencies</a> programme, which aims at cross-linguistically consistent tagging and annotation of dependency trees.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
-<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
-<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
-<li>Training is explicitly included in the framework.</li>
-<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
-<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
-<li>Given an input text, Gecco will add various suggestions for correction.</li>
+<li><a href="https://fryske-akademy.nl/fa-apps/ud-pipe/#run">UDPipe Frysk</a> is a webservice for lemmatizing, PoS tagging and dependency parsing of Frisian texts, developed by the Fryske Akademy and the Univerity of Groningen.</li>
+<li>Researchers can use the webservice for research concerning, for example, language change, syntactic relationships, author recognition, sentiment analysis or for developing automatic question-answer systems.</li>
+<li>The user can type in a Frisian text themselves, upload the text as a file or provide a URL to a Frisian website. The output can then be downloaded in various formats (txt, Excel, CoNLL-U) for further analysis.</li>
+<li>UDPipe parses texts following the <a href="https://universaldependencies.org/">Universal Dependencies</a> annotation guidelines, which aim at cross-linguistically consistent tagging and annotation of dependency trees.</li>
+<li>UDPipe Frysk also provides online parsing of Dutch and English texts using Dutch and English models.</li>
 </ul>
 <h2 id="learn">Learn</h2>
+<h3 id="using-udpipe-frysk">Using UDPipe Frysk</h3>
+<p>UDPipe Frysk is freely available. The user can type in a Frisian text themselves, upload the text as a file or provide a URL to a Frisian website. The output can then be downloaded in various formats (txt, Excel, CoNLL-U) for further analysis.</p>
+<p>The UDPipe Frysk webservice is built on the R package <a href="https://cran.r-project.org/web/packages/udpipe/index.html">udpipe</a>. </p>
+<p>More technical information can be found on the <a href="https://fryske-akademy.nl/fa-apps/ud-pipe/#about">UDPipe Frysk page</a>.</p>
+<p>UDPipe Frysk runs best on a computer with a monitor with a minimum resolution of 1370 x 870 (width x height). The use of (a recent version of) Chrome, Chromium, Edge, Firefox or Opera as a web browser is to be preferred.</p>
+<h3 id="universal-dependencies">Universal Dependencies</h3>
+<p><a href="https://universaldependencies.org/">Universal Dependencies</a> (UD) is a programme that aims at cross-linguistically consistent tagging and dependency parsing. UD is an open community effort with over 500 contributors producing over 200 treebanks in over 100 languages. If you’re new to UD, you should start by reading the first part of the <a href="https://universaldependencies.org/introduction.html">Short Introduction</a> and then browsing the <a href="https://universaldependencies.org/guidelines.html">annotation guidelines</a> on the UD website.</p>
+<h3 id="udpipe">UDPipe</h3>
+<p>Developed at Charles University, ÚFAL by <a href="https://aclanthology.org/K17-3009/">Straka and Straková</a>, <a href="https://ufal.mff.cuni.cz/udpipe">UDPipe</a> is a pipeline for morphosyntactic tagging and parsing following the <a href="https://universaldependencies.org/">UD</a> programme.</p>
+<p>A wide array of <a href="https://ufal.mff.cuni.cz/udpipe/2/models">models</a> for multiple languages is available for UDPipe on the LINDAT/CLARIN repository. However, the model used by UDPipe Frysk is not included in the LINDAT/CLARIN repository, and can instead be found on <a href="https://bitbucket.org/fryske-akademy/udpipe/src/master/">the Fryske Akademy's Bitbucket page</a>.</p>
+<p>UDPipe can be installed locally, for instance as <a href="https://pypi.org/project/ufal.udpipe/">Python</a> or <a href="https://cran.r-project.org/web/packages/udpipe/index.html">R</a> package, allowing the user to freely choose the preferred model, or even train their own. For the local installation of UDPipe, we refer to <a href="https://github.com/ufal/udpipe">ÚFAL's GitHub page</a> and relevant package pages. UDPipe Frysk can then be used locally, too, by installing UDPipe, and using the Frisian model.</p>
+<p>ÚFAL also hosts a webservice of UDPipe (not including Frisian), which can be found <a href="https://lindat.mff.cuni.cz/services/udpipe/run.php">here</a>.</p>
+<p>UDPipe output is formatted in CoNLL-U, introduced by UD. The format is explained <a href="https://universaldependencies.org/format.html">here</a>.</p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="key-publications">Key publications</h3>
 <ul>
 <li>
-<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
+<p>Wilbert Heeringa, Gosse Bouma, Martha Hofman, Eduard Drenth, Jan Wijffels &amp; Hans Van de Velde (2021). POS tagging, lemmatization and dependency parsing of West Frisian, arXiv preprint arXiv:2107.07974. https://arxiv.org/pdf/2107.07974.pdf</p>
 </li>
 <li>
-<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
-</li>
-<li>
-<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
-</li>
-<li>
-<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
-</li>
-<li>
-<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
+<p>Renckens, E. (2020, May 29). Tool voor Taalkundig Onderzoek Fries. E-Data &amp;Research. https://edata.nl/2020/05/20/tool-voor-taalkundig-onderzoek-fries/ (in Dutch)</p>
 </li>
 </ul>
-<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
+<h3 id="key-webpages">Key webpages</h3>
+<ul>
+<li>
+<p><a href="https://fryske-akademy.nl/fa-apps/ud-pipe/#run">UDPipe Frysk</a></p>
+</li>
+<li>
+<p><a href="https://bitbucket.org/fryske-akademy/udpipe/src/master/">UDPipe Frysk Bitbucket page</a></p>
+</li>
+</ul>
+<h3 id="relevant-literature">Relevant literature</h3>
+<ul>
+<li>Milan Straka and Jana Straková. 2017. <a href="https://aclanthology.org/K17-3009/">Tokenizing, POS Tagging, Lemmatizing and Parsing UD 2.0 with UDPipe.</a> In Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies, pages 88–99, Vancouver, Canada. Association for Computational Linguistics.</li>
+</ul>
+<h3 id="relevant-webpages">Relevant webpages</h3>
+<ul>
+<li>
+<p><a href="https://universaldependencies.org/">Universal Dependencies homepage</a></p>
+</li>
+<li>
+<p><a href="https://ufal.mff.cuni.cz/udpipe">UDPipe homepage</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ufal/udpipe">UDPipe GitHub page</a></p>
+</li>
+<li>
+<p><a href="https://ufal.mff.cuni.cz/udpipe/2/models">UDPipe models</a></p>
+</li>
+<li>
+<p><a href="https://lindat.mff.cuni.cz/services/udpipe/run.php">UDPipe webservice</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/ufal.udpipe/">Python UDPipe package</a></p>
+</li>
+<li>
+<p><a href="https://cran.r-project.org/web/packages/udpipe/index.html">R UDPipe package</a></p>
+</li>
+<li>
+<p><a href="https://universaldependencies.org/format.html">CoNLL-U format documentation</a></p>
+</li>
+</ul>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<p>The development of this software was made possible by a CLARIAH-Plus project financed by the Dutch Research Council (Grant 184.034.023).</p></div>
             </div>
         </div>
 

@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gretel/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/sasta/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>GrETEL - Ineo Content</title>
+        <title>SASTA - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -110,7 +110,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">GrETEL</a>
+    <a href="../gretel/" class="dropdown-item">GrETEL</a>
 </li>
                                     
 <li>
@@ -134,7 +134,7 @@
 </li>
                                     
 <li>
-    <a href="../sasta/" class="dropdown-item">SASTA</a>
+    <a href="./" class="dropdown-item active">SASTA</a>
 </li>
                                     
 <li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../gecco/" class="nav-link">
+                                <a rel="prev" href="../paqu/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../grlc/" class="nav-link">
+                                <a rel="next" href="../stam/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gretel.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/sasta.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,7 +194,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gretel" class="nav-link">GrETEL</a>
+            <li class="nav-item" data-level="1"><a href="#sasta" class="nav-link">SASTA</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
@@ -215,72 +215,77 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gretel">GrETEL</h1>
-<p>GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input.</p>
+<h1 id="sasta">SASTA</h1>
+<p><a href="https://sasta.hum.uu.nl/login">SASTA</a> is a tool for the analysis of spontaneous language transcripts, to aid clinical linguists and research into language development and language disorders. SASTA analyzes a transcript grammatically using <a href="https://www.ineo.tools/resources/alpino">Alpino</a>, an automatic utterance parser for Dutch, and can recognize a significant number of forms of deviant language use and analyze them correctly, following multiple assessment methods available for Dutch (<a href="https://www.pearsonclinical.nl/tarsp">TARSP</a>, <a href="https://www.hetwap.nl/wp-content/uploads/2018/04/2008-STAP-HANDLEIDING.pdf">STAP</a> and <a href="https://klinischelinguistiek.nl/uploads/201307asta4eversie.pdf">ASTA</a>).</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>GrETEL stands for Greedy Extraction of Trees for Empirical Linguistics.</li>
-<li>GrETEL is a user-friendly query engine in which linguists can use an utterance as a starting point for searching a treebank for a linguistic phenomenon. Instead of a formal, technical query instruction, it takes a natural language example as input. This provides a convenient way for novice and non-technical users to use treebanks with a limited knowledge of the underlying syntax and formal query languages.</li>
-<li>By allowing linguists to search for constructions similar to the example they provide, GrETEL aims to bridge the gap between descriptive-theoretical and computational linguistics. </li>
-<li>The example-based query procedure consists of multiple steps: </li>
-<li>The user enters an example of the construction they are interested in. </li>
-<li>The example is parsed with <a href="https://www.ineo.tools/resources/alpino">Alpino</a>, and is returned in the form of a matrix, in which the user specifies which aspects of this example are essential for the construction under investigation. This matrix is automatically converted in an XPath query, which can be manually edited or even written by the user. </li>
-<li>The user chooses the corpus on which the query must be executed. </li>
-<li>The query is executed on the selected corpus, and the matching constructions are presented to the user as a list of sentences, which can be downloaded. The user can also click on the sentences in order to visualize the results as syntax trees, in which the matching part of the tree is highlighted. </li>
-<li>The results of the query can then be efficiently analysed through the use of a pivot table.</li>
-<li>GrETEL is usable online on its webpage: https://gretel.hum.uu.nl/.</li>
-<li>Because GrETEL relies on <a href="https://www.ineo.tools/resources/alpino">Alpino</a> for parsing the example utterance, it only works for Dutch corpora and example utterances. However, GrETEL is in itself not bound to any particular language, as shown by the GrETEL <a href="http://gretel.ccl.kuleuven.be/afribooms/">variant for Afrikaans</a>, and <a href="http://gretel.ccl.kuleuven.be/poly-gretel/index.php">Poly-GrETEL</a>, which enabled simultaneous querying in multiple languages in a parallel treebank.</li>
+<li>SASTA can analyze transcripts following multiple assessment methods available for Dutch:</li>
+<li><a href="https://www.pearsonclinical.nl/tarsp">TARSP</a> (Schlichting 2005, 2017) for young children (1–4 years), inspired by LARSP for English (Crystal et al. 1989);</li>
+<li><a href="https://www.hetwap.nl/wp-content/uploads/2018/04/2008-STAP-HANDLEIDING.pdf">STAP</a> (Verbeek et al. 2007, van Ierland et al. 2008) for older children (4–8 years);</li>
+<li><a href="https://klinischelinguistiek.nl/uploads/201307asta4eversie.pdf">ASTA</a> (Boxum et al. 2013) for adults suffering from aphasia.</li>
+<li>SASTA generates as output a method-specific form and an annotated transcript. The generated transcript can be corrected by a linguist, if needed, and re-uploaded into SASTA, after which SASTA generates an adapted method-specific form. Overall, SASTA achieves an accuracy between 88 and 95% on training data for TARSP and STAP.</li>
+<li>SASTA accepts as input transcripts in MS Word or plain text (given some SASTA-specific requirements), as well as CHAT (MacWhinney 2000), and uses <a href="https://www.ineo.tools/resources/auchann">AuCHAnn</a> to generate valid CHAT files for transcripts accompanied by an interpretation, which significantly improves results. </li>
+<li>SASTA analyzes a transcript grammatically using <a href="https://www.ineo.tools/resources/alpino">Alpino</a>. It then uses specially constructed (XPath) queries for all measures defined within the assessment method to count the frequencies of linguistic phenomena in the spontaneous language sample. As such, SASTA may be considered a spin-off of <a href="https://www.ineo.tools/resources/gretel">GrETEL</a>, that can be used to investigate syntactic phenomena using query-by-example.</li>
+<li>Further development of SASTA is ongoing, in close collaboration with researchers in language development and with linguists in clinics. </li>
+<li>Using SASTA requires a login. An account can be created using the <code>Sign up</code> button on the <a href="https://sasta.hum.uu.nl/login">SASTA homepage</a>.</li>
 </ul>
-<h3 id="data">Data</h3>
-<p>GrETEL ships with (treebanks of) the LASSY-SMALL, the CGN and the Schlichting/Van Kampen corpora for querying.</p>
-<p>GrETEL also allows users to upload their own corpus. Uploaded corpora are automatically parsed with the <a href="https://www.ineo.tools/resources/alpino">Alpino parser</a>, preparing it for treebank querying.</p>
-<p>More about the LASSY-SMALL, the CGN and the Schlichting/Van Kampen corpora:</p>
-<ul>
-<li><a href="http://www.let.rug.nl/~vannoord/Lassy/">LASSY-SMALL</a></li>
-<li><a href="http://hdl.handle.net/10032/tm-a2-k6">CGN (Corpus Gesproken Nederlands)</a></li>
-<li><a href="https://childes.talkbank.org/access/DutchAfrikaans/SchlichtingVanKampen.html">Schlichting/Van Kampen corpus</a></li>
-</ul>
+<h3 id="documentation">Documentation</h3>
+<p>Documentation on how to use SASTA can be found <a href="https://uudigitalhumanitieslab.github.io/sasta/">here</a> (<strong>Dutch only</strong>).</p>
+<p>SASTA's code is itself available on <a href="https://github.com/UUDigitalHumanitieslab/sasta">Github</a>, where it is accompanied by more context and technical documentation.</p>
+<h3 id="sastadev"><code>sastadev</code></h3>
+<p>SASTA relies on a Python package called <a href="https://pypi.org/project/sastadev/"><code>sastadev</code></a> in the backend. This package is freely available on <a href="https://github.com/UUDigitalHumanitieslab/sastadev">Github</a>, with documentation available on <a href="https://sastadev.readthedocs.io/en/latest/introduction.html">Read the Docs</a>.</p>
 <h2 id="learn">Learn</h2>
-<h3 id="instruction-and-support">Instruction and support</h3>
-<p>Most recently, a complete tutorial on GrETEL was given on Oct 7, 2022 by Jan Odijk (in Dutch). This tutorial was taped and included slides and exercises, which can be found <a href="https://surfdrive.surf.nl/files/index.php/s/xfjVB2AfwgOpmNM">here</a>.</p>
-<p>The <a href="https://gretel.hum.uu.nl/ng/documentation">GrETEL webpage</a> offers a wide range of information, including tutorials, documentation and FAQ.
-* <a href="http://gretel.ccl.kuleuven.be/docs/GrETEL2-tutorial.pdf">Slides</a>
-* <a href="http://gretel.ccl.kuleuven.be/docs/GrETEL2-tutorial-handson.pdf">Exercises</a>
-* <a href="http://gretel.ccl.kuleuven.be/project/docs.php">Manuals and documentation</a>
-* <a href="https://gretel.hum.uu.nl/ng/documentation">FAQ</a>
-* <a href="https://gretel.hum.uu.nl/ng/documentation#contact">Contact the developers</a></p>
-<h3 id="local-installation">Local installation</h3>
-<p>While local installation is not necessary, given its <a href="https://gretel.hum.uu.nl/">web version</a>, it is possible to install GrETEL locally. GrETEL’s <a href="https://github.com/UUDigitalHumanitieslab/gretel">GitHub repository</a> has detailed information on how to install GrETEL locally, as well as notes for users and developers.</p>
-<h3 id="user-support">User support</h3>
-<p>The current version of GrETEL is developed by the Digital Humanities Lab at Utrecht University. If you have any suggestions, questions, or general feedback you are welcome to give us a ring, or send us an email. You can find contact information on <a href="https://dig.hum.uu.nl/">Digital Humanities Lab's website</a> or in the footer of the <a href="https://gretel.hum.uu.nl/">GrETEL webpage</a>.</p>
+<h3 id="documentation_1">Documentation</h3>
+<p>Documentation on how to use SASTA can be found <a href="https://uudigitalhumanitieslab.github.io/sasta/">here</a> (<strong>Dutch only</strong>).</p>
+<p>SASTA's code is itself available on <a href="https://github.com/UUDigitalHumanitieslab/sasta">Github</a>, where it is accompanied by more context and documentation. </p>
 <h3 id="jan-odijks-valedictory-speech">Jan Odijk's valedictory speech</h3>
-<p>In his valedictory speech called "Taaltechnologie voor taalkundig onderzoek [Language technology for linguistic research]", professor Jan Odijk (UU) discussed two of his more recent research projects in detail; one of which is GrETEL, the other being <a href="https://www.ineo.tools/resources/sasta">SASTA</a>, which he considers a spin-off of GrETEL. The recording of this ceremony can be found <a href="https://surfdrive.surf.nl/files/index.php/s/pzNHSgd6t8L0Wnk?path=%2Fopname#/files_mediaviewer/aula-jan-odijk_high.mp4">here</a>; the transcript of his speech can be found <a href="https://surfdrive.surf.nl/files/index.php/s/pzNHSgd6t8L0Wnk?path=%2Fuitgeschreven%20tekst">here</a> (<strong>both in Dutch</strong>).</p>
+<p>In his valedictory speech called "Taaltechnologie voor taalkundig onderzoek [Language technology for linguistic research]", professor Jan Odijk (UU), SASTA's project lead, discussed two of his more recent research projects in detail; one of which is SASTA, the other being <a href="https://www.ineo.tools/resources/gretel">GrETEL</a>, of which he considers SASTA a spin-off. The recording of this ceremony can be found <a href="https://surfdrive.surf.nl/files/index.php/s/pzNHSgd6t8L0Wnk?path=%2Fopname#/files_mediaviewer/aula-jan-odijk_high.mp4">here</a>; the transcript of his speech can be found <a href="https://surfdrive.surf.nl/files/index.php/s/pzNHSgd6t8L0Wnk?path=%2Fuitgeschreven%20tekst">here</a> (<strong>both in Dutch</strong>).</p>
+<h3 id="lectures-on-sastadev">Lectures on <code>sastadev</code></h3>
+<p>Professor Jan Odijk recently gave three lectures on <code>sastadev</code> (<strong>in Dutch</strong>). These lectures were recorded and <a href="https://surfdrive.surf.nl/files/index.php/s/dysj48H3NcmSvio">made fully available</a> on SURFdrive including additional materials:
+* <strong>Lecture 1</strong>: The syntactic structures in Alpino
+* <strong>Lecture 2</strong>: Implementation of the methods (TARSP, STAP, ASTA)
+* <strong>Lecture 3</strong>: Analysis of deviant language</p>
 <h2 id="mentions">Mentions</h2>
-<h3 id="key-publications">Key publications</h3>
+<h3 id="pipeline">Pipeline</h3>
+<p>In order to move toward implementation of SASTA in clinical practice and beyond, improving and extending the application is ongoing. In collaboration with the Koninklijke Auris Groep and commercial partner ITSLanguage, a <a href="https://auris.nl/innovatie/treintje-drie-tools-op-de-rails/">pipeline is actively being developed</a>, consisting of the following tools:
+* <a href="https://www.itslanguage.nl/tt/">TT</a> (ITSLanguage): TT supports the linguist in transcribing an uploaded audio or video fragment containing spontaneous language in CHAT format using automatic speech recognition.
+* SASTA (Utrecht University): SASTA analyzes a transcript grammatically and can recognize a significant number of forms of deviant language use and analyze them correctly, following multiple assessment methods available for Dutch (TARSP, STAP and ASTA).
+* Stamper (Anouk Scheffer, PhD candidate at Utrecht University/Auris): Stamper analyzes SASTA's output, by grouping various structures and making easy-to-use overviews.</p>
+<h3 id="publications-on-sasta">Publications on SASTA</h3>
 <ul>
-<li>
-<p>Jan Odijk, Martijn van der Klis and Sheean Spoel (2018). “Extensions to the GrETEL treebank query application.” In: Proceedings of the 16th International Workshop on Treebanks and Linguistic Theories. Prague, Czech Republic. pp. 46-55.</p>
-</li>
-<li>
-<p>Liesbeth Augustinus, Vincent Vandeghinste and Frank Van Eynde (2012). “Example-based treebank querying.” In: Proceedings of the 8th Conference on Language Resources and Evaluation (LREC 2012). Istanbul, Turkey. pp. 3161-3167.</p>
-</li>
+<li>Odijk, J. (2021). Towards Semi-Automatic Analysis of Spontaneous Language for Dutch. In <em>Selected papers from the CLARIN Annual Conference 2020</em> (Vol. 180, pp. 165-175). (Linköping Electronic Conference Proceedings). Linköping University Press. https://doi.org/10.3384/ecp18018</li>
+<li>Renckens, E., &amp; Odijk, J. (2021). Online tool SASTA analyseert taal. <em>eData &amp; Research</em>, <em>15</em>(2), 7-7. https://edata.nl/2021/02/10/online-tool-sasta-analyseert-taal/</li>
 </ul>
-<h3 id="other-publications">Other publications</h3>
+<h3 id="other-relevant-publications">Other relevant publications</h3>
 <ul>
-<li>Jan Odijk (2020). De verleidingen en gevaren van GrETEL. Nederlandse taalkunde, 25(1), 7-37.</li>
-<li>Jan Odijk (2023, 30 Jan.). <em>Taaltechnologie voor taalkundig onderzoek</em>. Valedictory speech, Utrecht University. https://surfdrive.surf.nl/files/index.php/s/pzNHSgd6t8L0Wnk</li>
+<li>Boxum, E., van der Scheer, F. and Zwaga, M. (2013). <em>ASTA: Analyse voor Spontane Taal bij Afasie</em> (4th ed.). Vereniging voor Klinische Linguïstiek.</li>
+<li>Crystal, D., Fletcher, P. and Garman, M. (1989). <em>Grammatical Analysis of Language Disability</em> (2nd ed.). London: Cole and Whurr. https://hdl.handle.net/10092/17651</li>
+<li>van Ierland, M., Verbeek, J. and van den Dungen, L. (2008). <em>Spontane Taal Analyse Procedure: Handleiding van het STAP-instrument</em>. Universiteit van Amsterdam.</li>
+<li>MacWhinney, B. (2000). <em>The CHILDES project: Tools for analyzing talk: Transcription format and programs</em> (3rd ed.). Lawrence Erlbaum Associates Publishers.</li>
+<li>Odijk, J. (2023, 30 Jan.). <em>Taaltechnologie voor taalkundig onderzoek</em>. Valedictory speech, Utrecht University. https://surfdrive.surf.nl/files/index.php/s/pzNHSgd6t8L0Wnk</li>
+<li>Schlichting, L. (2005). <em>TARSP: Taal Analyse Remediëring en Screening Procedure: Taalontwikkelingsschaal van
+Nederlandse kinderen van 1–4 jaar</em> (7th ed.). Amsterdam: Pearson. ISBN 978 90 265 1355 8.</li>
+<li>Schlichting, L. (2017). <em>TARSP: Taal analyse remediëring en screening procedure: Taalontwikkelingsschaal Van Nederlandse Kinderen van 1–4 Jaar met Aanvullende Structuren tot 6 jaar</em> (8th ed.). Amsterdam: Pearson. ISBN 978 90 430 3561 3.</li>
+<li>Verbeek, J., van Ierland, M. and van den Dungen, L. (2007). <em>Spontane Taal Analyse Procedure: Verantwoording van het STAP-instrument</em>. Universiteit van Amsterdam. </li>
 </ul>
+<h3 id="credits-and-contact-information">Credits and Contact Information</h3>
+<p>SASTA is being actively developed by Utrecht University, and maintained by its <a href="https://cdh.uu.nl/about/research-software-lab/">Centre for Digital Humanities – Research Software Lab</a>.</p>
+<p>SASTA is the result of close collaboration of several institutes, involving UU and the Dutch Association of Clinical Linguists (VKL), but also Hogeschool Utrecht, CLARIAH, Auris and Stichting Taaltechnologie, firmly embedding it among interested clinical linguists.</p>
+<p>For questions and feedback, please contact: <a href="mailto:dh.developers@uu.nl?subject=[SASTA]%20Feedback">Centre for Digital Humanities – Research Software Lab</a>.</p>
 <h3 id="webpages">Webpages</h3>
-<p>Source code: https://github.com/UUDigitalHumanitieslab/gretel</p>
-<p>Previous versions:
-* GrETEL 3: http://gretel.ccl.kuleuven.be/gretel3/
-* GrETEL 2: http://gretel.ccl.kuleuven.be/gretel-2.0/ebs/input.php</p>
-<p>More publications and talks: http://gretel.ccl.kuleuven.be/project/publications.php</p>
-<p>Poly-GrETEL: http://gretel.ccl.kuleuven.be/poly-gretel/</p>
-<p>GrETEL for Afrikaans: http://gretel.ccl.kuleuven.be/afribooms/</p>
-<h3 id="videos">Video’s</h3>
 <ul>
-<li>Jan Odijk (2022). “GrETEL Tutorial.” <a href="https://surfdrive.surf.nl/files/index.php/s/xfjVB2AfwgOpmNM">Online.</a></li>
+<li><a href="https://sasta.hum.uu.nl/login">SASTA main page</a></li>
+<li><a href="https://uudigitalhumanitieslab.github.io/sasta/">SASTA documentation</a></li>
+<li><a href="https://github.com/UUDigitalHumanitieslab/sasta">SASTA GitHub page</a></li>
+<li><a href="https://pypi.org/project/sastadev/"><code>sastadev</code> PyPI page</a></li>
+<li><a href="https://github.com/UUDigitalHumanitieslab/sastadev"><code>sastadev</code> Github page</a></li>
+<li><a href="https://sastadev.readthedocs.io/en/latest/index.html"><code>sastadev</code> documentation</a></li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li><a href="https://www.ineo.tools/resources/auchann">AuCHAnn</a></li>
+<li><a href="https://www.ineo.tools/resources/alpino">Alpino</a></li>
+<li><a href="https://www.ineo.tools/resources/gretel">GrETEL</a></li>
 </ul></div>
             </div>
         </div>

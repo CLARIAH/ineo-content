@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/colibricore/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Gecco - Ineo Content</title>
+        <title>Colibri Core - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -74,7 +74,7 @@
 </li>
                                     
 <li>
-    <a href="../colibricore/" class="dropdown-item">Colibri Core</a>
+    <a href="./" class="dropdown-item active">Colibri Core</a>
 </li>
                                     
 <li>
@@ -106,7 +106,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Gecco</a>
+    <a href="../gecco/" class="dropdown-item">Gecco</a>
 </li>
                                     
 <li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../clam/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gretel/" class="nav-link">
+                                <a rel="next" href="../corpus-frontend/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/colibricore.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,13 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
+            <li class="nav-item" data-level="1"><a href="#colibri-core" class="nav-link">Colibri Core</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -211,37 +215,61 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gecco">Gecco</h1>
-<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h1 id="colibri-core">Colibri Core</h1>
+<p><a href="https://proycon.github.io/colibri-core/">Colibri Core</a> is an NLP tool as well as a <a href="https://proycon.github.io/colibri-core/capi/html/">C++</a> and <a href="https://pypi.org/project/colibricore/">Python</a> library for working with basic linguistic constructions such as n-grams and skipgrams (i.e. patterns with one or more gaps, either of fixed or dynamic size) in a quick and memory-efficient way.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
-<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
-<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
-<li>Training is explicitly included in the framework.</li>
-<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
-<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
-<li>Given an input text, Gecco will add various suggestions for correction.</li>
+<li><a href="https://proycon.github.io/colibri-core/">Colibri Core</a> is software to quickly and efficiently count and extract patterns from large corpus data, to extract various statistics on the extracted patterns, and to compute relations between the extracted patterns.</li>
+<li>The employed notion of pattern or construction encompasses the following categories: n-gram -- <em>n</em> consecutive words; skipgram -- An abstract pattern of predetermined length with one or multiple gaps (of specific size); flexgram -- An abstract pattern with one or more gaps of variable-size.</li>
+<li>At the heart of the sofware is the notion of pattern models. A pattern model is simply a collection of extracted patterns (any of the three categories) and their counts from a specific corpus.</li>
+<li>Colibri Core is available as a collection of <a href="https://github.com/proycon/colibri-core">standalone command-line tools</a>, as a <a href="https://proycon.github.io/colibri-core/capi/html/">C++ library</a>, and as a <a href="https://pypi.org/project/colibricore/">Python library</a>.</li>
 </ul>
 <h2 id="learn">Learn</h2>
+<p>Colibri Core is software to quickly and efficiently count and extract patterns from large corpus data, to extract various statistics on the extracted patterns, and to compute relations between the extracted patterns. The employed notion of pattern or construction encompasses the following categories:</p>
 <ul>
-<li>
-<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
-</li>
-<li>
-<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
-</li>
-<li>
-<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
-</li>
-<li>
-<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
-</li>
-<li>
-<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
-</li>
+<li>n-gram -- n consecutive words;</li>
+<li>skipgram -- An abstract pattern of predetermined length with one or multiple gaps (of specific size);</li>
+<li>flexgram -- An abstract pattern with one or more gaps of variable-size.</li>
 </ul>
-<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
+<p>N-gram extraction may seem fairly trivial at first, with a few lines in your favourite scripting language, you can move a simple sliding window of size <em>n</em> over your corpus and store the results in some kind of hashmap. This trivial approach however makes an unnecessarily high demand on memory resources, this often becomes prohibitive if unleashed on large corpora. Colibri Core tries to minimise these space requirements in several ways:</p>
+<ul>
+<li>Compressed binary representation -- Each word type is assigned a numeric class, which is encoded in a compact binary format in which highly frequent classes take less space than less frequent classes. Colibri core always uses this representation rather than a full string representation, both on disk and in memory.</li>
+<li>Informed iterative counting -- Counting is performed more intelligently by iteratively processing the corpus in several passes and quickly discarding patterns that won't reach the desired occurrence threshold.</li>
+</ul>
+<p>Skipgram and flexgram extraction are computationally more demanding but have been implemented with similar optimisations. Skipgrams are computed by abstracting over n-grams, and flexgrams in turn are computed either by abstracting over skipgrams, or directly from n-grams on the basis of co-occurrence information (mutual pointwise information).</p>
+<p>At the heart of the sofware is the notion of <em>pattern models</em>. The core tool, to be used from the command-line, is <code>colibri-patternmodeller</code> which enables you to build pattern models, generate statistical reports, query for specific patterns and relations, and manipulate models.</p>
+<p>A pattern model is simply a collection of extracted patterns (any of the three categories) and their counts from a specific corpus. Pattern models come in two varieties:</p>
+<ul>
+<li>Unindexed Pattern Model -- The simplest form, which simply stores the patterns and their count;</li>
+<li>Indexed Pattern Model -- The more informed form, which retains all indices to the original corpus, at the cost of more memory/diskspace.</li>
+</ul>
+<p>The Indexed Pattern Model is much more powerful, and allows more statistics and relations to be inferred.</p>
+<p>The generation of pattern models is optionally parametrised by a minimum occurrence threshold, a maximum pattern length, and a lower-boundary on the different types that may instantiate a skipgram (i.e. possible fillings of the gaps).</p>
+<h3 id="distributions">Distributions</h3>
+<p>Colibri Core is available as a collection of <a href="https://github.com/proycon/colibri-core">standalone command-line tools</a>, as a <a href="https://proycon.github.io/colibri-core/capi/html/">C++ library</a>, and as a <a href="https://pypi.org/project/colibricore/">Python library</a>.</p>
+<h3 id="documentation-and-resources">Documentation and resources</h3>
+<p>Colibri Core is well documented in the following places:</p>
+<ul>
+<li>van Gompel, M., &amp; van den Bosch, A. (2016). <a href="http://dx.doi.org/10.5334/jors.105">Efficient n-gram, Skipgram and Flexgram Modelling with Colibri Core.</a> <em>Journal of Open Research Software, 4</em>(1), e30. http://dx.doi.org/10.5334/jors.105</li>
+<li><a href="https://github.com/proycon/colibri-core">Source code on GitHub</a></li>
+<li><a href="https://proycon.github.io/colibri-core/doc/">Documentation and Python API reference</a></li>
+<li><a href="https://proycon.github.io/colibri-core/capi/html/">C++ API reference</a></li>
+<li><a href="https://proycon.github.io/colibri-core/doc/colibricore-python-tutorial.html">Python Tutorial (ipython notebook)</a></li>
+</ul>
+<h3 id="user-support">User support</h3>
+<p>Colibri Core was developed by Maarten van Gompel at the Centre of Language Studies, Radboud University Nijmegen, under supervision of Antal van den Bosch. </p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="key-publications">Key publications</h3>
+<ul>
+<li>van Gompel, M., &amp; van den Bosch, A. (2016). <a href="http://dx.doi.org/10.5334/jors.105">Efficient n-gram, Skipgram and Flexgram Modelling with Colibri Core.</a> <em>Journal of Open Research Software, 4</em>(1), e30. http://dx.doi.org/10.5334/jors.105</li>
+</ul>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li><a href="https://github.com/proycon/colibri-core">Source code on GitHub</a></li>
+<li><a href="https://proycon.github.io/colibri-core/doc/">Documentation and Python API reference</a></li>
+<li><a href="https://proycon.github.io/colibri-core/capi/html/">C++ API reference</a></li>
+<li><a href="https://proycon.github.io/colibri-core/doc/colibricore-python-tutorial.html">Python Tutorial (ipython notebook)</a></li>
+</ul></div>
             </div>
         </div>
 

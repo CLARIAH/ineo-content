@@ -38,7 +38,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../CLAM/" class="dropdown-item">CLAM</a>
+    <a href="../alpino/" class="dropdown-item">Alpino</a>
+</li>
+                                    
+<li>
+    <a href="../alpinograph/" class="dropdown-item">AlpinoGraph</a>
 </li>
                                     
 <li>
@@ -46,7 +50,7 @@
 </li>
                                     
 <li>
-    <a href="../asr_nl/" class="dropdown-item">asr_nl</a>
+    <a href="../asr_nl/" class="dropdown-item">Automatic Speech Recognition for Dutch</a>
 </li>
                                     
 <li>
@@ -54,7 +58,23 @@
 </li>
                                     
 <li>
+    <a href="../autosearch/" class="dropdown-item">AutoSearch</a>
+</li>
+                                    
+<li>
+    <a href="../blacklab/" class="dropdown-item">BlackLab</a>
+</li>
+                                    
+<li>
     <a href="../burgerLinker/" class="dropdown-item">BurgerLinker</a>
+</li>
+                                    
+<li>
+    <a href="../clam/" class="dropdown-item">CLAM</a>
+</li>
+                                    
+<li>
+    <a href="../colibricore/" class="dropdown-item">Colibri Core</a>
 </li>
                                     
 <li>
@@ -63,6 +83,22 @@
                                     
 <li>
     <a href="../cow/" class="dropdown-item">CoW</a>
+</li>
+                                    
+<li>
+    <a href="../ewald/" class="dropdown-item">Ewald</a>
+</li>
+                                    
+<li>
+    <a href="../ewbd/" class="dropdown-item">Ewbd</a>
+</li>
+                                    
+<li>
+    <a href="../ewgd/" class="dropdown-item">Ewgd</a>
+</li>
+                                    
+<li>
+    <a href="../ewld/" class="dropdown-item">Ewld</a>
 </li>
                                     
 <li>
@@ -90,7 +126,15 @@
 </li>
                                     
 <li>
-    <a href="../paqu/" class="dropdown-item">PaQu</a>
+    <a href="../opensonar/" class="dropdown-item">OpenSoNaR</a>
+</li>
+                                    
+<li>
+    <a href="../paqu/" class="dropdown-item">PaQu – Parse and Query</a>
+</li>
+                                    
+<li>
+    <a href="../sasta/" class="dropdown-item">SASTA</a>
 </li>
                                     
 <li>
@@ -99,6 +143,14 @@
                                     
 <li>
     <a href="../textfabric/" class="dropdown-item">Text-Fabric</a>
+</li>
+                                    
+<li>
+    <a href="../ucto/" class="dropdown-item">Ucto</a>
+</li>
+                                    
+<li>
+    <a href="../udpipe_frysk/" class="dropdown-item">UDPipe Frysk</a>
 </li>
                                 </ul>
                             </li>
@@ -111,7 +163,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../CLAM/" class="nav-link">
+                                <a rel="prev" href="../alpinograph/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -152,6 +204,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -160,22 +216,48 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="alud">alud</h1>
-<p>alud is a <a href="https://go.dev/">Go</a> package for deriving <a href="https://universaldependencies.org/">Universal Dependencies</a> from Dutch sentences parsed with Alpino.</p>
+<p><a href="https://github.com/rug-compling/alud">alud</a> is a Go package for deriving <a href="https://universaldependencies.org/">Universal Dependencies</a> from Dutch sentences parsed with <a href="https://www.ineo.tools/resources/alpino">Alpino</a>.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Universal Dependencies (UD) is a framework for consistent annotation of grammar (parts of speech, morphological features, and syntactic dependencies) across different human languages.</li>
-<li>alud is a package for deriving Universal Dependencies parsed with Alpino, a collection of tools and programs for parsing Dutch sentences into dependency structures.</li>
-<li>Usually, the input is XML in the alpino_ds format.</li>
-<li>The output is in the CoNLL-U format, or the Universal Dependencies can be embedded into the alpino_ds format (version 1.10), making them available for XPath queries.</li>
-<li>It is also possible to embed a user provided file in the CoNLL-U format, and embed this into the alpino_ds format.</li>
+<li>
+<p>Alpino parses, POS-tags, lemmatizes and analyses morphologically any Dutch sentence that it is given. Alpino reliably analyses an input sentence syntactically, yielding a fully annotated syntactic tree with both constituents as well as explicitly labelled syntactic relations.</p>
+</li>
+<li>
+<p><strong>alud</strong> derives <a href="https://universaldependencies.org/">Universal Dependencies</a> from Alpino's output (in XML, in the alpino_ds format), and writes it in the <a href="https://universaldependencies.org/format.html">CoNLL-U format</a>. Alternatively, output can be embedded into the alpino_ds format, making them available for XPath queries.</p>
+</li>
+<li>
+<p><strong>alud</strong> is also capable of inserting given Universal Dependencies into the alpino_ds format.</p>
+</li>
+<li>
+<p><strong>alud</strong> was based on a translation of an xquery script, <a href="https://github.com/gossebouma/lassy2ud"><code>lassy2ud</code></a>.</p>
+</li>
 </ul>
+<h3 id="universal-dependencies">Universal Dependencies</h3>
+<p><a href="https://universaldependencies.org/">Universal Dependencies</a> (UD) is a programme that aims at cross-linguistically consistent tagging and dependency parsing. UD is an open community effort with over 500 contributors producing over 200 treebanks in over 100 languages. If you’re new to UD, you should start by reading the first part of the <a href="https://universaldependencies.org/introduction.html">Short Introduction</a> and then browsing the <a href="https://universaldependencies.org/guidelines.html">annotation guidelines</a> on the UD website.</p>
 <h2 id="learn">Learn</h2>
-<p><em>To see, what the results would look like, have a look this <a href="http://www.let.rug.nl/kleiweg/conllu/">visualisation</a>.
-</em>For more information, please refer to the <a href="https://github.com/rug-compling/alud/tree/master#readme">ReadMe</a></p>
-<h3 id="installation">Installation</h3>
-<p><em>The package comes with two example programs, alud and alud-dact.
-To install the demo program alud-dact, you need to have <a href="https://www.oracle.com/database/berkeley-db/xml.html">Oracle Berkeley DB XML</a> installed. With alud-dact you can process <a href="https://rug-compling.github.io/dact/">dact</a> files.
-</em>For more information, please refer to the <a href="https://github.com/rug-compling/alud/tree/master#readme">ReadMe</a></p></div>
+<p>alud is available as a <a href="https://go.dev/">Go</a> package. Up-to-date documentation of the package can be found <a href="https://pkg.go.dev/github.com/rug-compling/alud/v2">here</a>.</p>
+<p>alud's GitHub page provides extra information, such as how to install it. If you want to install alud, we kindly refer you to the up-to-date <a href="https://github.com/rug-compling/alud">GitHub page</a>.</p>
+<h2 id="mentions">Mentions</h2>
+<ul>
+<li><a href="https://www.ineo.tools/resources/alpino">Alpino</a>: alud is developed to convert Alpino's output into Universal Dependencies.</li>
+<li><a href="https://universaldependencies.org/">Universal Dependencies</a>: UD is a programme that aims at cross-linguistically consistent tagging and dependency parsing. UD is an open community effort with over 500 contributors producing over 200 treebanks in over 100 languages. If you’re new to UD, you should start by reading the first part of the <a href="https://universaldependencies.org/introduction.html">Short Introduction</a> and then browsing the <a href="https://universaldependencies.org/guidelines.html">annotation guidelines</a> on the UD website.</li>
+<li><a href="https://universaldependencies.org/format.html">CoNLL-U</a>: alud can write its output in CoNLL-U, a widely used format for dependency parses.</li>
+<li><a href="https://urd2.let.rug.nl/~kleiweg/conllu/">CoNLL-U visualization</a>: the main developer of alud also wrote a webservice for visualizing CoNLL-U files.</li>
+<li><a href="https://go.dev/">Go</a>: alud is a package for the Go programming language.</li>
+</ul>
+<h3 id="publications">Publications</h3>
+<ul>
+<li>Gosse Bouma &amp; Gertjan van Noord (2017). <a href="https://pure.rug.nl/ws/portalfiles/portal/50364749/Increasing_return_on_annotation_investment.pdf"><em>Increasing return on annotation investment: the automatic construction of a Universal Dependency treebank for Dutch.</em></a> In: Proceedings of the NoDaLiDa 2017 Workshop on Universal Dependencies (UDW 2017).</li>
+<li>Gosse Bouma (2018). <em>Comparing two methods for adding Enhanced Dependencies to UD treebanks.</em> In: Proceedings of the 17th International Workshop on Treebanks and Linguistic Theories (TLT 2018), December 13–14, 2018, Oslo University, Norway.</li>
+</ul>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li><a href="https://github.com/rug-compling/alud">alud GitHub page</a></li>
+<li><a href="https://pkg.go.dev/github.com/rug-compling/alud/v2">alud Go as package</a></li>
+<li><a href="https://github.com/gossebouma/lassy2ud"><code>lassy2ud</code></a></li>
+</ul>
+<h3 id="credits">Credits</h3>
+<p>alud was developed by the <a href="https://www.rug.nl/research/clcg/research/cl/">Computational Linguistics group of the Faculty of Arts, Groningen University</a>.</p></div>
             </div>
         </div>
 

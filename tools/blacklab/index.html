@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/gecco/">
+        <link rel="canonical" href="https://clariah.github.io/ineo-content/tools/blacklab/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Gecco - Ineo Content</title>
+        <title>BlackLab - Ineo Content</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 </li>
                                     
 <li>
-    <a href="../blacklab/" class="dropdown-item">BlackLab</a>
+    <a href="./" class="dropdown-item active">BlackLab</a>
 </li>
                                     
 <li>
@@ -106,7 +106,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Gecco</a>
+    <a href="../gecco/" class="dropdown-item">Gecco</a>
 </li>
                                     
 <li>
@@ -163,17 +163,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../frog/" class="nav-link">
+                                <a rel="prev" href="../autosearch/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gretel/" class="nav-link">
+                                <a rel="next" href="../burgerLinker/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/gecco.md" class="nav-link">Edit on CLARIAH/ineo-content
+                                <a href="https://github.dev/CLARIAH/ineo-content/blob/master/src/tools/blacklab.md" class="nav-link">Edit on CLARIAH/ineo-content
                                     </a>
                             </li>
                     </ul>
@@ -194,13 +194,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#gecco" class="nav-link">Gecco</a>
+            <li class="nav-item" data-level="1"><a href="#blacklab" class="nav-link">Blacklab</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#learn" class="nav-link">Learn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mentions" class="nav-link">Mentions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -211,37 +215,71 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="gecco">Gecco</h1>
-<p>Gecco is a modular, scalable, and context-aware spelling correction framework. It's designed to build a complete context-aware spelling correction system given your own data set.</p>
+<h1 id="blacklab">Blacklab</h1>
+<p><a href="https://inl.github.io/BlackLab/">BlackLab</a> is a corpus search engine built on top of <a href="https://lucene.apache.org/">Apache Lucene</a>. It supports token-based querying and querying (dependency) relations.</p>
 <h2 id="overview">Overview</h2>
 <ul>
-<li>Gecco (Generic Environment for Context-Aware Correction of Orthography) is a generic modular and distributed framework for spelling correction.</li>
-<li>Its primary goal is to build a complete context-aware spelling correction system using your own dataset.</li>
-<li>Most of its modules are language-independent, and they can be trained using a source corpus.</li>
-<li>Training is explicitly included in the framework.</li>
-<li>The framework is designed to be easily extendable, allowing you to write modules in Python 3 to enhance its functionality.</li>
-<li>Additionally, Gecco is scalable and can be distributed across multiple servers to handle larger tasks efficiently.</li>
-<li>Given an input text, Gecco will add various suggestions for correction.</li>
+<li>
+<p>BlackLab was designed primarily for linguists, but is also used for other purposes, like historical research and knowledge extraction.</p>
+</li>
+<li>
+<p>It is available as a REST API (web service), so you can use it from any programming language.</p>
+</li>
+<li>
+<p>BlackLab's features include:</p>
+</li>
+<li>Index annotated text, so you can search for specific headwords or parts of speech.</li>
+<li>Easy to use, well-documented REST API.</li>
+<li>Fast and scalable: find complex patterns in large corpora in seconds.</li>
+<li>Index your data using a built-in format or by writing a configuration file.</li>
+<li>Search for complex patterns using the powerful <a href="https://inl.github.io/BlackLab/guide/corpus-query-language.html">BlackLab Corpus Query Language</a>.</li>
+<li>Search within spans to e.g. find named entities containing tower at the end of a sentence.</li>
+<li>Search (dependency) relations, to find specific (tree) structures in your text. (NEW in v4)</li>
+<li>Capture parts of matches.</li>
+<li>Group and sort result sets on many criteria, such as the text preceding the match.</li>
+<li>Highlight hits in a document and keyword-in-context (KWIC) view of hits.</li>
+<li>Actively developed since 2010, with many <a href="https://inl.github.io/BlackLab/guide/future-plans.html">plans for the future</a>.</li>
 </ul>
 <h2 id="learn">Learn</h2>
+<h3 id="try-it-online">Try it online</h3>
+<p>For a quick example of the BlackLab Frontend web application, have a look at either of these:</p>
 <ul>
-<li>
-<p>The system can be invoked from the command-line, as a Python binding, as a RESTful webservice, or through the web application (two interfaces).</p>
-</li>
-<li>
-<p>To install Gecco, we strongly recommend you to use our LaMachine distribution, which can be obtained from [https://github.com/proycon/lamachine].</p>
-</li>
-<li>
-<p>LaMachine includes Gecco and can be run in multiple ways: as a virtual machine, as a docker app, or as a compilation script setting up a Python virtual environment.</p>
-</li>
-<li>
-<p>Gecco uses memory-based technologies, and depending on the models you train, may take up considerable memory. Therefore we recommend at least 16GB RAM, training may require even more. For various modules, model size may be reduced by increasing frequency thresholds, but this will come at the cost of reduced accuracy.</p>
-</li>
-<li>
-<p>Gecco will only run on POSIX-complaint operating systems (i.e. Linux, BSD, Mac OS X), not on Windows.</p>
-</li>
+<li><a href="https://brievenalsbuit.ivdnt.org/corpus-frontend/BaB/search/">Brieven als Buit</a> ("Letters as Loot"), where you can search a collection of historical letters to and from sailors from the 17th to the 19th century;</li>
+<li><a href="https://corpusgysseling.ivdnt.org/corpus-frontend/Gysseling/search/">Corpus Gysseling</a>, a small corpus of historic Dutch (1200-1300).</li>
 </ul>
-<p>Please refer to (the GitHub)[https://github.com/proycon/gecco] for more information on the requirements and set-up.</p></div>
+<p>With a <a href="https://idm.clarin.eu/unitygw/pub#!registration-CLARIN%20Identity%20Registration">free CLARIN account</a>, you can also check out:</p>
+<ul>
+<li><a href="https://chn.ivdnt.org/">Corpus Hedendaags Nederlands</a>;</li>
+<li><a href="https://opensonar.ivdnt.org/">OpenSonar</a>.</li>
+</ul>
+<p>Here are a few searches you can try (click on the Extended tab):</p>
+<ul>
+<li><strong>Lemma: "koe"</strong> Finds all forms of the word "koe" (cow). Other words to try: "wet" (law), "zien" (to see), "groot" (large).</li>
+<li><strong>Part of speech: "NOU-C"</strong> Find all common nouns. Other values to try: "VRB<em>" (verbs), "ADJ</em>" (adjectives).</li>
+<li><strong>Word: "coe"</strong> Find a specific historic spelling of "koe".</li>
+</ul>
+<p>This is just a small sample of the capabilities of BlackLab.</p>
+<h3 id="documentation">Documentation</h3>
+<p>If you're excited about the possibilities and want to get BlackLab up and running yourself, we kindly refer to the <a href="https://inl.github.io/BlackLab/guide/getting-started.html">BlackLab Guide</a>.</p>
+<h3 id="blacklab-corpus-query-language-bcql">BlackLab Corpus Query Language (BCQL)</h3>
+<p>BlackLab Corpus Query Language or BCQL is a powerful query language for text corpora. A guide to speaking BCQL can be found <a href="https://inl.github.io/BlackLab/guide/corpus-query-language.html">here</a>.</p>
+<h2 id="mentions">Mentions</h2>
+<h3 id="corpora-using-blacklab-selection">Corpora using BlackLab (selection)</h3>
+<ul>
+<li><a href="https://brievenalsbuit.ivdnt.org/corpus-frontend/BaB/search/">Brieven als Buit</a></li>
+<li><a href="https://corpusgysseling.ivdnt.org/corpus-frontend/Gysseling/search/">Corpus Gysseling</a></li>
+<li><a href="https://chn.ivdnt.org/">Corpus Hedendaags Nederlands</a></li>
+<li><a href="https://www.ineo.tools/resources/OpenSoNaR">OpenSonar</a></li>
+</ul>
+<h3 id="webpages">Webpages</h3>
+<ul>
+<li>GitHub repositories: <a href="https://github.com/INL/BlackLab">BlackLab Server and Core</a> and <a href="https://github.com/INL/corpus-frontend">BlackLab Frontend</a></li>
+<li><a href="https://inl.github.io/BlackLab/development/changelog.html">Release history</a></li>
+</ul>
+<h3 id="credits-and-contact-information">Credits and Contact Information</h3>
+<p>BlackLab was developed at the <a href="https://ivdnt.org/">Dutch Language Institute (INT)</a> to provide a fast and feature-rich search interface on our historical and contemporary text corpora. It was released as open source (Apache License 2.0) in 2012 and has since gathered a number of users and contributors. It is still in active development.</p>
+<p>For technical questions, contact <a href="mailto:jan.niestadt@ivdnt.org">Jan Niestadt</a>.</p>
+<p>Follow <a href="https://twitter.com/BlackLab_IvdNT">@BlackLab_IvdNT</a> on Twitter (very low activity).</p></div>
             </div>
         </div>
 
