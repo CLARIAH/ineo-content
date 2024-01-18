@@ -1,6 +1,6 @@
 ---
 title: UDPipe Frysk
-identifier: udpipe_frysk
+identifier: "udpipe-frysk-service"
 ---
 
 # UDPipe Frysk
