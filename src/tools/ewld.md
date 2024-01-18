@@ -1,5 +1,5 @@
 ---
-title: e-WLD: Electronisch woordenboek van de Limburgse dialecten
+title: "e-WLD: Electronisch woordenboek van de Limburgse dialecten"
 carousel:
  - /media/taalkaart-wld.jpg
  - /media/boeken-wld.jpg

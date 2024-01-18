@@ -1,5 +1,5 @@
 ---
-title: e-WGD: Electronisch woordenboek van de Gelderse dialecten
+title: "e-WGD: Electronisch woordenboek van de Gelderse dialecten"
 carousel:
  - /media/taalkaart-wgd.jpg
  - /media/boeken-wgd.jpg

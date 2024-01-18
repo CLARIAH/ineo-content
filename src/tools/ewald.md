@@ -1,5 +1,5 @@
 ---
-title: e-WALD: Electronisch woordenboek van de Achterhoekse en Liemerse dialecten
+title: "e-WALD: Electronisch woordenboek van de Achterhoekse en Liemerse dialecten"
 carousel:
  - /media/taalkaart-wald.jpg
  - /media/boeken-wald.jpg

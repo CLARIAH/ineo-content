@@ -1,5 +1,5 @@
 ---
-title: e-WBD: Electronisch woordenboek van de Brabantse dialecten
+title: "e-WBD: Electronisch woordenboek van de Brabantse dialecten"
 carousel:
  - /media/taalkaart-wbd.jpg
  - /media/boeken-wbd.jpg
