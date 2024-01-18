@@ -3,7 +3,7 @@ title: Colibri Core
 carousel:
   - /media/colibri_architecture.svg
   - /media/colibri-core.gif
-identifier: colibricore
+identifier: "colibri-core"
 ---
 
 # Colibri Core
