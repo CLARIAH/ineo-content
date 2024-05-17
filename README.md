@@ -35,8 +35,9 @@ requiring real technical knowledge of either.
 Directories:
 
 * ``src/`` - Contains Markdown texts
-    * ``tools/`` - Contains Markdown texts describing tools. 
+    * ``tools/`` - Contains Markdown texts describing tools
     * ``data/`` -  Contains Markdown texts describing data
+    * ``projects/`` -  Contains Markdown texts describing projects
     * ``workflows/`` -  Contains Markdown texts describing workflows
     * ``standards/`` -  Contains Markdown texts describing standards
 * ``media/`` - Stores images or other associated media files,
