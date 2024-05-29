@@ -4,14 +4,6 @@ identifier: hi_bgb
 ---
 # Bookkeeper-General Batavia
 
-
-
-## Overview
-
-This resource introduced in four minutes (https://vimeo.com/72899160)
-
-DESCRIPTION DATASET
-
 There are different ways to use this dataset. The data can be accessed through the search engine on the website which has several filters. The data can also be downloaded as csv file, with seperate files for voyages and cargo.
 
 When the user has reached a result screen, most of the column headers can be clicked in order to sort the results alphabeticallt, on date or on quantity. To make full use of the option 'download as Excel' might be necessary to change the computer settings for the decimal symbol and the list separator. If you want to use the downloaded results in Excel the decimal symbol must become a '.' (dot) and the list seperator must become ',' (comma). One can only download in Excel is the selection in the result does not exceed 65536 lines.
@@ -19,6 +11,11 @@ When the user has reached a result screen, most of the column headers can be cli
 All field names and part of the remarks in the database are in English. The information within the fields, however, has mostly been retained in Dutch in order to follow the source as closely as possible. An exception has been made for the annotation found in the remark field for both voyage and product. These were entered in English only in those cases where no information would be lost in translation, and in all other cases the original Dutch text was transcribed. 
 
 The surviving originals, supplemented by some remaining copies are currently preserved at the National Archives of the Netherlands as a seperate collection (access number 1.04.18.02) next to the Archives of the VOC, which originated from the Heren XVII and the Chambers in the Netherlands (access number 1.04.02). In order to enable the user to easily trace back the original source the number of the general journal as well as the folio number of every voyage as entered. 
+
+
+## Overview
+
+This resource introduced in four minutes (https://vimeo.com/72899160)
 
 ## Learn
 
