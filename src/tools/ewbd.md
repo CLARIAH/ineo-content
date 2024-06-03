@@ -7,7 +7,7 @@ carousel:
 identifier: ewbd
 ---
 
-# e-WALD: Electronisch woordenboek van de Brabantse dialecten
+# e-WBD: Electronisch woordenboek van de Brabantse dialecten
 
 The [e-WBD](https://e-wbd.nl/) is an online dictionary of dialects from the Dutch province Noord-Brabant, as well as the Belgian provinces of Antwerpen, Vlaams-Brabant and Brussels. It stands for *Electronisch woordenboek van de Brabantse dialecten*.
 
