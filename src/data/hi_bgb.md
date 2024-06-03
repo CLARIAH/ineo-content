@@ -6,8 +6,7 @@ identifier: hi_bgb
 This database offers information concerning the circulation of commodities as found in the administration of the Bookkeeper-General (Boekhouder-Generaal) of the Dutch East India Company (Verenigde Oost-Indische Compagnie, for short VOC) in Batavia, in the eighteenth century.
 
 ## Overview
-This resource introduced in four minutes:
-<iframe src="https://player.vimeo.com/video/72899160?h=3b7a7d612d" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+[This resource introduced in four minutes](https://vimeo.com/72899160).
 
 The database *Bookkeeper-General Batavia* provides information on products and voyages of the Dutch East India Company's (VOC) trade in Asia during the eighteenth century. The database contains information from the records of the bookkeeper-general (the head bookkeeper) of the VOC in Batavia.
 
