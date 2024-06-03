@@ -23,9 +23,9 @@ The [e-WLD](https://e-wld.nl/) is an online dictionary of the Limburgian dialect
 
 * Together with the [e-WALD](https://www.ineo.tools/resources/ewald), [e-WBD](https://www.ineo.tools/resources/ewbd) and the [e-WGD](https://www.ineo.tools/resources/ewgd), the e-WLD forms a series of electronic dictionaries.
 
-![Original in-press publication of the *Woordenboek van de Limburgse dialecten*, that the e-WLD makes available digitally.](./../media/boeken-wld.jpg)
+![Original in-press publication of the *Woordenboek van de Limburgse dialecten*, that the e-WLD makes available digitally.](https://github.com/CLARIAH/ineo-content/blob/master/media/boeken-wld.jpg)
 
-![Subdivisions of the Limburgian dialects.](./../media/dialectkaart-wld.jpg)
+![Subdivisions of the Limburgian dialects.](https://github.com/CLARIAH/ineo-content/blob/master/media/dialectkaart-wld.jpg)
 
 
 

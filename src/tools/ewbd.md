@@ -21,19 +21,19 @@ The [e-WBD](https://e-wbd.nl/) is an online dictionary of dialects from the Dutc
 
 * Together with the [e-WALD](https://www.ineo.tools/resources/ewald), [e-WGD](https://www.ineo.tools/resources/ewgd) and the [e-WLD](https://www.ineo.tools/resources/ewld), the e-WBD forms a series of electronic dictionaries.
 
-![Original in-press publication of the *Woordenboek van de Brabantse dialecten*, that the e-WBD makes available digitally.](./../media/boeken-wbd.jpg)
+![Original in-press publication of the *Woordenboek van de Brabantse dialecten*, that the e-WBD makes available digitally.](https://github.com/CLARIAH/ineo-content/blob/master/media/boeken-wbd.jpg)
 
 ### About
 
 #### Overview research area
 The research area for the e-WBD comprises the Dutch province of Noord-Brabant (north),the Belgian province of Antwerpen (middle) and Vlaams-Brabant (south). On the map, another closed area has been indicated in Vlaams-Brabant, the Brussels Capital Region. Brusselian is originally a Brabantian dialect.
 
-![Research area of the WBD.](./../media/taalkaart-wbd.jpg)
+![Research area of the WBD.](https://github.com/CLARIAH/ineo-content/blob/master/media/taalkaart-wbd.jpg)
 
 #### Brabantian dialects
 Below is a dialect map showing the Brabant dialect areas. These areas have been used to designate areas in the WBD. An explanation of this classification can be found in WBD Inleiding op deel III: R. Belemans, J. Goossens, *Inleiding en klankgeografie van de Brabantse dialecten*, Assen 2000 (232p.) (**in Dutch**). That episode included a transparent card that could be placed on top of the printed cards. That transparent map has been converted into the dialect map shown here, in which the larger places are indicated for orientation. The larger dialect areas are demarcated with lines. The further division is indicated in color.
 
-![Classification of the Brabantian dialects.](./../media/dialectkaart-wbd.jpg)
+![Classification of the Brabantian dialects.](https://github.com/CLARIAH/ineo-content/blob/master/media/dialectkaart-wbd.jpg)
 
 
 
