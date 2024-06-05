@@ -21,7 +21,7 @@ Frog's current version will tokenize, tag, lemmatize, and morphologically segmen
 
 Frog produces [FoLiA XML](https://proycon.github.io/folia/), or tab-delimited column-formatted output, one line per token, that looks as follows:
 
-![Example of Frog output](https://github.com/CLARIAH/ineo-content/blob/master/media/frog/frog-output.png)
+![Example of Frog output](https://github.com/CLARIAH/ineo-content/blob/master/media/frog/frog-output.png?raw=1)
 
 The ten columns contain the following information:
 * Token number (resets every sentence)

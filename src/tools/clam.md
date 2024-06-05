@@ -50,7 +50,7 @@ Please consult the [CLAM Documentation](https://clam.readthedocs.io/en/stable/) 
 
 ### Architecture
 
-![CLAM's architecture](https://github.com/CLARIAH/ineo-content/blob/master/media/clam_architecture.png)
+![CLAM's architecture](https://github.com/CLARIAH/ineo-content/blob/master/media/clam_architecture.png?raw=1)
 
 CLAM has a layered architecture, with at the core the NLP application(s) you want to turn into a webservice. The application itself can remain untouched and unaware of CLAM. The scheme on the right illustrates the various layers.
 

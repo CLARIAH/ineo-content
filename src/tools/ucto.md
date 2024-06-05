@@ -30,7 +30,7 @@ identifier: ucto
 
 ## Learn
 
-![Ucto in action.](https://github.com/CLARIAH/ineo-content/blob/master/media/ucto.gif)
+![Ucto in action.](https://github.com/CLARIAH/ineo-content/blob/master/media/ucto.gif?raw=1)
 
 ### Webservice
 

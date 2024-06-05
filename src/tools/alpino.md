@@ -8,7 +8,7 @@ identifier: alpino
 [Alpino](https://urd2.let.rug.nl/~vannoord/alp/Alpino/) is a dependency **parser for Dutch** that also analyses sentences in terms of constituents. Apart from a purely syntactic analysis, Alpino also provides part-of-speech tagging, lemmatization and morphological tagging. The output is formatted in XML.
 
 
-![Example of an Alpino parse](https://github.com/CLARIAH/ineo-content/blob/master/media/alpino/example_parse.png)
+![Example of an Alpino parse](https://github.com/CLARIAH/ineo-content/blob/master/media/alpino/example_parse.png?raw=1)
 
 
 

@@ -25,7 +25,7 @@ The [e-WGD](https://e-wgd.nl/) is an online dictionary of dialects from the Dutc
 
 * Together with the [e-WALD](https://www.ineo.tools/resources/ewald), [e-WBD](https://www.ineo.tools/resources/ewbd) and the [e-WLD](https://www.ineo.tools/resources/ewld), the e-WGD forms a series of electronic dictionaries.
 
-![Research area of the WGD.](https://github.com/CLARIAH/ineo-content/blob/master/media/taalkaart-wgd.jpg)
+![Research area of the WGD.](https://github.com/CLARIAH/ineo-content/blob/master/media/taalkaart-wgd.jpg?raw=1)
 
 ![Original in-press publication of the *Woordenboek van de Gelderse dialecten*, that the e-WGD makes available digitally.](https://github.com/CLARIAH/ineo-content/blob/master/media/boeken-wgd.jpg)
 

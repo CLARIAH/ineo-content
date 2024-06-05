@@ -20,7 +20,7 @@ The [e-WALD](https://e-wald.nl/) is an online dictionary of Dutch dialects from 
 
 * Together with the [e-WBD](https://www.ineo.tools/resources/ewbd), [e-WGD](https://www.ineo.tools/resources/ewgd) and the [e-WLD](https://www.ineo.tools/resources/ewld), the e-WALD forms a series of electronic dictionaries.
 
-![Original in-press publication of the *Woordenboek van de Achterhoekse en Liemerse dialecten*, that the e-WALD makes available digitally.](https://github.com/CLARIAH/ineo-content/blob/master/media/boeken-wald.jpg)
+![Original in-press publication of the *Woordenboek van de Achterhoekse en Liemerse dialecten*, that the e-WALD makes available digitally.](https://github.com/CLARIAH/ineo-content/blob/master/media/boeken-wald.jpg?raw=1)
 
 ### About
 
@@ -32,12 +32,12 @@ In the future, the volumes of the WALD that have now been published as well as t
 #### Dialect areas
 The map includes the WALD research area. Although the Oude IJssel is considered a geographical border between the Liemers and the Achterhoek, it has no significance from a dialectological point of view: north and south of the Oude IJssel there is a wide transitional area between Low Saxon in the Achterhoek and Low Franconian in the south of the Liemers.
 
-![Dialect area of the WALD.](https://github.com/CLARIAH/ineo-content/blob/master/media/dialectkaart-wald.jpg)
+![Dialect area of the WALD.](https://github.com/CLARIAH/ineo-content/blob/master/media/dialectkaart-wald.jpg?raw=1)
 
 #### Places
 The 75 places in Achterhoek and Liemers where material was collected are listed in the map with the places and their place names. In a large number of cases, material from adjacent areas has also been included. This was done to show what is happening across the border. Words often pay little attention to regional, provincial and national boundaries. Research that is limited within those boundaries suggests that the area studied forms a unity. The language of Winterswijk is very similar to that of Vreden in Westphalia; the language of Lobith with that of Millingen. Gorssels and Wilps are similar, as are the dialects of Gelselaar and Markelo.
 
-![Places where material was collected for the WALD.](https://github.com/CLARIAH/ineo-content/blob/master/media/taalkaart-wald_vindplaatsen.jpg)
+![Places where material was collected for the WALD.](https://github.com/CLARIAH/ineo-content/blob/master/media/taalkaart-wald_vindplaatsen.jpg?raw=1)
 
 
 

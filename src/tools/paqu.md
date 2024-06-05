@@ -37,11 +37,11 @@ PaQu offers two ways to search through the syntactically annotated texts.
 
 The first option is to use the search bar to look for word pairs, optionally complemented by their syntactic relationship. For instance, in the image below, PaQu is told to look for the adjective (adj) *taalkundig* 'linguistic' that is a modifier (mod) to the noun (n) *onderzoek* 'research'. As said above, to use this effectively, the user must be familiar with the Alpino annotation guidelines, for which see the links provided under Preliminaries. Also check out [PaQu's own information page](https://www.let.rug.nl/alfa/paqu/info.html#zoeken) for more tips and tricks on search for word pairs (in Dutch).
 
-![PaQu is told to look for the adjective (adj) *taalkundig* 'linguistic' that is a modifier (mod) to the noun (n) *onderzoek* 'research'.](https://github.com/CLARIAH/ineo-content/blob/master/media/paqu-cover1.png)
+![PaQu is told to look for the adjective (adj) *taalkundig* 'linguistic' that is a modifier (mod) to the noun (n) *onderzoek* 'research'.](https://github.com/CLARIAH/ineo-content/blob/master/media/paqu-cover1.png?raw=1)
 
 The second search option is to use the query language XPath. In the image below, the XPath query tells PaQu to look for any instance of the verb *zoeken* 'search' that takes a PP-complement headed by the preposition *in*. 
 
-![The XPath query tells PaQu to look for any instance of the verb *zoeken* 'search' that takes a PP-complement headed by the preposition *in*.](https://github.com/CLARIAH/ineo-content/blob/master/media/paqu-cover3.png)
+![The XPath query tells PaQu to look for any instance of the verb *zoeken* 'search' that takes a PP-complement headed by the preposition *in*.](https://github.com/CLARIAH/ineo-content/blob/master/media/paqu-cover3.png?raw=1)
 
 Using the more advanced XPath querying method allows the user to search for more complex structures, however requires them to be familiar with the Alpino annotations, as well as XPath. A 'cookbook' for writing XPath queries for Alpino-annotated treebanks can be found [here](https://rug-compling.github.io/dact/cookbook/) (in English). Also check out [PaQu's own information page](https://www.let.rug.nl/alfa/paqu/info.html#xpath) for more tips and tricks on using XPath in PaQu (in Dutch).
 
